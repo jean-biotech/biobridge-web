@@ -264,16 +264,25 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0 0 0.5rem;
 }
 .bb-flip-back p:last-child { margin-bottom: 0; }
-.bb-flip-back-img {
-  background: rgba(255,255,255,0.08);
-  border: 1px dashed rgba(255,255,255,0.2);
-  border-radius: 4px;
-  padding: 0.3rem 0.6rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.62rem;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
+/* Company name badges on flip card back */
+.bb-flip-org-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
   margin-top: 0.65rem;
+}
+.bb-flip-org-badge {
+  display: inline-block;
+  background: rgba(14,116,144,0.18);
+  border: 1px solid rgba(14,116,144,0.38);
+  border-radius: 20px;
+  padding: 0.18rem 0.6rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #7ECFE0;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 /* Two-column split */
@@ -323,15 +332,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   display: block;
 }
 
-/* Logo on flip card back */
-.bb-flip-back-logo {
-  display: block;
-  max-height: 44px;
-  max-width: 130px;
-  object-fit: contain;
-  border-radius: 4px;
-  margin-top: 0.65rem;
-}
 
 /* Beyond the Science image */
 .bb-beyond-img {
@@ -394,7 +394,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>Medicine</h3>
         <p>Insulin for diabetics is made by bacteria engineered to carry the human insulin gene. CAR-T therapy takes your own immune cells, genetically reprograms them to recognize cancer, and injects them back.</p>
-        <img src="/assets/images/biotech-medicine.png" alt="Medicine" class="bb-flip-back-logo">
+        <div class="bb-flip-org-badges">
+          <span class="bb-flip-org-badge">Moderna</span>
+          <span class="bb-flip-org-badge">Pfizer</span>
+          <span class="bb-flip-org-badge">Genentech</span>
+        </div>
       </div>
     </div>
   </div>
@@ -411,7 +415,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>Agriculture</h3>
         <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme (a protein from engineered yeast) to replicate the taste and texture of beef.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <div class="bb-flip-org-badges">
+          <span class="bb-flip-org-badge">Bayer</span>
+          <span class="bb-flip-org-badge">Monsanto</span>
+          <span class="bb-flip-org-badge">Syngenta</span>
+        </div>
       </div>
     </div>
   </div>
@@ -428,7 +436,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>Environment</h3>
         <p>Bioremediation uses bacteria that break down petroleum into harmless compounds. Bioplastics made from plants instead of petroleum decompose in months, not centuries.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <div class="bb-flip-org-badges">
+          <span class="bb-flip-org-badge">Bolt Threads</span>
+          <span class="bb-flip-org-badge">LanzaTech</span>
+          <span class="bb-flip-org-badge">Novozymes</span>
+        </div>
       </div>
     </div>
   </div>
@@ -445,7 +457,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>The Cutting Edge</h3>
         <p>Bioprinting uses 3D printers loaded with living cells to build skin grafts, cartilage, and blood vessels. Mini-brains grown from stem cells are helping scientists study Alzheimer's without human trials.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <div class="bb-flip-org-badges">
+          <span class="bb-flip-org-badge">10x Genomics</span>
+          <span class="bb-flip-org-badge">CRISPR Therapeutics</span>
+          <span class="bb-flip-org-badge">Illumina</span>
+        </div>
       </div>
     </div>
   </div>
