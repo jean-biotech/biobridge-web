@@ -204,6 +204,13 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   justify-content: center;
   flex-shrink: 0;
   border-bottom: 1px solid var(--bb-border);
+  overflow: hidden;
+}
+.bb-flip-front-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .bb-flip-front-img span {
   font-family: 'Inter', sans-serif;
@@ -361,7 +368,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Medicine example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Medicine Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-medicine.jpg" alt="Medicine and biotechnology"></div>
         <div class="bb-flip-front-body">
           <h3>Medicine</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -378,7 +385,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Agriculture example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Agriculture Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-agriculture.jpg" alt="Agriculture and biotechnology"></div>
         <div class="bb-flip-front-body">
           <h3>Agriculture</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -395,7 +402,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Environment example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Environment Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-environment.jpg" alt="Environment and biotechnology"></div>
         <div class="bb-flip-front-body">
           <h3>Environment</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -412,7 +419,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Cutting Edge example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Cutting Edge Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-cuttingedge.jpg" alt="The cutting edge of biotechnology"></div>
         <div class="bb-flip-front-body">
           <h3>The Cutting Edge</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -444,9 +451,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
-    <div class="bb-img-placeholder">
-      [PLACEHOLDER: Illustration, cross-functional team behind a biotech breakthrough]
-    </div>
+    <img src="/assets/images/team-illustration.jpg" alt="Cross-functional team behind a biotech breakthrough" style="width:100%; border-radius:8px; display:block;">
   </div>
 </div>
 
