@@ -271,16 +271,24 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0 0 0.5rem;
 }
 .bb-flip-back p:last-child { margin-bottom: 0; }
-.bb-flip-back-img {
-  background: rgba(255,255,255,0.08);
-  border: 1px dashed rgba(255,255,255,0.2);
-  border-radius: 4px;
-  padding: 0.3rem 0.6rem;
+.bb-flip-companies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.75rem;
+}
+.bb-flip-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 20px;
+  padding: 0.2rem 0.65rem;
   font-family: 'Inter', sans-serif;
-  font-size: 0.62rem;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
-  margin-top: 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 /* Two-column split */
@@ -377,7 +385,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>Medicine</h3>
         <p>Insulin for diabetics is made by bacteria engineered to carry the human insulin gene. CAR-T therapy takes your own immune cells, genetically reprograms them to recognize cancer, and injects them back.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <div class="bb-flip-companies">
+          <span class="bb-flip-badge">Moderna</span>
+          <span class="bb-flip-badge">Pfizer</span>
+          <span class="bb-flip-badge">Genentech</span>
+        </div>
       </div>
     </div>
   </div>
@@ -394,7 +406,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>Agriculture</h3>
         <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme (a protein from engineered yeast) to replicate the taste and texture of beef.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <div class="bb-flip-companies">
+          <span class="bb-flip-badge">Bayer</span>
+          <span class="bb-flip-badge">Monsanto</span>
+          <span class="bb-flip-badge">Syngenta</span>
+        </div>
       </div>
     </div>
   </div>
@@ -411,7 +427,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>Environment</h3>
         <p>Bioremediation uses bacteria that break down petroleum into harmless compounds. Bioplastics made from plants instead of petroleum decompose in months, not centuries.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <div class="bb-flip-companies">
+          <span class="bb-flip-badge">Bolt Threads</span>
+          <span class="bb-flip-badge">LanzaTech</span>
+          <span class="bb-flip-badge">Novozymes</span>
+        </div>
       </div>
     </div>
   </div>
@@ -428,7 +448,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>The Cutting Edge</h3>
         <p>Bioprinting uses 3D printers loaded with living cells to build skin grafts, cartilage, and blood vessels. Mini-brains grown from stem cells are helping scientists study Alzheimer's without human trials.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <div class="bb-flip-companies">
+          <span class="bb-flip-badge">10x Genomics</span>
+          <span class="bb-flip-badge">CRISPR Therapeutics</span>
+          <span class="bb-flip-badge">Illumina</span>
+        </div>
       </div>
     </div>
   </div>
