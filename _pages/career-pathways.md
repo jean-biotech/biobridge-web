@@ -582,7 +582,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <!-- CARD 7: Bioinformatics & Computational Biology -->
       <div class="bb-career-slide">
         <div class="bb-card-img">
-          <div class="bb-card-img-label">Bioinformatics &amp; Data Science Image Placeholder</div>
+          <img src="/assets/images/career-bioinformatics.jpg" alt="Bioinformatics and computational biology">
         </div>
         <div class="bb-card-body">
           <h2>Bioinformatics &amp; Computational Biology</h2>
