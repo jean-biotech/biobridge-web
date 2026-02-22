@@ -315,6 +315,31 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   line-height: 1.7;
 }
 
+/* Flip card front image fill */
+.bb-flip-front-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Logo on flip card back */
+.bb-flip-back-logo {
+  display: block;
+  max-height: 44px;
+  max-width: 130px;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-top: 0.65rem;
+}
+
+/* Beyond the Science image */
+.bb-beyond-img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
 /* Desktop */
 @media (min-width: 769px) {
   .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
@@ -325,7 +350,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   .bb-flip-front-img { height: 120px; }
   .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.25rem; }
   .bb-callout p { font-size: 1rem; }
-  .bb-img-placeholder { padding: 2.25rem 1.5rem; font-size: 0.8rem; }
 }
 @media (min-width: 1024px) {
   .bb-flip-grid { grid-template-columns: repeat(4, 1fr); }
@@ -361,7 +385,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Medicine example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Medicine Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-medicine.jpg" alt="Medicine"></div>
         <div class="bb-flip-front-body">
           <h3>Medicine</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -370,7 +394,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-back">
         <h3>Medicine</h3>
         <p>Insulin for diabetics is made by bacteria engineered to carry the human insulin gene. CAR-T therapy takes your own immune cells, genetically reprograms them to recognize cancer, and injects them back.</p>
-        <div class="bb-flip-back-img">Company logo placeholder</div>
+        <img src="/assets/images/biotech-medicine.png" alt="Medicine" class="bb-flip-back-logo">
       </div>
     </div>
   </div>
@@ -378,7 +402,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Agriculture example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Agriculture Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-agriculture.jpg" alt="Agriculture"></div>
         <div class="bb-flip-front-body">
           <h3>Agriculture</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -395,7 +419,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Environment example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Environment Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-environment.jpg" alt="Environment"></div>
         <div class="bb-flip-front-body">
           <h3>Environment</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -412,7 +436,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-flip-card" role="button" tabindex="0" aria-label="Cutting Edge example: click to flip">
     <div class="bb-flip-card-inner">
       <div class="bb-flip-front">
-        <div class="bb-flip-front-img"><span>Cutting Edge Image Placeholder</span></div>
+        <div class="bb-flip-front-img"><img src="/assets/images/biotech-cuttingedge.jpg" alt="The Cutting Edge"></div>
         <div class="bb-flip-front-body">
           <h3>The Cutting Edge</h3>
           <p class="bb-flip-hint">Hover to learn more</p>
@@ -444,9 +468,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     <p>That's why biotech needs business people, engineers, lawyers, writers, and project managers just as much as it needs scientists.</p>
   </div>
   <div>
-    <div class="bb-img-placeholder">
-      [PLACEHOLDER: Illustration, cross-functional team behind a biotech breakthrough]
-    </div>
+    <img src="/assets/images/team-illustration.jpg" alt="Cross-functional team behind a biotech breakthrough" class="bb-beyond-img">
   </div>
 </div>
 
