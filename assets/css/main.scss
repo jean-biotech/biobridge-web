@@ -158,12 +158,12 @@ p {
 
 // Logo — in Minimal Mistakes, .site-logo IS the <img> element (not a wrapper)
 .site-logo {
-  height: 30px;
+  height: 40px;
   width: auto;
   transition: transform 0.25s ease, opacity 0.25s ease;
 
   @media (min-width: 769px) {
-    height: 34px;
+    height: 44px;
   }
 }
 
