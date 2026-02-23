@@ -156,16 +156,14 @@ p {
   }
 }
 
-// Logo
-.site-logo img {
-  max-height: 49px;
+// Logo — in Minimal Mistakes, .site-logo IS the <img> element (not a wrapper)
+.site-logo {
+  height: 30px;
   width: auto;
   transition: transform 0.25s ease, opacity 0.25s ease;
-  padding: 4px 0;
 
   @media (min-width: 769px) {
-    max-height: 54px;
-    padding: 5px 0;
+    height: 34px;
   }
 }
 
