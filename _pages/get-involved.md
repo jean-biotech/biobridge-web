@@ -203,20 +203,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <p>BioBridge is a student-led initiative, and we are always looking for people who want to help make biotech more accessible.</p>
 </div>
 
-<div class="bb-stats-strip">
-  <div class="bb-stat">
-    <div class="bb-stat-num">10,000+</div>
-    <div class="bb-stat-label">Students Reached</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">55K+</div>
-    <div class="bb-stat-label">Community Members</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">Open to All</div>
-    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
-  </div>
-</div>
 
 <div class="bb-involve-grid">
 
