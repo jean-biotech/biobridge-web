@@ -322,21 +322,6 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   <p>There is no single path into biotech. Explore the major routes, one card at a time, with realistic entry points for every background.</p>
 </div>
 
-<div class="bb-stats-strip">
-  <div class="bb-stat">
-    <div class="bb-stat-num">10,000+</div>
-    <div class="bb-stat-label">Students Reached</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">55K+</div>
-    <div class="bb-stat-label">Community Members</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">Open to All</div>
-    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
-  </div>
-</div>
-
 <!-- CAROUSEL -->
 <div class="bb-carousel-wrap">
   <button class="bb-carousel-btn prev" id="bb-prev" aria-label="Previous career">&#8249;</button>

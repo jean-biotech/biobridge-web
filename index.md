@@ -545,6 +545,35 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   box-shadow: var(--bb-shadow-sm);
 }
 
+.bb-connect-link.bb-instagram {
+  border-color: rgba(225, 48, 108, 0.35);
+  color: #E1306C !important;
+}
+.bb-connect-link.bb-instagram i {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.bb-connect-link.bb-instagram:hover {
+  background: rgba(225, 48, 108, 0.06);
+  border-color: #E1306C;
+  color: #E1306C !important;
+}
+
+.bb-connect-link.bb-linkedin {
+  border-color: rgba(10, 102, 194, 0.35);
+  color: #0A66C2 !important;
+}
+.bb-connect-link.bb-linkedin i {
+  color: #0A66C2;
+}
+.bb-connect-link.bb-linkedin:hover {
+  background: rgba(10, 102, 194, 0.06);
+  border-color: #0A66C2;
+  color: #0A66C2 !important;
+}
+
 /* ================================================================
    BOTTOM CTA
    ================================================================ */
@@ -800,9 +829,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   </div>
 </div>
 
-<!-- Hero Image Placeholder -->
-<div class="bb-image-placeholder">
-  [PLACEHOLDER: Header Image - Biotechnology research visualization, such as a wide-angle photo of a modern biotech lab, DNA helix visualization, or students engaged in scientific work]
+<!-- Hero Image -->
+<div style="max-width:1200px; margin:0 auto; overflow:hidden;">
+  <img src="/assets/images/hero-header.jpg" alt="Biotechnology research" style="width:100%; display:block; object-fit:cover; max-height:420px;">
 </div>
 
 <!-- What BioBridge Offers -->
@@ -865,10 +894,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
         <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions: What is biotech? How do I get in? Do I need a PhD? People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
         <div class="bb-connect">
           <span class="bb-connect-label">Follow the journey:</span>
-          <a href="https://instagram.com/jeans.scenes" target="_blank" class="bb-connect-link">
+          <a href="https://instagram.com/jeans.scenes" target="_blank" class="bb-connect-link bb-instagram">
             <i class="fab fa-instagram"></i> Instagram
           </a>
-          <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-connect-link">
+          <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-connect-link bb-linkedin">
             <i class="fab fa-linkedin"></i> LinkedIn
           </a>
         </div>
@@ -877,9 +906,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   </div>
 </div>
 
-<!-- Team Image Placeholder -->
-<div class="bb-image-placeholder">
-  [PLACEHOLDER: Team Photo - Group of diverse students in a lab setting, or a candid photo from a BioBridge event, workshop, or community gathering]
+<!-- Team Image -->
+<div style="max-width:1200px; margin:0 auto; overflow:hidden;">
+  <img src="/assets/images/team-header.jpg" alt="BioBridge team and community" style="width:100%; display:block; object-fit:cover; max-height:420px;">
 </div>
 
 <!-- Bottom CTA -->

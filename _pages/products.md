@@ -325,21 +325,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
 </div>
 
-<div class="bb-stats-strip">
-  <div class="bb-stat">
-    <div class="bb-stat-num">10,000+</div>
-    <div class="bb-stat-label">Students Reached</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">55K+</div>
-    <div class="bb-stat-label">Community Members</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">Open to All</div>
-    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
-  </div>
-</div>
-
 <!-- MAIN PRODUCT LAYOUT -->
 <div class="bb-product-layout">
 
@@ -357,13 +342,14 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
     <p class="bb-section-label">What's Included</p>
     <ul class="bb-feature-list">
-      <li>A real resume that landed a biotech internship: annotated line by line so you understand every choice, not just what it looks like.</li>
-      <li>An interview prep guide with actual questions asked at biotech companies, organized by role, with guidance on how to approach each one.</li>
-      <li>Cold email templates for reaching out to researchers and hiring managers.</li>
-      <li>A curated list of biotech-friendly professors and labs organized by research area, for students trying to get into research without existing connections.</li>
-      <li>A beginner's guide to reading a scientific paper, step by step, with no science background assumed.</li>
-      <li>Four roadmaps for four starting points: high school student, non-biology college major, career changer, and graduate student.</li>
-      <li>The most common mistakes people make applying to biotech roles, with fixes for each.</li>
+      <li><strong>A personal resume that landed a biotech internship at a major pharma company:</strong> annotated line by line so you understand every formatting and content choice, not just what it looks like.</li>
+      <li><strong>Cold email and outreach templates that got responses from partners at firms and senior people at major biotech and pharma companies:</strong> including the exact framing that works when you have no existing connections.</li>
+      <li><strong>A pivot story roadmap based on a real transition from pre-dental to biotech:</strong> with the specific steps, reframing strategies, and application materials that made it work.</li>
+      <li><strong>An interview prep guide with actual questions asked at biotech companies, organized by role type:</strong> with guidance on how to approach each one.</li>
+      <li><strong>A curated list of biotech-friendly professors and labs organized by research area:</strong> for students trying to get into research without existing connections.</li>
+      <li><strong>A beginner's guide to reading a scientific paper, step by step:</strong> no science background assumed.</li>
+      <li><strong>Four roadmaps for four starting points:</strong> high school student, non-biology college major, career changer, and graduate student.</li>
+      <li><strong>The most common mistakes people make applying to biotech roles:</strong> and exactly how to fix them.</li>
     </ul>
 
     <p class="bb-section-label">Who It's For</p>
@@ -392,6 +378,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-roadmap-item">
     <div class="bb-roadmap-dot"></div>
     <p><strong>Mentorship Program Access</strong>—Connect directly with biotech professionals who have been where you are and can help you figure out the next step.</p>
+  </div>
+  <div class="bb-roadmap-item">
+    <div class="bb-roadmap-dot"></div>
+    <p><strong>BioBridge High School Program Initiative at Thomas Jefferson University:</strong> A structured educational program bringing biotech literacy directly into high school classrooms — modeled after initiatives like First Generation Investors, with the goal of giving students hands-on exposure to the industry before college.</p>
   </div>
 </div>
 
