@@ -5,7 +5,7 @@ url: "https://biotechbridge.org"
 baseurl: ""
 
 # Logo
-logo: "/assets/images/biobridge-logo.svg"
+logo: "/assets/images/BioBridge.png"
 
 # Theme
 remote_theme: mmistakes/minimal-mistakes@4.26.2

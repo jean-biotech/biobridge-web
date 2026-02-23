@@ -125,7 +125,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   min-width: 44px;
   background: linear-gradient(135deg, #d1e8d8, #c8dfe0);
   border-radius: 5px;
-  border: 1px solid var(--bb-border);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -136,8 +135,9 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-resource-thumb img {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  padding: 4px;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 5px;
 }
 .bb-resource-thumb-label {
   font-family: 'Inter', sans-serif;
@@ -181,11 +181,17 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   min-width: 44px;
   background: linear-gradient(160deg, #c8dac4, #b8d0cc);
   border-radius: 3px;
-  border: 1px solid var(--bb-border);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+}
+.bb-book-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .bb-book-thumb-label {
   font-family: 'Inter', sans-serif;
@@ -235,21 +241,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <span class="bb-hero-sub">Curated Science Media</span>
   <h1>The Learning Lab</h1>
   <p>Media and resources for exploring biotech: newsletters, podcasts, videos, courses, and books, all hand-picked for quality and accessibility.</p>
-</div>
-
-<div class="bb-stats-strip">
-  <div class="bb-stat">
-    <div class="bb-stat-num">10,000+</div>
-    <div class="bb-stat-label">Students Reached</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">55K+</div>
-    <div class="bb-stat-label">Community Members</div>
-  </div>
-  <div class="bb-stat">
-    <div class="bb-stat-num">Open to All</div>
-    <div class="bb-stat-label">Backgrounds &amp; Disciplines</div>
-  </div>
 </div>
 
 <!-- NEWSLETTERS -->
@@ -332,11 +323,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <div class="bb-resource-thumb-label">Pipeline</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.alextelford.com/cells-are-very-small" target="_blank">Cells Are Very Small</a></h3>
-        <p>A visual, approachable introduction to cell biology that actually sticks.</p>
+        <h3><a href="https://www.science.org/blogs/pipeline" target="_blank">In the Pipeline — Derek Lowe</a></h3>
+        <p>A medicinal chemist's honest take on drug discovery, lab failures, and what actually happens inside pharma.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -440,7 +431,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card bb-book-card">
       <div class="bb-book-thumb">
-        <div class="bb-book-thumb-label">Cover</div>
+        <img src="/assets/images/book-the-gene.jpg" alt="The Gene book cover">
       </div>
       <div class="bb-resource-info">
         <h3>"The Gene" by Siddhartha Mukherjee</h3>
@@ -449,7 +440,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card bb-book-card">
       <div class="bb-book-thumb">
-        <div class="bb-book-thumb-label">Cover</div>
+        <img src="/assets/images/book-henrietta-lacks.jpg" alt="The Immortal Life of Henrietta Lacks book cover">
       </div>
       <div class="bb-resource-info">
         <h3>"The Immortal Life of Henrietta Lacks"</h3>
@@ -458,7 +449,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card bb-book-card">
       <div class="bb-book-thumb">
-        <div class="bb-book-thumb-label">Cover</div>
+        <img src="/assets/images/book-spillover.png" alt="Spillover book cover">
       </div>
       <div class="bb-resource-info">
         <h3>"Spillover" by David Quammen</h3>
