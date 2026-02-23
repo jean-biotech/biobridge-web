@@ -131,6 +131,13 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   justify-content: center;
   flex-direction: column;
   gap: 2px;
+  overflow: hidden;
+}
+.bb-resource-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 4px;
 }
 .bb-resource-thumb-label {
   font-family: 'Inter', sans-serif;
@@ -253,7 +260,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-readout.png" alt="The Readout logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.statnews.com/newsletters/" target="_blank">The Readout</a></h3>
@@ -262,7 +269,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-sciencedaily.png" alt="ScienceDaily logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.sciencedaily.com/newsletters/" target="_blank">ScienceDaily</a></h3>
@@ -271,7 +278,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-fiercebiotech.png" alt="Fierce Biotech logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.fiercebiotech.com/newsletters" target="_blank">Fierce Biotech</a></h3>
@@ -289,7 +296,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-shortwave.png" alt="Shortwave logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.npr.org/podcasts/510351/short-wave" target="_blank">Shortwave (NPR)</a></h3>
@@ -298,7 +305,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-radiolab.png" alt="Radiolab logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wnycstudios.org/podcasts/radiolab" target="_blank">Radiolab</a></h3>
@@ -307,7 +314,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-mindscape.png" alt="Mindscape logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://mindscapepodcast.com/" target="_blank">Mindscape</a></h3>
@@ -334,7 +341,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-learngenetics.png" alt="Learn.Genetics logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://learn.genetics.utah.edu/" target="_blank">Learn.Genetics</a></h3>
@@ -343,7 +350,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-scitable.png" alt="Scitable by Nature logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.nature.com/scitable" target="_blank">Scitable by Nature</a></h3>
@@ -361,7 +368,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-kurzgesagt.png" alt="Kurzgesagt logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/c/inanutshell" target="_blank">Kurzgesagt</a></h3>
@@ -370,7 +377,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-teded.png" alt="TED-Ed logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/teded" target="_blank">TED-Ed</a></h3>
@@ -379,7 +386,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-veritasium.png" alt="Veritasium logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/c/veritasium" target="_blank">Veritasium</a></h3>
@@ -397,7 +404,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-mitocw.png" alt="MIT OpenCourseWare logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://ocw.mit.edu/courses/biology/" target="_blank">MIT OpenCourseWare: Biology</a></h3>
@@ -406,7 +413,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-khanacademy.png" alt="Khan Academy logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.khanacademy.org/science/biology" target="_blank">Khan Academy: Biology</a></h3>
@@ -415,7 +422,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Logo</div>
+        <img src="/assets/images/logo-ibiology.png" alt="iBiology logo">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.ibiology.org/" target="_blank">iBiology</a></h3>
