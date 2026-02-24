@@ -277,6 +277,33 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <p>Industry-focused biotech news covering drug development, clinical trials, and company moves.</p>
       </div>
     </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Wall St Biotech</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="#" target="_blank">Wall Street Biotech</a></h3>
+        <p>Covers biotech stocks, funding rounds, and market-moving clinical trial results. Great for understanding the business side of the industry.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Endpoints</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://endpts.com/" target="_blank">Bio Newsletter by Endpoints News</a></h3>
+        <p>Daily biotech news covering drug development, FDA decisions, and company pipelines. Trusted by industry insiders.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Nature</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.nature.com/briefing/signup/" target="_blank">Nature Briefing</a></h3>
+        <p>Weekly digest from Nature covering the biggest stories across biology, medicine, and science policy.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -313,6 +340,33 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <p>Sean Carroll interviews scientists and thinkers about the big ideas in physics, biology, and the universe.</p>
       </div>
     </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">BioBoss</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="#" target="_blank">BioBoss</a></h3>
+        <p>Interviews with biotech executives and founders on how they built their careers and companies. Great for anyone interested in the industry side.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Readout Loud</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.statnews.com/tag/the-readout-loud/" target="_blank">The Readout Loud (STAT News)</a></h3>
+        <p>Two journalists break down the biggest biotech news stories of the week. Conversational, smart, and accessible.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Ologies</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.alieward.com/ologies" target="_blank">Ologies with Alie Ward</a></h3>
+        <p>Deep dives into specific scientific fields with the experts who study them. Approachable, funny, and genuinely educational.</p>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -347,6 +401,33 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-resource-info">
         <h3><a href="https://www.nature.com/scitable" target="_blank">Scitable by Nature</a></h3>
         <p>Free science education articles from one of the world's top research journals.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Fortune</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://fortune.com/2023/03/31/ai-cure-cancer-chatgpt-drug-discovery/" target="_blank">Fortune: "Will AI Cure Cancer?"</a></h3>
+        <p>A fascinating look at how artificial intelligence is transforming drug discovery and cancer research — a perfect window into where biotech is heading and why it matters beyond the lab.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Atlantic</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.theatlantic.com/" target="_blank">The Atlantic: The Promise of mRNA</a></h3>
+        <p>A clear and compelling explanation of how mRNA technology went from obscure research to saving millions of lives. Great context for understanding the COVID vaccine revolution.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Wired</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.wired.com/" target="_blank">Wired: Inside the CRISPR Revolution</a></h3>
+        <p>An accessible deep dive into how gene editing works and what it means for medicine, agriculture, and the future of life itself.</p>
       </div>
     </div>
   </div>
@@ -393,6 +474,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-section-head">
     <h2>Online Courses (Free)</h2>
   </div>
+  <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills — all free.</p>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
@@ -419,6 +501,33 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-resource-info">
         <h3><a href="https://www.ibiology.org/" target="_blank">iBiology</a></h3>
         <p>Video talks by leading researchers, offering a window into how real scientists think and work.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">Coursera</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.coursera.org/specializations/bioinformatics" target="_blank">Coursera: Bioinformatics Specialization (UC San Diego)</a></h3>
+        <p>Covers algorithms, genomics, and computational biology. Perfect for students interested in the data and dry lab side of biotech.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <div class="bb-resource-thumb-label">edX</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.edx.org/" target="_blank">edX: Regulatory Affairs in the Pharmaceutical Industry</a></h3>
+        <p>Learn how drugs get approved, how to navigate the FDA, and what regulatory teams actually do day to day.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <img src="/assets/images/logo-mitocw.png" alt="MIT OpenCourseWare logo" width="44" height="44">
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://ocw.mit.edu/courses/brain-and-cognitive-sciences/" target="_blank">MIT OpenCourseWare: Biology of Mental Health</a></h3>
+        <p>Explores neuroscience, drug development for psychiatric conditions, and the intersection of biotech and mental health. Completely free.</p>
       </div>
     </div>
   </div>
@@ -455,6 +564,33 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-resource-info">
         <h3>"Spillover" by David Quammen</h3>
         <p>How infectious diseases jump from animals to humans. Prescient, terrifying, and beautifully written.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card bb-book-card">
+      <div class="bb-book-thumb">
+        <div class="bb-book-thumb-label">Sapiens</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3>"Sapiens" by Yuval Noah Harari</h3>
+        <p>A sweeping history of humankind that puts biology, medicine, and biotechnology in deep historical context. Essential reading for understanding why biotech matters.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card bb-book-card">
+      <div class="bb-book-thumb">
+        <div class="bb-book-thumb-label">Feynman</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3>"Surely You're Joking, Mr. Feynman!" by Richard Feynman</h3>
+        <p>A Nobel Prize-winning physicist's memoir about curiosity, experimentation, and what it means to think like a scientist. Surprisingly funny and genuinely inspiring.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card bb-book-card">
+      <div class="bb-book-thumb">
+        <div class="bb-book-thumb-label">Selfish Gene</div>
+      </div>
+      <div class="bb-resource-info">
+        <h3>"The Selfish Gene" by Richard Dawkins</h3>
+        <p>A foundational text in evolutionary biology that reshaped how scientists think about genes, behavior, and life itself. Challenging but rewarding.</p>
       </div>
     </div>
   </div>
