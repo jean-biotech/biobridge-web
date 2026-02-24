@@ -156,15 +156,27 @@ p {
   }
 }
 
-// Logo — in Minimal Mistakes, .site-logo IS the <img> element (not a wrapper)
+// .site-logo is the <a> wrapper around the logo <img> (not the img itself).
+// The MM theme applies `max-height: 2em` to .site-logo img — we must target
+// the img directly to override that and get the correct rendered size.
 .site-logo {
-  height: 46px;
-  width: auto;
-  display: block; // prevent inline baseline gap that can cause upward drift
-  transition: transform 0.25s ease, opacity 0.25s ease;
+  display: flex;        // turn anchor into flex container so img centers inside it
+  align-items: center;  // vertically center the img within the anchor
+  height: auto;         // let the img drive the anchor height; don't over-constrain
+  line-height: 0;       // collapse line-box leading that adds phantom vertical space
+
+  img {
+    height: 46px;       // size the actual <img>, not just the anchor wrapper
+    width: auto;
+    max-height: none;   // override theme's default max-height: 2em on .site-logo img
+    display: block;     // remove inline baseline gap
+    vertical-align: middle;
+  }
 
   @media (min-width: 769px) {
-    height: 48px;
+    img {
+      height: 48px;
+    }
   }
 }
 
@@ -194,7 +206,8 @@ p {
 }
 
 .greedy-nav {
-  align-items: center; // vertically center site-title and nav links within the bar
+  display: flex;        // explicitly declare flex (theme sets this, but reinforce it)
+  align-items: center;  // vertically center all children: logo, title, nav links
 
   a {
     font-size: 1.07rem; // ~16px at 15px base
