@@ -351,11 +351,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Readout Loud</div>
+        <div class="bb-resource-thumb-label">Nature</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.statnews.com/tag/the-readout-loud/" target="_blank">The Readout Loud (STAT News)</a></h3>
-        <p>Two journalists break down the biggest biotech news stories of the week. Conversational, smart, and accessible.</p>
+        <h3><a href="https://www.nature.com/nature/podcast" target="_blank">Nature Podcast</a></h3>
+        <p>Weekly episodes from one of the world's top scientific journals, covering the biggest discoveries in biology, medicine, and beyond.</p>
       </div>
     </div>
     <div class="bb-resource-card">
