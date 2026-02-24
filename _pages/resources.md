@@ -282,7 +282,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-resource-thumb-label">Wall St Biotech</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="#" target="_blank">Wall Street Biotech</a></h3>
+        <h3><a href="https://www.wsj.com/tech/biotech" target="_blank">Wall Street Journal: Biotech</a></h3>
         <p>Covers biotech stocks, funding rounds, and market-moving clinical trial results. Great for understanding the business side of the industry.</p>
       </div>
     </div>
@@ -342,11 +342,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">BioBoss</div>
+        <img src="/assets/images/hidden-brain.png" alt="Hidden Brain logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
-        <h3><a href="#" target="_blank">BioBoss</a></h3>
-        <p>Interviews with biotech executives and founders on how they built their careers and companies. Great for anyone interested in the industry side.</p>
+        <h3><a href="https://hiddenbrain.org/" target="_blank">Hidden Brain</a></h3>
+        <p>Explores the unconscious patterns that drive human behavior — including how scientists think, make decisions, and navigate uncertainty. Surprisingly relevant for anyone in research.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -464,6 +464,33 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/c/veritasium" target="_blank">Veritasium</a></h3>
         <p>Science and engineering deep dives, thoughtful, well-produced, and always surprising.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <img src="/assets/images/nvidia-biotech-video.png" alt="Why Nvidia, Google and Microsoft Are Betting Billions on Biotech's AI Future thumbnail" width="44" height="44">
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://youtu.be/Xzw7TXdXYtk" target="_blank">Why Nvidia, Google and Microsoft Are Betting Billions on Biotech's AI Future</a></h3>
+        <p>A clear breakdown of why the biggest tech companies are pouring billions into biotech and what it means for the future of the industry.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <img src="/assets/images/birth-of-biotech-video.png" alt="The Birth of Biotech video thumbnail" width="44" height="44">
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.youtube.com/watch?v=naqbi_qVoVY" target="_blank">The Birth of Biotech | Recombinant DNA, Genentech, and Insulin Analogs</a></h3>
+        <p>The origin story of the modern biotech industry — how recombinant DNA technology and Genentech changed medicine forever. Essential history for any biotech student.</p>
+      </div>
+    </div>
+    <div class="bb-resource-card">
+      <div class="bb-resource-thumb">
+        <img src="/assets/images/jared-friedman-video.png" alt="Jared Friedman video thumbnail" width="44" height="44">
+      </div>
+      <div class="bb-resource-info">
+        <h3><a href="https://www.youtube.com/watch?v=C1DlZWfI6rk" target="_blank">Jared Friedman — Advice for Hard-tech and Biotech Founders</a></h3>
+        <p>YC partner Jared Friedman shares honest advice for anyone building a hard-tech or biotech company. Great perspective on the startup side of the industry.</p>
       </div>
     </div>
   </div>
