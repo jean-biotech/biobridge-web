@@ -160,22 +160,24 @@ p {
 .site-logo {
   height: 46px;
   width: auto;
+  display: block; // prevent inline baseline gap that can cause upward drift
   transition: transform 0.25s ease, opacity 0.25s ease;
 
   @media (min-width: 769px) {
-    height: 54px;
+    height: 48px;
   }
 }
 
 .site-title {
   font-weight: 700 !important;
-  font-size: 1.55rem !important;
+  font-size: 1.47rem !important; // ~22px at 15px base
   letter-spacing: -0.01em;
   color: $bb-navy !important;
-  padding: 14px 0;
+  padding: 12px 0; // vertical breathing room without over-stretching navbar
   display: inline-flex;
-  align-items: center;
+  align-items: center; // vertically center logo img and text within the link
   gap: 12px;
+  line-height: 1;
 
   &:hover {
     color: $bb-green !important;
@@ -185,13 +187,15 @@ p {
   }
 
   @media (min-width: 769px) {
-    font-size: 1.75rem !important;
-    padding: 16px 0;
+    font-size: 1.53rem !important; // ~23px at 15px base
+    padding: 12px 0;
     gap: 14px;
   }
 }
 
 .greedy-nav {
+  align-items: center; // vertically center site-title and nav links within the bar
+
   a {
     font-size: 0.93rem; // reduced from 1.07rem to reclaim space after logo enlargement
     font-weight: 500;
