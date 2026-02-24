@@ -351,11 +351,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Readout Loud</div>
+        <img src="/assets/images/nature-podcast.png" alt="Nature Podcast logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.statnews.com/tag/the-readout-loud/" target="_blank">The Readout Loud (STAT News)</a></h3>
-        <p>Two journalists break down the biggest biotech news stories of the week. Conversational, smart, and accessible.</p>
+        <h3><a href="https://www.nature.com/nature/articles?type=nature-podcast" target="_blank">Nature Podcast</a></h3>
+        <p>The weekly podcast from one of the world's most respected scientific journals. Covers breakthrough research, emerging science, and what it means for medicine and society.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -417,8 +417,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-resource-thumb-label">Atlantic</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.theatlantic.com/" target="_blank">The Atlantic: The Promise of mRNA</a></h3>
-        <p>A clear and compelling explanation of how mRNA technology went from obscure research to saving millions of lives. Great context for understanding the COVID vaccine revolution.</p>
+        <h3><a href="https://www.theatlantic.com/ideas/archive/2021/03/how-mrna-technology-could-change-world/618431/" target="_blank">The Atlantic: How mRNA Technology Could Change the World</a></h3>
+        <p>A compelling look at how mRNA technology went from obscure lab research to one of the most important medical breakthroughs in history. Essential reading for understanding the future of medicine.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -426,8 +426,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-resource-thumb-label">Wired</div>
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.wired.com/" target="_blank">Wired: Inside the CRISPR Revolution</a></h3>
-        <p>An accessible deep dive into how gene editing works and what it means for medicine, agriculture, and the future of life itself.</p>
+        <h3><a href="https://www.wired.com/story/wired-guide-to-crispr/" target="_blank">The WIRED Guide to CRISPR</a></h3>
+        <p>WIRED's definitive guide to CRISPR gene editing — how it works, where it came from, and what it means for the future of medicine, agriculture, and life itself.</p>
       </div>
     </div>
   </div>
