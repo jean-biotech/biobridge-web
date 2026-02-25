@@ -144,7 +144,7 @@ p {
   background-color: $bb-white;
   border-bottom: 1px solid $bb-border;
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
-  padding: 0;
+  padding: 0.5rem 0;
 
   .masthead__inner-wrap {
     max-width: 100%;
@@ -166,14 +166,14 @@ p {
   margin: 0;
 
   img {
-    height: 46px;
+    height: 58px;
     width: auto;
     display: block; // removes baseline descender gap
     margin: 0;
     transition: transform 0.25s ease, opacity 0.25s ease;
 
     @media (min-width: 769px) {
-      height: 48px;
+      height: 64px;
     }
   }
 
@@ -184,7 +184,7 @@ p {
 
 .site-title {
   font-weight: 700 !important;
-  font-size: 1.47rem !important; // ~22px at 15px base
+  font-size: 1.55rem !important; // ~23px at 15px base
   letter-spacing: -0.01em;
   color: $bb-navy !important;
   padding: 0;
@@ -198,7 +198,7 @@ p {
   }
 
   @media (min-width: 769px) {
-    font-size: 1.53rem !important; // ~23px at 15px base
+    font-size: 1.63rem !important; // ~24px at 15px base
     padding: 0;
   }
 }
@@ -207,7 +207,7 @@ p {
   align-items: center; // vertically center site-title and nav links within the bar
 
   a {
-    font-size: 0.93rem; // reduced from 1.07rem to reclaim space after logo enlargement
+    font-size: 0.97rem;
     font-weight: 500;
     letter-spacing: 0.01em;
     transition: color 0.2s ease;
