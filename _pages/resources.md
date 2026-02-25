@@ -279,7 +279,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Wall St Biotech</div>
+        <img src="/assets/images/logo-wsj.png" alt="Wall Street Journal logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wsj.com/tech/biotech" target="_blank">Wall Street Journal: Biotech</a></h3>
@@ -288,7 +288,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Endpoints</div>
+        <img src="/assets/images/logo-endpoints.png" alt="Endpoints News logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://endpts.com/" target="_blank">Bio Newsletter by Endpoints News</a></h3>
@@ -297,7 +297,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Nature</div>
+        <img src="/assets/images/logo-nature.png" alt="Nature logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.nature.com/briefing/signup/" target="_blank">Nature Briefing</a></h3>
@@ -360,7 +360,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Ologies</div>
+        <img src="/assets/images/logo-ologies.png" alt="Ologies logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.alieward.com/ologies" target="_blank">Ologies with Alie Ward</a></h3>
@@ -378,7 +378,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Pipeline</div>
+        <img src="/assets/images/logo-pipeline.png" alt="In the Pipeline logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.science.org/blogs/pipeline" target="_blank">In the Pipeline — Derek Lowe</a></h3>
@@ -405,7 +405,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Fortune</div>
+        <img src="/assets/images/logo-fortune.png" alt="Fortune logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://fortune.com/2023/03/31/ai-cure-cancer-chatgpt-drug-discovery/" target="_blank">Fortune: "Will AI Cure Cancer?"</a></h3>
@@ -414,7 +414,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Atlantic</div>
+        <img src="/assets/images/logo-atlantic.png" alt="The Atlantic logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.theatlantic.com/ideas/archive/2021/03/how-mrna-technology-could-change-world/618431/" target="_blank">The Atlantic: How mRNA Technology Could Change the World</a></h3>
@@ -423,7 +423,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Wired</div>
+        <img src="/assets/images/logo-wired.png" alt="WIRED logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wired.com/story/wired-guide-to-crispr/" target="_blank">The WIRED Guide to CRISPR</a></h3>
@@ -532,7 +532,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">Coursera</div>
+        <img src="/assets/images/logo-coursera.png" alt="Coursera logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.coursera.org/specializations/bioinformatics" target="_blank">Coursera: Bioinformatics Specialization (UC San Diego)</a></h3>
@@ -541,7 +541,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
-        <div class="bb-resource-thumb-label">edX</div>
+        <img src="/assets/images/logo-edx.png" alt="edX logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.edx.org/" target="_blank">edX: Regulatory Affairs in the Pharmaceutical Industry</a></h3>
@@ -595,7 +595,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card bb-book-card">
       <div class="bb-book-thumb">
-        <div class="bb-book-thumb-label">Sapiens</div>
+        <img src="/assets/images/book-sapiens.png" alt="Sapiens book cover">
       </div>
       <div class="bb-resource-info">
         <h3>"Sapiens" by Yuval Noah Harari</h3>
@@ -604,7 +604,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card bb-book-card">
       <div class="bb-book-thumb">
-        <div class="bb-book-thumb-label">Feynman</div>
+        <img src="/assets/images/book-feynman.png" alt="Surely You're Joking Mr. Feynman book cover">
       </div>
       <div class="bb-resource-info">
         <h3>"Surely You're Joking, Mr. Feynman!" by Richard Feynman</h3>
@@ -613,7 +613,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </div>
     <div class="bb-resource-card bb-book-card">
       <div class="bb-book-thumb">
-        <div class="bb-book-thumb-label">Selfish Gene</div>
+        <img src="/assets/images/book-selfish-gene.png" alt="The Selfish Gene book cover">
       </div>
       <div class="bb-resource-info">
         <h3>"The Selfish Gene" by Richard Dawkins</h3>
