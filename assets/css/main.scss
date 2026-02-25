@@ -160,7 +160,8 @@ p {
 .site-logo {
   height: 46px;
   width: auto;
-  display: block; // prevent inline baseline gap that can cause upward drift
+  display: inline-block;
+  vertical-align: middle;
   transition: transform 0.25s ease, opacity 0.25s ease;
 
   @media (min-width: 769px) {
@@ -173,7 +174,7 @@ p {
   font-size: 1.47rem !important; // ~22px at 15px base
   letter-spacing: -0.01em;
   color: $bb-navy !important;
-  padding: 12px 0; // vertical breathing room without over-stretching navbar
+  padding: 0;
   display: inline-flex;
   align-items: center; // vertically center logo img and text within the link
   gap: 12px;
@@ -188,7 +189,7 @@ p {
 
   @media (min-width: 769px) {
     font-size: 1.53rem !important; // ~23px at 15px base
-    padding: 12px 0;
+    padding: 0;
     gap: 14px;
   }
 }
@@ -206,7 +207,7 @@ p {
   .visible-links {
     a {
       color: $bb-charcoal;
-      padding: 0.75rem 0.68rem; // reduced horizontal padding from 0.9rem to fit all 6 nav items
+      padding: 0.75rem 0.9rem; // wider padding so FAQ + Get Involved both overflow into hamburger at split-screen
 
       &:hover {
         color: $bb-green;
