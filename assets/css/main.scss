@@ -160,8 +160,10 @@ p {
 .site-logo {
   height: 46px;
   width: auto;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
   margin: 0;
+  align-self: center;
   transition: transform 0.25s ease, opacity 0.25s ease;
 
   @media (min-width: 769px) {
@@ -176,7 +178,8 @@ p {
   color: $bb-navy !important;
   padding: 0;
   display: flex;
-  align-items: center; // vertically center logo img and text within the link
+  align-items: center;
+  align-self: center;
   gap: 12px;
   line-height: 1;
 
