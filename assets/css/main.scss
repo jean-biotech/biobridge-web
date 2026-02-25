@@ -156,19 +156,58 @@ p {
   }
 }
 
-// .site-logo is the <a> wrapper; the <img> is nested inside it with no class.
-// The <img> defaults to vertical-align: baseline which creates a descender gap,
-// making the logo appear to float upward. Fix: target the img directly.
+// .masthead__menu is floated in theme CSS, which collapses its height.
+// Switching to flex makes it a proper block that respects its children's height.
+.masthead__menu {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+// Give the nav an explicit height so there is space to center within.
+// Theme default min-height is only 2em (~30px) which is too small for our logo.
+.greedy-nav {
+  display: flex;
+  align-items: center;
+  min-height: 68px;
+  width: 100%;
+
+  a {
+    font-size: 0.93rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: color 0.2s ease;
+  }
+
+  .visible-links {
+    a {
+      color: $bb-charcoal;
+      padding: 0.75rem 0.9rem;
+
+      &:hover {
+        color: $bb-green;
+      }
+
+      &:before {
+        background: $bb-green;
+      }
+    }
+  }
+}
+
+// .site-logo is the <a> wrapper; the <img> sits inside it with no class.
+// Theme caps the img at max-height: 2rem — override that so our 46/48px shows.
 .site-logo {
-  display: flex !important; // override theme's display: block
+  display: flex !important;
   align-items: center;
   align-self: center;
   margin: 0;
 
   img {
     height: 46px;
+    max-height: none; // override theme's max-height: 2rem
     width: auto;
-    display: block; // removes baseline descender gap
+    display: block;
     margin: 0;
     transition: transform 0.25s ease, opacity 0.25s ease;
 
@@ -184,11 +223,11 @@ p {
 
 .site-title {
   font-weight: 700 !important;
-  font-size: 1.47rem !important; // ~22px at 15px base
+  font-size: 1.47rem !important;
   letter-spacing: -0.01em;
   color: $bb-navy !important;
   padding: 0;
-  display: flex !important; // override theme's display: block
+  display: flex !important;
   align-items: center;
   align-self: center;
   line-height: 1;
@@ -198,34 +237,8 @@ p {
   }
 
   @media (min-width: 769px) {
-    font-size: 1.53rem !important; // ~23px at 15px base
+    font-size: 1.53rem !important;
     padding: 0;
-  }
-}
-
-.greedy-nav {
-  align-items: center; // vertically center site-title and nav links within the bar
-
-  a {
-    font-size: 0.93rem; // reduced from 1.07rem to reclaim space after logo enlargement
-    font-weight: 500;
-    letter-spacing: 0.01em;
-    transition: color 0.2s ease;
-  }
-
-  .visible-links {
-    a {
-      color: $bb-charcoal;
-      padding: 0.75rem 0.9rem; // wider padding so FAQ + Get Involved both overflow into hamburger at split-screen
-
-      &:hover {
-        color: $bb-green;
-      }
-
-      &:before {
-        background: $bb-green;
-      }
-    }
   }
 }
 
