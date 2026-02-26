@@ -472,7 +472,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
   <!-- Product image -->
   <div class="bb-product-img">
-    <img src="/assets/images/blueprint-cover.jpg" alt="The Biotech Blueprint cover">
+    <img src="/assets/images/blueprint-cover.png" alt="The Biotech Blueprint cover">
   </div>
 
   <!-- Product details -->
