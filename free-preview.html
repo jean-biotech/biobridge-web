@@ -62,29 +62,20 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran �
       padding: 0 24px;
     }
 
-    /* ─── Header strip ─── */
-    .site-header {
-      width: 100%;
-      background: var(--green-dark);
-      padding: 20px 24px;
-      display: flex;
-      justify-content: center;
-      margin-bottom: 0;
-    }
-
-    .site-header img {
-      height: 44px;
-      width: auto;
-      display: block;
-    }
-
     /* ─── Hero block ─── */
     .hero {
       width: 100%;
       background: linear-gradient(160deg, var(--green-dark) 0%, var(--green-mid) 100%);
-      padding: 64px 24px 72px;
+      padding: 40px 24px 72px;
       display: flex;
       justify-content: center;
+    }
+
+    .hero-logo {
+      display: block;
+      height: 48px;
+      width: auto;
+      margin: 0 auto 36px;
     }
 
     .hero-inner {
@@ -424,16 +415,12 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran �
 </head>
 <body>
 
-  <!-- ── Logo header ── -->
-  <header class="site-header">
-    <a href="https://biotechbridge.org" aria-label="BioBridge Home">
-      <img src="/assets/images/BioBridge.png" alt="BioBridge logo" />
-    </a>
-  </header>
-
-  <!-- ── Hero ── -->
+  <!-- ── Hero (logo + headline unified) ── -->
   <section class="hero">
     <div class="hero-inner">
+      <a href="https://biotechbridge.org" aria-label="BioBridge Home">
+        <img src="/assets/images/BioBridge.png" alt="BioBridge logo" class="hero-logo" />
+      </a>
       <span class="eyebrow">Free Chapter Download</span>
       <h1>Get the Free Preview of<br /><em>The Biotech Blueprint</em></h1>
       <p class="hero-sub">
@@ -464,16 +451,10 @@ description: "Download a free chapter from The Biotech Blueprint by Jean Tran �
       <h2 class="preview-title">Chapter 4: The Cold Outreach Playbook</h2>
       <div class="divider"></div>
       <p class="preview-text">
-        Most people send cold messages and hear nothing back. Chapter 4 breaks down why
-        — and shows you exactly what to say instead. You'll see the real subject lines,
+        Most people send cold messages and hear nothing back. Chapter 4 breaks down why—and shows you exactly what to say instead. You'll see the real subject lines,
         message structures, and follow-up timing that generated responses from Directors
         and VPs at companies like Pfizer and Johnson &amp; Johnson, and partners at top
         life sciences consulting firms.
-      </p>
-      <p class="preview-text">
-        This isn't theory. It's a tested playbook with the actual language that works in
-        biotech — because biotech professionals respond differently than people in other
-        industries, and most outreach advice gets that completely wrong.
       </p>
 
       <div class="chapter-badge">
