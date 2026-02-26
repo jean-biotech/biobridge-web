@@ -69,32 +69,18 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 2rem;
 }
 
-/* Product image placeholder */
+/* Product image */
 .bb-product-img {
-  background: linear-gradient(145deg, #e0ebe2, #d4e8d9);
-  border: 1px dashed rgba(45,95,63,0.3);
   border-radius: 8px;
-  padding: 2rem 1.25rem;
-  text-align: center;
-  color: var(--bb-gray);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 500;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
+  overflow: hidden;
   min-height: 180px;
 }
-.bb-product-img-label {
-  display: inline-block;
-  background: rgba(45,95,63,0.1);
-  border: 1px dashed rgba(45,95,63,0.3);
-  border-radius: 5px;
-  padding: 0.35rem 0.85rem;
-  letter-spacing: 0.02em;
-  font-size: 0.75rem;
+.bb-product-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Product card */
@@ -486,8 +472,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
   <!-- Product image -->
   <div class="bb-product-img">
-    <div class="bb-product-img-label">Blueprint Cover / Preview</div>
-    <div style="font-size:0.72rem; color: var(--bb-gray); margin-top:0.2rem;">Placeholder. Final mockup coming.</div>
+    <img src="/assets/images/blueprint-cover.png" alt="The Biotech Blueprint cover">
   </div>
 
   <!-- Product details -->
@@ -513,10 +498,9 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
     <p class="bb-section-label">Get the Guide</p>
     <div class="bb-price-row">
-      <span class="bb-price-tag">$22</span>
+      <span class="bb-price-tag">$27</span>
     </div>
-    <a href="#" class="bb-buy-btn">Purchase on Gumroad</a>
-    <p class="bb-coming-soon-note">Link coming soon; guide in final review.</p>
+    <a href="https://tranquility120.gumroad.com/l/the-biotech-blueprint" class="bb-buy-btn gumroad-button" data-gumroad-product-id="the-biotech-blueprint">Purchase on Gumroad</a>
   </div>
 
 </div>
