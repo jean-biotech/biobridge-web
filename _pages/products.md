@@ -464,7 +464,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- International callout — resume/CV context -->
 <div class="bb-international-callout">
   <div class="bb-intl-header">🌍 Outside the US?</div>
-  <p>Canada, the UK, and Australia typically use CVs (curriculum vitae) rather than resumes, and formatting expectations differ — CVs are often longer, include more detail on academic history, and may include a personal statement. The resume materials in the Biotech Blueprint are formatted for US applications. The frameworks and principles apply internationally, but you may want to adapt the formatting to match local conventions in your country.</p>
+  <p>Canada, the UK, and Australia typically use CVs (curriculum vitae) rather than resumes, and formatting expectations differ—CVs are often longer, include more detail on academic history, and may include a personal statement. The resume materials in the Biotech Blueprint are formatted for US applications. The frameworks and principles apply internationally, but you may want to adapt the formatting to match local conventions in your country.</p>
 </div>
 
 <!-- MAIN PRODUCT LAYOUT -->

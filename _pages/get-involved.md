@@ -237,11 +237,14 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <div class="bb-contact-section">
   <h2>Stay Connected</h2>
   <div class="bb-contact-links">
-    <a href="mailto:contact@biobridge.org" class="bb-contact-link">
-      <i class="fas fa-envelope"></i> contact@biobridge.org
+    <a href="mailto:jeans.connects@gmail.com" class="bb-contact-link">
+      <i class="fas fa-envelope"></i> jeans.connects@gmail.com
     </a>
     <a href="https://github.com/jean-biotech/biobridge" target="_blank" class="bb-contact-link">
       <i class="fab fa-github"></i> GitHub
+    </a>
+    <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-contact-link">
+      <i class="fab fa-linkedin"></i> LinkedIn
     </a>
   </div>
   <p class="bb-feedback-note">See something that could be better? Have an idea for a new resource or page? We are constantly improving BioBridge based on feedback from students and professionals. Let us know what would make this more useful for you.</p>
