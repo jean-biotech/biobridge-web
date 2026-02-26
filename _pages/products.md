@@ -503,9 +503,9 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       <li><strong>A pivot story roadmap based on a real transition from pre-dental to biotech:</strong> with the specific steps, reframing strategies, and application materials that made it work.</li>
       <li><strong>An interview prep guide with actual questions asked at biotech companies, organized by role type:</strong> with guidance on how to approach each one.</li>
       <li><strong>A curated list of biotech-friendly professors and labs organized by research area:</strong> for students trying to get into research without existing connections.</li>
-      <li><strong>A beginner's guide to reading a scientific paper, step by step:</strong> no science background assumed.</li>
-      <li><strong>Four roadmaps for four starting points:</strong> high school student, non-biology college major, career changer, and graduate student.</li>
-      <li><strong>The most common mistakes people make applying to biotech roles:</strong> and exactly how to fix them.</li>
+      <li><strong>A career quiz to help identify which biotech role fits your background and goals:</strong> with tailored next steps based on your results.</li>
+      <li><strong>A complete career timeline and entry roadmap:</strong> mapping out exactly what to do at each stage, from your first research experience to your first industry role.</li>
+      <li><strong>A full interview prep roadmap covering the entire hiring arc:</strong> from application to offer, with what to expect at each stage and how to prepare for it.</li>
     </ul>
 
     <p class="bb-section-label">Who It's For</p>
@@ -533,11 +533,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <h2>Coming Soon</h2>
   <div class="bb-roadmap-item">
     <div class="bb-roadmap-dot"></div>
-    <p><strong>Mentorship Program Access</strong>—Connect directly with biotech professionals who have been where you are and can help you figure out the next step.</p>
+    <p><strong>Mentorship Program Access</strong>: Connect directly with biotech professionals who have been where you are and can help you figure out the next step.</p>
   </div>
   <div class="bb-roadmap-item">
     <div class="bb-roadmap-dot"></div>
-    <p><strong>BioBridge High School Program Initiative at Thomas Jefferson University:</strong> A structured educational program bringing biotech literacy directly into high school classrooms — modeled after initiatives like First Generation Investors, with the goal of giving students hands-on exposure to the industry before college.</p>
+    <p><strong>BioBridge High School Program Initiative at Thomas Jefferson University:</strong> A structured educational program bringing biotech literacy directly into high school classrooms—modeled after initiatives like First Generation Investors, with the goal of giving students hands-on exposure to the industry before college.</p>
   </div>
 </div>
 
