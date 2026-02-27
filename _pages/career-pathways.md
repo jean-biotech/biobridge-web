@@ -947,7 +947,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 <!-- International callout — career structure note -->
 <div class="bb-international-callout">
-  <div class="bb-intl-header">🌍 Outside the US?</div>
+  <div class="bb-intl-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Outside the US?</div>
   <p>The biotech industry structure differs internationally. Europe and Asia have more publicly funded research conducted through universities and government institutes, with fewer venture-backed startups than you'd find in Boston or the Bay Area. In the UK, Germany, and the Netherlands, many biotech roles are embedded within academic medical centers or government research councils. If you're outside the US, look for roles with national research institutes (e.g., the Wellcome Sanger Institute, EMBL, or RIKEN in Japan) alongside commercial opportunities.</p>
 </div>
 
@@ -1105,13 +1105,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
     <div class="bb-future-card bb-flip-card">
       <div class="bb-flip-front">
-        <span class="bb-flip-icon">🤖</span>
+        <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span>
         <h3>AI &amp; Drug Discovery</h3>
         <p class="bb-flip-teaser">AlphaFold changed what computational biology teams can do in months. New career paths are emerging fast at the ML–biology intersection.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
-        <h3>🤖 AI &amp; Drug Discovery</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> AI &amp; Drug Discovery</h3>
         <p>AlphaFold's protein structure predictions changed what computational biology teams can accomplish in months rather than years. AI-assisted clinical trial design is reducing the time it takes to identify patient cohorts and predict drug responses. New roles are emerging at the intersection of machine learning and wet lab science—computational biologists, AI research scientists, and data engineers focused on genomics pipelines are among the fastest-growing positions in pharma and early-stage biotech. You don't need to be a programmer to contribute: biology domain expertise is increasingly what distinguishes useful AI tools from ones that fail in practice.</p>
         <a href="https://www.statnews.com" class="bb-flip-back-link" target="_blank" rel="noopener">Explore on STAT News →</a>
         <span class="bb-flip-close">← Click to flip back</span>
@@ -1120,13 +1120,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
     <div class="bb-future-card bb-flip-card">
       <div class="bb-flip-front">
-        <span class="bb-flip-icon">🧫</span>
+        <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg></span>
         <h3>Synthetic Biology</h3>
         <p class="bb-flip-teaser">Engineering organisms for fragrances, therapeutics, and industrial materials. Biomanufacturing is pulling in serious investment and a new category of roles.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
-        <h3>🧫 Synthetic Biology</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg> Synthetic Biology</h3>
         <p>Companies like Ginkgo Bioworks have built platform-level infrastructure for engineering organisms to produce everything from fragrances to industrial chemicals to therapeutic proteins. Biomanufacturing—using engineered microbes and cell lines to produce products that previously required petroleum chemistry or animal agriculture—is attracting significant investment. Roles range from metabolic engineering and strain development to process scale-up and fermentation operations. Synthetic biology also intersects with food, materials, and agriculture, making it one of the broader application areas for biology training outside traditional pharma.</p>
         <a href="https://www.nature.com" class="bb-flip-back-link" target="_blank" rel="noopener">Read on Nature →</a>
         <span class="bb-flip-close">← Click to flip back</span>
@@ -1135,13 +1135,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
     <div class="bb-future-card bb-flip-card">
       <div class="bb-flip-front">
-        <span class="bb-flip-icon">🔬</span>
+        <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg></span>
         <h3>Longevity &amp; Aging Biotech</h3>
         <p class="bb-flip-teaser">VC interest in aging science is real and growing. Here's what it means for early-career researchers entering this scientifically exciting niche.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
-        <h3>🔬 Longevity &amp; Aging Biotech</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg> Longevity &amp; Aging Biotech</h3>
         <p>Venture capital interest in longevity science has grown substantially, with firms like Calico (backed by Alphabet) and Unity Biotechnology pursuing interventions targeting the biology of aging itself rather than individual diseases. The field remains scientifically early-stage, but it's generating roles in translational research, clinical development, and biomarker science. For students interested in this space, a strong foundation in cell biology, metabolism, or genetics—combined with an understanding of the long and uncertain clinical timelines involved—puts you ahead of most applicants entering this niche.</p>
         <a href="https://www.nia.nih.gov" class="bb-flip-back-link" target="_blank" rel="noopener">Explore at NIA (NIH) →</a>
         <span class="bb-flip-close">← Click to flip back</span>
@@ -1150,13 +1150,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
     <div class="bb-future-card bb-flip-card">
       <div class="bb-flip-front">
-        <span class="bb-flip-icon">🧬</span>
+        <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 16 1.5 1.5"/><path d="m14 8-1.5-1.5"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m16.5 10.5 1 1"/><path d="m17 6-2.891-2.891"/><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="m20 9 .891.891"/><path d="M3.109 14.109 4 15"/><path d="m6.5 12.5 1 1"/><path d="m7 18 2.891 2.891"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/></svg></span>
         <h3>Personalized Medicine &amp; Diagnostics</h3>
         <p class="bb-flip-teaser">Sequencing costs have dropped dramatically. Companion diagnostics are now FDA-required for many oncology drugs. The clinical genomics job market is expanding.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
-        <h3>🧬 Personalized Medicine &amp; Diagnostics</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="m10 16 1.5 1.5"/><path d="m14 8-1.5-1.5"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m16.5 10.5 1 1"/><path d="m17 6-2.891-2.891"/><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="m20 9 .891.891"/><path d="M3.109 14.109 4 15"/><path d="m6.5 12.5 1 1"/><path d="m7 18 2.891 2.891"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/></svg> Personalized Medicine &amp; Diagnostics</h3>
         <p>Genomic sequencing costs have dropped dramatically, making population-scale genomics programs feasible. Companion diagnostics—tests that determine whether a patient will respond to a specific therapy—are now required for many oncology drug approvals. Liquid biopsy, which detects cancer-related DNA fragments in blood rather than tissue, is reshaping early detection. Roles in this space include clinical genomics scientists, bioinformatics analysts, regulatory affairs specialists focused on IVD (in vitro diagnostics), and commercial teams that work with oncologists and hospital systems to implement these tools in clinical practice.</p>
         <a href="https://www.genome.gov" class="bb-flip-back-link" target="_blank" rel="noopener">Explore at genome.gov →</a>
         <span class="bb-flip-close">← Click to flip back</span>
@@ -1165,13 +1165,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
     <div class="bb-future-card bb-flip-card" style="grid-column: 1 / -1;">
       <div class="bb-flip-front">
-        <span class="bb-flip-icon">🧪</span>
+        <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></svg></span>
         <h3>How AI Is Changing (Not Eliminating) Wet Lab Roles</h3>
         <p class="bb-flip-teaser">The most common student concern—addressed directly. AI accelerates hypothesis generation; it doesn't pipette, troubleshoot assays, or navigate biological unpredictability.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
-        <h3>🧪 How AI Is Changing (Not Eliminating) Wet Lab Roles</h3>
+        <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></svg> How AI Is Changing (Not Eliminating) Wet Lab Roles</h3>
         <p>A common concern among students is that AI will automate laboratory work and reduce the need for bench scientists. This misreads what AI actually does in a biotech context. AI accelerates hypothesis generation and data interpretation—it does not yet pipette, culture cells, troubleshoot failed assays, or navigate the physical unpredictability of biological systems. What is changing: scientists spend less time on routine data analysis and more time on experimental design, interpretation, and cross-functional communication. The human skills that remain essential are precisely the ones that are hardest to automate: deep domain intuition, the ability to recognize when something unexpected in your data is noise versus signal, and the judgment to know when to abandon a hypothesis and why. If anything, the growing role of AI in biotech increases the premium on scientists who can both run experiments and engage meaningfully with computational outputs—a combination that is currently rare and therefore valuable.</p>
         <a href="https://www.nature.com" class="bb-flip-back-link" target="_blank" rel="noopener">Read on Nature →</a>
         <span class="bb-flip-close">← Click to flip back</span>
