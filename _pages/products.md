@@ -502,7 +502,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
     <p class="bb-section-label">Get the Guide</p>
     <div class="bb-price-row">
-      <span class="bb-price-tag">$27</span>
+      <span class="bb-price-tag">$37</span>
     </div>
     <a href="https://tranquility120.gumroad.com/l/the-biotech-blueprint" class="bb-buy-btn gumroad-button" data-gumroad-product-id="the-biotech-blueprint">Purchase on Gumroad</a>
   </div>
@@ -514,19 +514,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <h2>Why a Paid Guide?</h2>
   <p>I spent months figuring out what no one explains clearly: which resume format actually gets interviews, how to cold email a professor and hear back, what to say in your first biotech internship application. A lot of it was trial and error. The Blueprint is what came out of that process: my actual materials, annotated and explained, alongside roadmaps I developed from my own experience as a student navigating this field.</p>
   <p>Everything on this website (the career pages, the resource library, the FAQ) is free and always will be. The Blueprint is for people who want everything in one place, with more depth, in a format they can save and return to. If you want experience-backed guidance rather than another generic article, this is it.</p>
-</div>
-
-<!-- COMING SOON -->
-<div class="bb-roadmap">
-  <h2>Coming Soon</h2>
-  <div class="bb-roadmap-item">
-    <div class="bb-roadmap-dot"></div>
-    <p><strong>Mentorship Program Access</strong>: Connect directly with biotech professionals who have been where you are and can help you figure out the next step.</p>
-  </div>
-  <div class="bb-roadmap-item">
-    <div class="bb-roadmap-dot"></div>
-    <p><strong>BioBridge High School Program Initiative at Thomas Jefferson University:</strong> A structured educational program bringing biotech literacy directly into high school classrooms—modeled after initiatives like First Generation Investors, with the goal of giving students hands-on exposure to the industry before college.</p>
-  </div>
 </div>
 
 <!-- FREE PREVIEW CARD -->
@@ -548,6 +535,19 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <div class="bb-international-callout">
   <div class="bb-intl-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Outside the US?</div>
   <p>Canada, the UK, and Australia typically use CVs (curriculum vitae) rather than resumes, and formatting expectations differ—CVs are often longer, include more detail on academic history, and may include a personal statement. The resume materials in the Biotech Blueprint are formatted for US applications. The frameworks and principles apply internationally, but you may want to adapt the formatting to match local conventions in your country.</p>
+</div>
+
+<!-- COMING SOON -->
+<div class="bb-roadmap">
+  <h2>Coming Soon</h2>
+  <div class="bb-roadmap-item">
+    <div class="bb-roadmap-dot"></div>
+    <p><strong>Mentorship Program Access</strong>: Connect directly with biotech professionals who have been where you are and can help you figure out the next step.</p>
+  </div>
+  <div class="bb-roadmap-item">
+    <div class="bb-roadmap-dot"></div>
+    <p><strong>BioBridge High School Program Initiative at Thomas Jefferson University:</strong> A structured educational program bringing biotech literacy directly into high school classrooms—modeled after initiatives like First Generation Investors, with the goal of giving students hands-on exposure to the industry before college.</p>
+  </div>
 </div>
 
 <p class="bb-contact-note">Questions about the guide? Email <a href="mailto:jeans.connects@gmail.com">jeans.connects@gmail.com</a></p>
