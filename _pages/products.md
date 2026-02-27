@@ -467,7 +467,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 </style>
 
 <div class="bb-page-hero">
-  <img src="/assets/images/BioBridge.png" alt="BioBridge" class="bb-hero-logo" />
   <h1>BioBridge Guides</h1>
   <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
 </div>
