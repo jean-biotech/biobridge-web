@@ -502,7 +502,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
     <p class="bb-section-label">Get the Guide</p>
     <div class="bb-price-row">
-      <span class="bb-price-tag">$24</span>
+      <span class="bb-price-tag">$20</span>
     </div>
     <a href="https://tranquility120.gumroad.com/l/the-biotech-blueprint" class="bb-buy-btn gumroad-button" data-gumroad-product-id="the-biotech-blueprint">Purchase on Gumroad</a>
   </div>
