@@ -471,6 +471,21 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <p>Structured, experience-backed guidance for anyone figuring out their path into biotech.</p>
 </div>
 
+<!-- FREE PREVIEW CARD -->
+<div class="bb-preview-card">
+  <p class="bb-preview-eyebrow">Try Before You Buy</p>
+  <h2>Get a Free Preview &rarr;</h2>
+  <p>Not sure if the Blueprint is right for you? Download a free sample and see the level of detail, annotation, and practical guidance you can expect throughout the full guide.</p>
+  <div class="bb-preview-sample">
+    <div class="bb-preview-sample-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
+    <div class="bb-preview-sample-info">
+      <strong>Free Sample: The Cold Email Template</strong>
+      <span>The exact email framework that got responses from senior people at major biotech and pharma companies—annotated line by line.</span>
+    </div>
+    <a href="/free-preview" class="bb-preview-btn">Get Free Preview &rarr;</a>
+  </div>
+</div>
+
 <!-- MAIN PRODUCT LAYOUT -->
 <div class="bb-product-layout">
 
@@ -514,21 +529,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <h2>Why a Paid Guide?</h2>
   <p>I spent months figuring out what no one explains clearly: which resume format actually gets interviews, how to cold email a professor and hear back, what to say in your first biotech internship application. A lot of it was trial and error. The Blueprint is what came out of that process: my actual materials, annotated and explained, alongside roadmaps I developed from my own experience as a student navigating this field.</p>
   <p>Everything on this website (the career pages, the resource library, the FAQ) is free and always will be. The Blueprint is for people who want everything in one place, with more depth, in a format they can save and return to. If you want experience-backed guidance rather than another generic article, this is it.</p>
-</div>
-
-<!-- FREE PREVIEW CARD -->
-<div class="bb-preview-card">
-  <p class="bb-preview-eyebrow">Try Before You Buy</p>
-  <h2>Get a Free Preview &rarr;</h2>
-  <p>Not sure if the Blueprint is right for you? Download a free sample and see the level of detail, annotation, and practical guidance you can expect throughout the full guide.</p>
-  <div class="bb-preview-sample">
-    <div class="bb-preview-sample-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></div>
-    <div class="bb-preview-sample-info">
-      <strong>Free Sample: The Cold Email Template</strong>
-      <span>The exact email framework that got responses from senior people at major biotech and pharma companies—annotated line by line.</span>
-    </div>
-    <a href="/free-preview" class="bb-preview-btn">Get Free Preview &rarr;</a>
-  </div>
 </div>
 
 <!-- International callout — resume/CV context -->
