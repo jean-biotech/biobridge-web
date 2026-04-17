@@ -64,10 +64,15 @@ Use this exact schema:
     "<another gap>",
     "<up to 5 total, minimum 1>"
   ],
-  "suggestions": [
-    "<actionable suggestion: something specific the student can do or highlight to strengthen this application>",
-    "<another suggestion>",
-    "<up to 5 total, minimum 2>"
+  "coverLetterTips": [
+    "<specific tip for what to emphasize, what story to tell, or what to address proactively in the cover letter>",
+    "<another tip>",
+    "<up to 4 total, minimum 2>"
+  ],
+  "actionItems": [
+    "<concrete action the student can take before submitting: a skill to highlight, a project to mention, a gap to address>",
+    "<another action>",
+    "<up to 4 total, minimum 2>"
   ],
   "keywords": {
     "matched": ["<biotech term, technique, or skill appearing in both JD and resume>"],
