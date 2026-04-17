@@ -905,8 +905,9 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 <script>
 (function () {
   'use strict';
-  var MAX  = 8000;
-  var CIRC = 326.73;
+  var MAX        = 8000;
+  var CIRC       = 326.73;
+  var WORKER_URL = 'https://biobridge-reviewer.YOUR_SUBDOMAIN.workers.dev';
 
   var jdEl        = document.getElementById('bb-jd');
   var resumeEl    = document.getElementById('bb-resume');
@@ -1025,38 +1026,6 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     setTimeout(function () { animateScore(data.matchScore); }, 100);
   }
 
-  // ---- Mock data (replaced by real worker call after deployment) ----
-  var MOCK = {
-    matchScore: 68,
-    matchLabel: 'Good Match',
-    summary: 'Your RNA-seq experience and Python proficiency directly address this role\'s core computational requirements, making you a competitive candidate. However, the JD emphasizes scRNA-seq specifically and familiarity with Seurat/Scanpy\u2014tools not mentioned in your resume\u2014which represent the main gaps to address.',
-    strengths: [
-      'Direct RNA-seq experience from the Chen Lab aligns with the team\'s transcriptomics focus.',
-      'Python skills (pandas, NumPy) match the JD\'s requirement for scripting and data wrangling.',
-      'GPA of 3.7 and biochemistry coursework demonstrate strong quantitative foundations.',
-      'Poster presentation at SACNAS shows ability to communicate complex findings clearly.'
-    ],
-    gaps: [
-      'No mention of single-cell RNA-seq (scRNA-seq)\u2014listed as a preferred qualification.',
-      'Seurat and Scanpy are absent; these are the dominant scRNA-seq analysis frameworks.',
-      'No cloud computing experience listed; the JD references AWS-based data pipelines.'
-    ],
-    coverLetterTips: [
-      'Open with your RNA-seq project and draw an explicit line to their transcriptomics pipeline work.',
-      'Acknowledge you haven\'t used Seurat yet, but cite your pandas/R fluency as evidence you can ramp quickly.',
-      'Reference the SACNAS poster to show you can distill complex data for non-specialist audiences.'
-    ],
-    actionItems: [
-      'Complete a Seurat or Scanpy tutorial on a public scRNA-seq dataset and add it to your resume.',
-      'Reference the role\'s disease area (oncology) explicitly in your application materials.',
-      'Ask your PI about cloud computing access\u2014even basic AWS S3 familiarity is worth listing.'
-    ],
-    keywords: {
-      matched: ['RNA-seq', 'Python', 'bioinformatics', 'pandas', 'molecular biology', 'genomics'],
-      missing: ['scRNA-seq', 'Seurat', 'Scanpy', 'AWS', 'STAR aligner', 'DESeq2', 'cell clustering']
-    }
-  };
-
   // ---- Submit ----
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -1076,7 +1045,25 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 
     hideValidation();
     showState('loading');
-    setTimeout(function () { renderResults(MOCK); }, 2000);
+
+    fetch(WORKER_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ jobDescription: jd, resumeText: resume })
+    })
+    .then(function (res) {
+      return res.json().then(function (data) {
+        if (!res.ok) throw new Error(data.error || 'Analysis service unavailable. Please try again.');
+        return data;
+      });
+    })
+    .then(function (data) {
+      renderResults(data);
+    })
+    .catch(function (err) {
+      showState('form');
+      showValidation(err.message || 'Something went wrong. Please try again.');
+    });
   });
 
   // ---- Try again ----
