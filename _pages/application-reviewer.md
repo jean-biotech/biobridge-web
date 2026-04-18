@@ -907,7 +907,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
   'use strict';
   var MAX        = 8000;
   var CIRC       = 326.73;
-  var WORKER_URL = 'https://biobridge-reviewer.YOUR_SUBDOMAIN.workers.dev';
+  var WORKER_URL = 'https://biobridge-reviewer.jennifertranpk.workers.dev';
 
   var jdEl        = document.getElementById('bb-jd');
   var resumeEl    = document.getElementById('bb-resume');
