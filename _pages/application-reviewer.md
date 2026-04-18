@@ -425,10 +425,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-score-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
+  border-top: 3px solid var(--bb-green-accent);
   border-radius: 10px;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.09);
   padding: 1.75rem 1.5rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 1.25rem;
 }
 .bb-score-inner {
   display: flex;
@@ -530,16 +531,20 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
   overflow: hidden;
 }
+.bb-detail-card--green { border-top: 3px solid var(--bb-green-accent); }
+.bb-detail-card--amber { border-top: 3px solid var(--bb-amber); }
+.bb-detail-card--teal  { border-top: 3px solid var(--bb-teal); }
+.bb-detail-card--navy  { border-top: 3px solid var(--bb-navy); }
 .bb-card-header {
   display: flex;
   align-items: center;
   gap: 0.65rem;
   padding: 0.9rem 1.25rem;
   border-bottom: 1px solid var(--bb-border);
-  background: var(--bb-off-white);
+  background: var(--bb-green-bg-subtle);
 }
 .bb-card-icon {
   width: 28px;
@@ -550,10 +555,10 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   align-items: center;
   justify-content: center;
 }
-.bb-card-icon--green { background: rgba(45,95,63,0.1); }
-.bb-card-icon--amber { background: rgba(180,83,9,0.1); }
-.bb-card-icon--teal  { background: rgba(14,116,144,0.1); }
-.bb-card-icon--navy  { background: rgba(26,26,46,0.07); }
+.bb-card-icon--green { background: rgba(45,95,63,0.13); }
+.bb-card-icon--amber { background: rgba(180,83,9,0.13); }
+.bb-card-icon--teal  { background: rgba(14,116,144,0.13); }
+.bb-card-icon--navy  { background: rgba(26,26,46,0.10); }
 .bb-card-title {
   font-family: 'Inter', sans-serif;
   font-size: 0.69rem;
@@ -571,12 +576,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-result-item {
   display: flex;
   gap: 0.6rem;
-  padding: 0.6rem 1.25rem;
-  border-bottom: 1px solid #f8fafc;
+  padding: 0.65rem 1.25rem;
+  border-bottom: 1px solid #f1f5f9;
   font-family: 'Inter', sans-serif;
   font-size: 0.84rem;
-  color: var(--bb-text-secondary);
-  line-height: 1.6;
+  color: var(--bb-charcoal);
+  line-height: 1.65;
 }
 .bb-result-item:last-child { border-bottom: none; }
 .bb-item-marker {
@@ -600,9 +605,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
   border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
   overflow: hidden;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 .bb-kw-body {
   padding: 1.1rem 1.25rem;
@@ -687,7 +692,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     Free Tool &middot; Powered by Claude
   </div>
   <h1>AI Application Reviewer</h1>
-  <p>Paste a biotech job description and your resume — Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
+  <p>Paste a biotech job description and your resume—Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
 </div>
 
 <div class="bb-steps">
@@ -702,7 +707,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
     <div class="bb-step-num">2</div>
     <div class="bb-step-text">
       <strong>Paste your resume</strong>
-      <span>Plain text works best — copy directly from your Word doc or PDF.</span>
+      <span>Plain text works best—copy directly from your Word doc or PDF.</span>
     </div>
   </div>
   <div class="bb-step">
@@ -735,7 +740,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
           <div class="bb-form-group">
             <label class="bb-field-label" for="bb-jd">Job Description</label>
-            <p class="bb-field-hint">Paste the full posting — include the requirements section and any preferred qualifications.</p>
+            <p class="bb-field-hint">Paste the full posting—include the requirements section and any preferred qualifications.</p>
             <textarea
               id="bb-jd"
               class="bb-textarea"
@@ -831,7 +836,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 
   <div class="bb-detail-grid">
 
-    <div class="bb-detail-card">
+    <div class="bb-detail-card bb-detail-card--green">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--green">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D5F3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -841,7 +846,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
       <ul id="bb-strengths-list" class="bb-result-list"></ul>
     </div>
 
-    <div class="bb-detail-card">
+    <div class="bb-detail-card bb-detail-card--amber">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--amber">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -851,7 +856,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
       <ul id="bb-gaps-list" class="bb-result-list"></ul>
     </div>
 
-    <div class="bb-detail-card">
+    <div class="bb-detail-card bb-detail-card--teal">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--teal">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
@@ -861,7 +866,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
       <ul id="bb-cover-list" class="bb-result-list"></ul>
     </div>
 
-    <div class="bb-detail-card">
+    <div class="bb-detail-card bb-detail-card--navy">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--navy">
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -893,7 +898,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
   </div>
 
   <div class="bb-results-footer">
-    <p class="bb-disclaimer">AI-generated analysis &mdash; use as a starting point, not a definitive assessment. Results may not capture all your experience or the full context of the role.</p>
+    <p class="bb-disclaimer">AI-generated analysis&mdash;use as a starting point, not a definitive assessment. Results may not capture all your experience or the full context of the role.</p>
     <button type="button" id="bb-try-again" class="bb-try-again-btn">
       <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.61"/></svg>
       Try Another Application
