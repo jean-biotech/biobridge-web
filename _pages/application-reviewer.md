@@ -644,6 +644,36 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 /* ============================================
+   SHARE BUTTON
+   ============================================ */
+.bb-share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: transparent;
+  color: var(--bb-green-accent);
+  border: 1px solid rgba(58,125,92,0.35);
+  border-radius: 5px;
+  padding: 0.45rem 0.9rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  margin-top: 0.9rem;
+}
+.bb-share-btn:hover {
+  background: var(--bb-green-bg-subtle);
+  border-color: var(--bb-green-accent);
+}
+.bb-share-btn.bb-share-copied {
+  color: var(--bb-green);
+  border-color: var(--bb-green-accent);
+  background: var(--bb-green-bg);
+  cursor: default;
+}
+
+/* ============================================
    RESULTS FOOTER
    ============================================ */
 .bb-results-footer {
@@ -825,6 +855,10 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
       <div class="bb-score-info">
         <span id="bb-score-label" class="bb-score-label">&nbsp;</span>
         <p id="bb-score-summary" class="bb-score-summary"></p>
+        <button type="button" id="bb-share-btn" class="bb-share-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+          Copy shareable summary
+        </button>
       </div>
     </div>
   </div>
@@ -920,6 +954,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
   var loadingSec  = document.getElementById('bb-loading');
   var resultsSec  = document.getElementById('bb-results');
   var tryAgainBtn = document.getElementById('bb-try-again');
+  var shareBtn    = document.getElementById('bb-share-btn');
 
   // ---- Char counters ----
   function updateCounter(el, ctrEl) {
@@ -1013,9 +1048,38 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     document.getElementById('bb-kw-missing').innerHTML = chips(missing, 'bb-kw-missing');
   }
 
+  // ---- Share ----
+  function buildShareText(data) {
+    var score = data.matchScore;
+    var label = data.matchLabel || '';
+    var title = data.jobTitle  || null;
+    var co    = data.company   || null;
+    var url   = 'biotechbridge.org/application-reviewer/';
+    var base  = 'I got a ' + score + '/100 ' + label;
+    if (title && co) return base + ' for ' + title + ' at ' + co + '\u2014analyzed by BioBridge \u00b7 ' + url;
+    if (title)       return base + ' for ' + title + '\u2014analyzed by BioBridge \u00b7 ' + url;
+    return base + '\u2014analyzed by BioBridge \u00b7 ' + url;
+  }
+
+  var CLIPBOARD_ICON = shareBtn.innerHTML;
+
+  shareBtn.addEventListener('click', function () {
+    var text = shareBtn.dataset.shareText;
+    if (!text) return;
+    navigator.clipboard.writeText(text).then(function () {
+      shareBtn.classList.add('bb-share-copied');
+      shareBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+      setTimeout(function () {
+        shareBtn.classList.remove('bb-share-copied');
+        shareBtn.innerHTML = CLIPBOARD_ICON;
+      }, 2000);
+    });
+  });
+
   function renderResults(data) {
     document.getElementById('bb-score-label').textContent   = data.matchLabel || '';
     document.getElementById('bb-score-summary').textContent = data.summary    || '';
+    shareBtn.dataset.shareText = buildShareText(data);
     renderList('bb-strengths-list', data.strengths,       'bb-item-marker--green', '\u2713');
     renderList('bb-gaps-list',      data.gaps,            'bb-item-marker--amber', '!');
     renderList('bb-cover-list',     data.coverLetterTips, 'bb-item-marker--teal',  '\u2192');
