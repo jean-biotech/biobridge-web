@@ -53,6 +53,8 @@ Use this exact schema:
 {
   "matchScore": <integer 0-100>,
   "matchLabel": "<exactly one of: 'Poor Match', 'Fair Match', 'Good Match', 'Strong Match'>",
+  "jobTitle": "<the position title from the JD, e.g. 'Regulatory Affairs Intern' — use null if not clearly stated>",
+  "company": "<the company or organization name from the JD — use null if not clearly stated>",
   "summary": "<2-3 sentences: candid overall assessment referencing specific role requirements and what the resume does/doesn't show>",
   "strengths": [
     "<specific strength citing actual resume content that aligns with this JD — be concrete, not generic>",
