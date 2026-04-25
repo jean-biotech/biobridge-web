@@ -5,6 +5,8 @@ main:
     url: /career-pathways/
   - title: "Guides"
     url: /products/
+  - title: "Tools"
+    url: /application-reviewer/
   - title: "Resources"
     url: /resources/
   - title: "FAQ"
