@@ -5,81 +5,27 @@ permalink: /application-reviewer/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
-  --bb-teal: #0E7490;
-  --bb-amber: #b45309;
-}
-
-/* ============================================
-   HERO
-   ============================================ */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
-}
-.bb-hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  padding: 0.2rem 0.6rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 0.75rem;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
+  --bb-teal: #5C6335;
+  --bb-amber: #5C6335;
 }
 
 /* ============================================
@@ -97,7 +43,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-border);
 }
 .bb-section-divider-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -107,52 +53,40 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 /* ============================================
-   HOW IT WORKS — 3-step strip
+   HOW IT WORKS: numbered editorial list
    ============================================ */
 .bb-steps {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
+  border-top: 1px solid var(--bb-border);
   margin-bottom: 2rem;
 }
-@media (min-width: 600px) {
-  .bb-steps { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-}
 .bb-step {
-  background: var(--bb-green-bg-subtle);
-  border: 1px solid var(--bb-border);
-  border-radius: 8px;
-  padding: 1rem 1.1rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 1.1rem 0.25rem;
+  border-bottom: 1px solid var(--bb-border);
+}
+@media (min-width: 600px) {
+  .bb-step { grid-template-columns: 3rem 1fr; padding: 1.25rem 0.5rem; }
 }
 .bb-step-num {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  background: var(--bb-green-accent);
-  color: var(--bb-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.95rem;
   font-weight: 700;
-  margin-top: 1px;
+  color: var(--bb-text-secondary);
 }
 .bb-step-text strong {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--bb-navy);
-  margin-bottom: 0.15rem;
+  margin-bottom: 0.2rem;
 }
 .bb-step-text span {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.79rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.83rem;
   color: var(--bb-text-secondary);
   line-height: 1.5;
 }
@@ -163,20 +97,19 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-form-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.06);
+  border-radius: 0;
   overflow: hidden;
   margin-bottom: 2rem;
 }
 .bb-form-card-top {
   height: 4px;
-  background: linear-gradient(90deg, var(--bb-green-dark), var(--bb-green-accent));
+  background: var(--bb-green-accent);
 }
 .bb-form-card-body {
   padding: 1.75rem 1.5rem;
 }
 .bb-form-eyebrow {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -185,7 +118,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0 0 0.35rem;
 }
 .bb-form-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--bb-navy);
@@ -193,7 +126,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   letter-spacing: -0.01em;
 }
 .bb-form-subhead {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.85rem;
   color: var(--bb-text-secondary);
   line-height: 1.65;
@@ -214,7 +147,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 /* Individual form group */
 .bb-form-group { display: flex; flex-direction: column; }
 .bb-field-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -223,7 +156,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 0.25rem;
 }
 .bb-field-hint {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
   color: var(--bb-gray);
   margin-bottom: 0.5rem;
@@ -233,33 +166,31 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   width: 100%;
   min-height: 220px;
   border: 1.5px solid var(--bb-border);
-  border-radius: 7px;
+  border-radius: 0;
   padding: 0.85rem 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.84rem;
   line-height: 1.65;
   color: var(--bb-charcoal);
   background: var(--bb-white);
   resize: vertical;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  transition: border-color 0.2s ease;
   box-sizing: border-box;
 }
 .bb-textarea:focus {
   outline: none;
   border-color: var(--bb-green-accent);
-  box-shadow: 0 0 0 3px rgba(58,125,92,0.1);
 }
 .bb-textarea::placeholder {
-  color: #aab4c0;
+  color: #5B5745;
   font-size: 0.81rem;
   line-height: 1.55;
 }
 .bb-textarea.bb-field-error {
   border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220,38,38,0.08);
 }
 .bb-char-counter {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.72rem;
   color: var(--bb-gray);
   margin-top: 0.35rem;
@@ -276,9 +207,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   gap: 0.5rem;
   background: #fef2f2;
   border: 1px solid #fecaca;
-  border-radius: 6px;
+  border-radius: 0;
   padding: 0.65rem 1rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   color: #dc2626;
   margin-bottom: 1rem;
@@ -299,13 +230,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-green-accent);
   color: var(--bb-white);
   border: none;
-  border-radius: 6px;
+  border-radius: 0;
   padding: 0.875rem 2.75rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.92rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.22s ease;
+  transition: background 0.2s ease;
   letter-spacing: 0.01em;
   width: 100%;
   justify-content: center;
@@ -315,16 +246,13 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-analyze-btn:hover:not(:disabled) {
   background: var(--bb-green);
-  transform: translateY(-1px);
-  box-shadow: 0 5px 18px rgba(45,95,63,0.28);
 }
-.bb-analyze-btn:active:not(:disabled) { transform: translateY(0); }
 .bb-analyze-btn:disabled {
   opacity: 0.55;
   cursor: not-allowed;
 }
 .bb-btn-note {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   color: var(--bb-gray);
   display: flex;
@@ -335,15 +263,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   width: 5px;
   height: 5px;
   background: var(--bb-green-accent);
-  border-radius: 50%;
+  border-radius: 0;
   display: inline-block;
 }
 
 /* Desktop tweaks */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-form-card-body { padding: 2rem 2.25rem; }
   .bb-form-heading { font-size: 1.4rem; }
   .bb-textarea { min-height: 260px; }
@@ -365,20 +290,20 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   height: 44px;
   border: 3px solid var(--bb-green-bg);
   border-top-color: var(--bb-green-accent);
-  border-radius: 50%;
+  border-radius: 0;
   animation: bb-spin 0.85s linear infinite;
   margin-bottom: 1.25rem;
 }
 @keyframes bb-spin { to { transform: rotate(360deg); } }
 .bb-loading-heading {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--bb-navy);
   margin: 0 0 0.4rem;
 }
 .bb-loading-sub {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.83rem;
   color: var(--bb-text-secondary);
   line-height: 1.65;
@@ -393,23 +318,23 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-loading-dots span {
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--bb-green-accent);
   animation: bb-dot-pulse 1.4s ease-in-out infinite;
 }
 .bb-loading-dots span:nth-child(2) { animation-delay: 0.2s; }
 .bb-loading-dots span:nth-child(3) { animation-delay: 0.4s; }
 @keyframes bb-dot-pulse {
-  0%, 80%, 100% { opacity: 0.2; transform: scale(0.85); }
-  40%           { opacity: 1;   transform: scale(1); }
+  0%, 80%, 100% { opacity: 0.2; }
+  40%           { opacity: 1; }
 }
 
 /* ============================================
-   RESULTS — FADE IN
+   RESULTS: FADE IN
    ============================================ */
 @keyframes bb-fade-up {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 .bb-results {
   display: none;
@@ -426,8 +351,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
   border-top: 3px solid var(--bb-green-accent);
-  border-radius: 10px;
-  box-shadow: 0 4px 28px rgba(0,0,0,0.09);
+  border-radius: 0;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.25rem;
 }
@@ -474,7 +398,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   justify-content: center;
 }
 .bb-ring-num {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1;
@@ -482,7 +406,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   transition: color 0.3s ease;
 }
 .bb-ring-denom {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.67rem;
   color: var(--bb-gray);
   font-weight: 500;
@@ -492,20 +416,20 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-score-label {
   display: inline-block;
   padding: 0.28rem 0.85rem;
-  border-radius: 4px;
-  font-family: 'Inter', sans-serif;
+  border-radius: 2px;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 0.85rem;
-  background: rgba(14,116,144,0.1);
-  border: 1px solid rgba(14,116,144,0.25);
+  background: rgba(92,99,53,0.1);
+  border: 1px solid rgba(92,99,53,0.25);
   color: var(--bb-teal);
   transition: background 0.3s, border-color 0.3s, color 0.3s;
 }
 .bb-score-summary {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   color: var(--bb-text-secondary);
   line-height: 1.75;
@@ -516,7 +440,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 /* ============================================
-   DETAIL GRID — 2×2
+   DETAIL GRID: 2x2
    ============================================ */
 .bb-detail-grid {
   display: grid;
@@ -530,8 +454,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-detail-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
+  border-radius: 0;
   overflow: hidden;
 }
 .bb-detail-card--green { border-top: 3px solid var(--bb-green-accent); }
@@ -550,17 +473,17 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   width: 28px;
   height: 28px;
   min-width: 28px;
-  border-radius: 6px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.bb-card-icon--green { background: rgba(45,95,63,0.13); }
-.bb-card-icon--amber { background: rgba(180,83,9,0.13); }
-.bb-card-icon--teal  { background: rgba(14,116,144,0.13); }
-.bb-card-icon--navy  { background: rgba(26,26,46,0.10); }
+.bb-card-icon--green { background: rgba(92,99,53,0.13); }
+.bb-card-icon--amber { background: rgba(92,99,53,0.13); }
+.bb-card-icon--teal  { background: rgba(92,99,53,0.13); }
+.bb-card-icon--navy  { background: rgba(36,34,26,0.10); }
 .bb-card-title {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.69rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -577,8 +500,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   display: flex;
   gap: 0.6rem;
   padding: 0.65rem 1.25rem;
-  border-bottom: 1px solid #f1f5f9;
-  font-family: 'Inter', sans-serif;
+  border-bottom: 1px solid var(--bb-border);
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.84rem;
   color: var(--bb-charcoal);
   line-height: 1.65;
@@ -599,13 +522,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-item-marker--navy  { color: var(--bb-navy); }
 
 /* ============================================
-   KEYWORDS CARD — full width
+   KEYWORDS CARD: full width
    ============================================ */
 .bb-keywords-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
+  border-radius: 0;
   overflow: hidden;
   margin-bottom: 1.75rem;
 }
@@ -619,7 +541,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   .bb-kw-body { grid-template-columns: 1fr 1fr; }
 }
 .bb-kw-col-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -631,20 +553,20 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-kw-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .bb-kw-badge {
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 0.22rem 0.65rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
   font-weight: 600;
 }
 .bb-kw-matched {
-  background: rgba(45,95,63,0.08);
-  border: 1px solid rgba(45,95,63,0.2);
+  background: rgba(92,99,53,0.08);
+  border: 1px solid rgba(92,99,53,0.2);
   color: var(--bb-green);
 }
 .bb-kw-missing {
-  background: rgba(180,83,9,0.07);
-  border: 1px solid rgba(180,83,9,0.2);
+  background: rgba(92,99,53,0.07);
+  border: 1px solid rgba(92,99,53,0.2);
   color: var(--bb-amber);
 }
 
@@ -657,14 +579,14 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   gap: 0.4rem;
   background: transparent;
   color: var(--bb-green-accent);
-  border: 1px solid rgba(58,125,92,0.35);
-  border-radius: 5px;
+  border: 1px solid rgba(92,99,53,0.35);
+  border-radius: 0;
   padding: 0.45rem 0.9rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.18s ease;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
   margin-top: 0.9rem;
 }
 .bb-share-btn:hover {
@@ -686,7 +608,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   padding-bottom: 1rem;
 }
 .bb-disclaimer {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   color: var(--bb-gray);
   line-height: 1.65;
@@ -701,47 +623,38 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-white);
   color: var(--bb-green-accent);
   border: 1.5px solid var(--bb-green-accent);
-  border-radius: 6px;
+  border-radius: 0;
   padding: 0.7rem 1.75rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: background 0.2s ease;
 }
 .bb-try-again-btn:hover {
   background: var(--bb-green-bg-subtle);
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(45,95,63,0.15);
 }
 </style>
 
-<div class="bb-page-hero">
-  <div class="bb-hero-badge">
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-    Free Tool &middot; Powered by Claude
-  </div>
-  <h1>AI Application Reviewer</h1>
-  <p>Paste a biotech job description and your resume—Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
-</div>
+{% include page-header.html kicker="APPLICATION TOOL" title="AI Application Reviewer" deck="Paste a biotech job description and your resume: Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit." %}
 
 <div class="bb-steps">
   <div class="bb-step">
-    <div class="bb-step-num">1</div>
+    <div class="bb-step-num">01</div>
     <div class="bb-step-text">
       <strong>Paste the job description</strong>
       <span>Copy the full posting, including requirements and preferred qualifications.</span>
     </div>
   </div>
   <div class="bb-step">
-    <div class="bb-step-num">2</div>
+    <div class="bb-step-num">02</div>
     <div class="bb-step-text">
       <strong>Paste your resume</strong>
-      <span>Plain text works best—copy directly from your Word doc or PDF.</span>
+      <span>Plain text works best. Copy directly from your Word doc or PDF.</span>
     </div>
   </div>
   <div class="bb-step">
-    <div class="bb-step-num">3</div>
+    <div class="bb-step-num">03</div>
     <div class="bb-step-text">
       <strong>Get your analysis</strong>
       <span>Match score, strengths, gaps, and biotech-specific suggestions in about 20 seconds.</span>
@@ -770,7 +683,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
           <div class="bb-form-group">
             <label class="bb-field-label" for="bb-jd">Job Description</label>
-            <p class="bb-field-hint">Paste the full posting—include the requirements section and any preferred qualifications.</p>
+            <p class="bb-field-hint">Paste the full posting. Include the requirements section and any preferred qualifications.</p>
             <textarea
               id="bb-jd"
               class="bb-textarea"
@@ -818,7 +731,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
           </button>
           <span class="bb-btn-note">
             <span class="bb-btn-note-dot"></span>
-            Takes about 15–20 seconds &middot; Your text is not stored
+            Takes about 15 to 20 seconds &middot; Your text is not stored
           </span>
         </div>
 
@@ -830,7 +743,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 <div id="bb-loading" class="bb-loading">
   <div class="bb-spinner"></div>
   <p class="bb-loading-heading">Analyzing your application&hellip;</p>
-  <p class="bb-loading-sub">Claude is reviewing the job description and your resume. This usually takes 15&ndash;20 seconds.</p>
+  <p class="bb-loading-sub">Claude is reviewing the job description and your resume. This usually takes 15 to 20 seconds.</p>
   <div class="bb-loading-dots">
     <span></span><span></span><span></span>
   </div>
@@ -873,7 +786,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--green">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--green">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D5F3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#24221A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
         </div>
         <p class="bb-card-title">Strengths</p>
       </div>
@@ -883,7 +796,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--amber">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--amber">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6335" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         </div>
         <p class="bb-card-title">Gaps</p>
       </div>
@@ -893,7 +806,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--teal">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--teal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6335" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
         </div>
         <p class="bb-card-title">Cover Letter Tips</p>
       </div>
@@ -903,7 +816,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div class="bb-detail-card bb-detail-card--navy">
       <div class="bb-card-header">
         <div class="bb-card-icon bb-card-icon--navy">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#24221A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
         </div>
         <p class="bb-card-title">Action Items</p>
       </div>
@@ -915,7 +828,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
   <div class="bb-keywords-card">
     <div class="bb-card-header">
       <div class="bb-card-icon bb-card-icon--navy">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#24221A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
       </div>
       <p class="bb-card-title">Keyword Match</p>
     </div>
@@ -932,7 +845,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
   </div>
 
   <div class="bb-results-footer">
-    <p class="bb-disclaimer">AI-generated analysis&mdash;use as a starting point, not a definitive assessment. Results may not capture all your experience or the full context of the role.</p>
+    <p class="bb-disclaimer">This is an AI-generated analysis: use it as a starting point, not a definitive assessment. Results may not capture all your experience or the full context of the role.</p>
     <button type="button" id="bb-try-again" class="bb-try-again-btn">
       <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.61"/></svg>
       Try Another Application
@@ -991,9 +904,9 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 
   // ---- Score colors ----
   function scoreColors(s) {
-    if (s >= 76) return { stroke: '#2D5F3F', text: '#2D5F3F', bg: 'rgba(45,95,63,0.1)',    border: 'rgba(45,95,63,0.25)' };
-    if (s >= 51) return { stroke: '#0E7490', text: '#0E7490', bg: 'rgba(14,116,144,0.1)',  border: 'rgba(14,116,144,0.25)' };
-    if (s >= 26) return { stroke: '#d97706', text: '#b45309', bg: 'rgba(180,83,9,0.08)',   border: 'rgba(180,83,9,0.25)' };
+    if (s >= 76) return { stroke: '#24221A', text: '#24221A', bg: 'rgba(92,99,53,0.1)',    border: 'rgba(92,99,53,0.25)' };
+    if (s >= 51) return { stroke: '#5C6335', text: '#3B4223', bg: 'rgba(92,99,53,0.12)',  border: 'rgba(92,99,53,0.3)' };
+    if (s >= 26) return { stroke: '#5C6335', text: '#3B4223', bg: 'rgba(92,99,53,0.08)',   border: 'rgba(92,99,53,0.25)' };
     return         { stroke: '#dc2626', text: '#dc2626', bg: 'rgba(220,38,38,0.08)',   border: 'rgba(220,38,38,0.25)' };
   }
 
@@ -1061,9 +974,9 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     var co    = data.company   || null;
     var url   = 'biotechbridge.org/application-reviewer/';
     var base  = 'I got a ' + score + '/100 ' + label;
-    if (title && co) return base + ' for ' + title + ' at ' + co + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    if (title)       return base + ' for ' + title + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    return base + '\u2014analyzed by BioBridge \u00b7 ' + url;
+    if (title && co) return base + ' for ' + title + ' at ' + co + '. Analyzed by BioBridge \u00b7 ' + url;
+    if (title)       return base + ' for ' + title + '. Analyzed by BioBridge \u00b7 ' + url;
+    return base + '. Analyzed by BioBridge \u00b7 ' + url;
   }
 
   var CLIPBOARD_ICON = shareBtn.innerHTML;
@@ -1085,7 +998,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     document.getElementById('bb-score-label').textContent   = data.matchLabel || '';
     document.getElementById('bb-score-summary').textContent = data.summary    || '';
     shareBtn.dataset.shareText = buildShareText(data);
-    renderList('bb-strengths-list', data.strengths,       'bb-item-marker--green', '\u2713');
+    renderList('bb-strengths-list', data.strengths,       'bb-item-marker--green', '-');
     renderList('bb-gaps-list',      data.gaps,            'bb-item-marker--amber', '!');
     renderList('bb-cover-list',     data.coverLetterTips, 'bb-item-marker--teal',  '\u2192');
     renderList('bb-actions-list',   data.actionItems,     'bb-item-marker--navy',  '\u2192');
@@ -1109,8 +1022,8 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     }
     if (!jd)     { jdEl.classList.add('bb-field-error');     showValidation('Please paste the job description.'); return; }
     if (!resume)  { resumeEl.classList.add('bb-field-error'); showValidation('Please paste your resume text.');    return; }
-    if (jd.length < 100)     { jdEl.classList.add('bb-field-error');     showValidation('The job description looks too short\u2014paste the full posting for accurate results.'); return; }
-    if (resume.length < 100) { resumeEl.classList.add('bb-field-error'); showValidation('The resume text looks too short\u2014paste your full resume for accurate results.');    return; }
+    if (jd.length < 100)     { jdEl.classList.add('bb-field-error');     showValidation('The job description looks too short. Paste the full posting for accurate results.'); return; }
+    if (resume.length < 100) { resumeEl.classList.add('bb-field-error'); showValidation('The resume text looks too short. Paste your full resume for accurate results.');    return; }
 
     hideValidation();
     showState('loading');

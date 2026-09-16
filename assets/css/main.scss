@@ -5,37 +5,29 @@
 @charset "utf-8";
 
 // ============================================================
-// BioBridge Design System — Green Biotech / Professional
-// Scientific green palette with wide desktop layout
-// Refined typographic scale (jefferson.edu / upenn.edu reference)
+// BioBridge Design System — field guide edition
+// Fraunces display / Instrument Sans body. No monospace, no
+// gradients, no shadows, squared corners (0-2px), one flat
+// olive accent. Everything reads from :root custom properties
+// below so pages can tune without touching logic.
 // ============================================================
 
-// Green Biotech Color System
-$bb-green: #2D5F3F;
-$bb-green-accent: #3A7D5C;
-$bb-green-bright: #4CAF50;
-$bb-green-hover: #66BB6A;
-$bb-green-dark: #1A3A28;
-$bb-green-bg: #E8F5E9;
-$bb-green-bg-subtle: #F1F8F4;
-$bb-navy: #1A1A2E;
-$bb-charcoal: #2C3E50;
-$bb-white: #ffffff;
-$bb-off-white: #FAFAFA;
-$bb-gray: #757575;
-$bb-gray-light: #9E9E9E;
-$bb-border: #e2e8f0;
-$bb-text: #1e293b;
+$bb-paper: #EFE6D2;
+$bb-paper-2: #E6DBC2;
+$bb-ink: #24221A;
+$bb-ink-soft: #5B5745;
+$bb-olive: #5C6335;
+$bb-olive-deep: #3B4223;
 
 // Minimal Mistakes overrides
-$background-color: $bb-white !default;
-$text-color: $bb-text !default;
-$primary-color: $bb-green !default;
-$link-color: $bb-green-accent !default;
-$link-color-hover: $bb-green !default;
-$masthead-link-color: $bb-navy !default;
-$masthead-link-color-hover: $bb-green !default;
-$border-color: $bb-border !default;
+$background-color: $bb-paper !default;
+$text-color: $bb-ink !default;
+$primary-color: $bb-olive !default;
+$link-color: $bb-olive !default;
+$link-color-hover: $bb-olive-deep !default;
+$masthead-link-color: $bb-ink !default;
+$masthead-link-color-hover: $bb-olive !default;
+$border-color: rgba(36, 34, 26, 0.22) !default;
 $max-width: 1400px !default;
 
 // Refined typography scale
@@ -52,6 +44,36 @@ $type-size-8: 0.65rem !default;
 @import "minimal-mistakes";
 
 // ============================================================
+// DESIGN TOKENS — the single source of truth for color/type/space.
+// ============================================================
+
+:root {
+  --paper: #EFE6D2;
+  --paper-2: #E6DBC2;
+  --ink: #24221A;
+  --ink-soft: #5B5745;
+
+  --olive: #5C6335;
+  --olive-deep: #3B4223;
+  // lighter olive derivative, used only where text needs to sit on
+  // a flat --olive-deep section and #5C6335 wouldn't have enough
+  // contrast (e.g. small labels on a dark flat block)
+  --olive-on-dark: #AAB388;
+  // rare secondary mark, figure numbers only — never backgrounds/buttons
+  --mustard: #A9781F;
+
+  --line: rgba(36, 34, 26, 0.22);
+  --line-soft: rgba(36, 34, 26, 0.12);
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Instrument Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --radius: 2px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+// ============================================================
 // GLOBAL RESETS & BASE STYLES
 // ============================================================
 
@@ -59,20 +81,146 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 15px; // base down from 16px for tighter scale
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 body {
-  background: $bb-white;
-  color: $bb-text;
-  font-size: 0.9rem;
-  line-height: 1.7;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
-// Refined paragraph sizing
 p {
-  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
   line-height: 1.75;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
+
+// small uppercase labels: Instrument Sans, never monospace
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--olive);
+}
+
+.section-number {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+
+// Editorial drop cap — use on a lead paragraph via <p class="lede">
+.lede::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.4em;
+  font-weight: 500;
+  float: left;
+  line-height: 0.82;
+  padding: 0.05em 0.09em 0 0;
+  color: var(--olive-deep);
+}
+
+// Pull quotes: large serif editorial text, no stripe, no box
+.pull-quote {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(1.5rem, 3.4vw, 2.35rem);
+  line-height: 1.32;
+  color: var(--ink);
+  margin: 1.75rem 0;
+}
+
+// Large serif pull statement (used for in-flow definitions instead
+// of boxed/terminal-styled callouts)
+.pull-statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--ink);
+  line-height: 1.3;
+  margin: 1.5rem 0 0.4rem;
+}
+.pull-caption {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+}
+
+// Figures: images with a short sentence-case caption underneath
+figure.pg-figure {
+  margin: 2rem 0;
+}
+figure.pg-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  display: block;
+}
+figure.pg-figure figcaption {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 0.6rem;
+}
+
+// ============================================================
+// PAGE HEADER — replaces the old dark gradient banner on every
+// interior page. See _includes/page-header.html.
+// ============================================================
+
+.pg-header {
+  margin: 0 0 2.5rem;
+}
+.pg-header .eyebrow {
+  margin-bottom: 0.75rem;
+}
+.pg-header h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+}
+.pg-header__deck {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
+  max-width: 640px;
+}
+.pg-header__rule {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 0;
 }
 
 // ============================================================
@@ -123,7 +271,7 @@ p {
   }
 }
 
-// Sidebar (TOC) — position to the side on desktop
+// Sidebar contents list — de-boxed, no icon, numbered feel
 .sidebar__right {
   @media (min-width: 1024px) {
     position: sticky;
@@ -132,18 +280,18 @@ p {
     width: 240px;
     margin-right: 0;
     padding-left: 1.5rem;
-    border-left: 2px solid $bb-green-bg;
+    border-left: 1px solid var(--line);
   }
 }
 
 // ============================================================
-// MASTHEAD / NAVIGATION — Professional, full-width
+// MASTHEAD / NAVIGATION
 // ============================================================
 
 .masthead {
-  background-color: $bb-white;
-  border-bottom: 1px solid $bb-border;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--line);
+  box-shadow: none;
   padding: 0.5rem 0;
   position: sticky;
   top: 0;
@@ -159,197 +307,306 @@ p {
   }
 }
 
-// .site-logo is the <a> wrapper; the <img> is nested inside it with no class.
-// The <img> defaults to vertical-align: baseline which creates a descender gap,
-// making the logo appear to float upward. Fix: target the img directly.
 .site-logo {
-  display: flex !important; // override theme's display: block
+  display: flex !important;
   align-items: center;
   align-self: center;
   margin: 0;
 
   img {
-    height: 58px;
+    height: 52px;
     width: auto;
-    display: block; // removes baseline descender gap
+    display: block;
     margin: 0;
-    transition: transform 0.25s ease, opacity 0.25s ease;
 
     @media (min-width: 769px) {
-      height: 64px;
+      height: 58px;
     }
-  }
-
-  &:hover img {
-    transform: scale(1.04);
   }
 }
 
 .site-title {
-  font-weight: 700 !important;
-  font-size: 1.55rem !important; // ~23px at 15px base
+  font-family: var(--font-display) !important;
+  font-weight: 600 !important;
+  font-size: 1.55rem !important;
   letter-spacing: -0.01em;
-  color: $bb-navy !important;
+  color: var(--ink) !important;
   padding: 0;
-  display: flex !important; // override theme's display: block
+  display: flex !important;
   align-items: center;
   align-self: center;
   line-height: 1;
 
   &:hover {
-    color: $bb-green !important;
+    color: var(--olive) !important;
   }
 
   @media (min-width: 769px) {
-    font-size: 1.63rem !important; // ~24px at 15px base
+    font-size: 1.63rem !important;
     padding: 0;
   }
 }
 
 .greedy-nav {
-  align-items: center; // vertically center site-title and nav links within the bar
+  align-items: center;
+  background: var(--paper);
 
   a {
-    font-size: 0.97rem;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
     font-weight: 500;
     letter-spacing: 0.01em;
-    transition: color 0.2s ease;
+    transition: color 0.15s ease;
   }
 
   .visible-links {
     a {
-      color: $bb-charcoal;
-      padding: 0.75rem 0.9rem; // wider padding so FAQ + Get Involved both overflow into hamburger at split-screen
+      color: var(--ink-soft);
+      padding: 0.75rem 0.9rem;
 
       &:hover {
-        color: $bb-green;
+        color: var(--olive);
       }
 
       &:before {
-        background: $bb-green;
+        background: var(--olive);
+        height: 2px;
       }
     }
+  }
+
+  button {
+    color: var(--ink);
   }
 }
 
 // ============================================================
-// PAGE TITLES & CONTENT — Refined scale
+// PAGE TITLES & CONTENT
 // ============================================================
 
+// Every interior page now renders its own heading via
+// _includes/page-header.html, so the theme's automatic page__title
+// (which would otherwise duplicate it) is suppressed. page.title
+// itself is left untouched in front matter so <title>/SEO meta stay
+// correct — only the theme's visible, duplicate on-page heading is hidden.
 .page__title {
-  color: $bb-green;
-  font-weight: 700;
-  font-size: 1.5rem;
-  letter-spacing: -0.02em;
+  display: none;
 }
 
 h1 {
-  color: $bb-green;
-  font-size: 1.65rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   line-height: 1.2;
 }
 
 h2 {
-  color: $bb-green;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 1.3rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.3;
 }
 
 h3 {
-  color: $bb-green;
-  font-size: 1rem;
+  font-family: var(--font-display);
+  color: var(--ink);
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
 h4, h5, h6 {
-  color: $bb-green;
-  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: var(--ink);
+  font-size: 0.95rem;
   font-weight: 600;
 }
 
 // ============================================================
-// BUTTONS — Green
+// BUTTONS — flat, squared, color-change-only on hover
 // ============================================================
 
 .btn--primary {
-  background-color: $bb-green-bright !important;
-  color: $bb-white !important;
-  border-radius: 5px;
+  background-color: var(--olive) !important;
+  color: var(--paper) !important;
+  border-radius: var(--radius);
+  font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   letter-spacing: 0.01em;
-  transition: all 0.2s ease;
+  box-shadow: none;
+  transition: background-color 0.15s ease;
 
   &:hover {
-    background-color: $bb-green !important;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba($bb-green, 0.22);
+    background-color: var(--olive-deep) !important;
   }
 }
 
 // ============================================================
-// TOC STYLING — Green theme
+// CONTENTS LIST (theme TOC) — flat, numbered feel, no icon, no box
 // ============================================================
 
 .toc {
-  border: 1px solid $bb-border;
-  border-radius: 6px;
-  background: $bb-green-bg-subtle;
-  font-size: 0.82rem;
+  border: none;
+  border-top: 1px solid var(--line);
+  border-radius: 0;
+  background: transparent;
+  font-size: 0.85rem;
+  box-shadow: none;
 
   .nav__title {
-    background: $bb-green;
-    border-radius: 6px 6px 0 0;
-    font-size: 0.78rem;
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.85rem 0 0.6rem;
+    border-radius: 0;
+
+    // hide the theme's default list icon
+    i, svg {
+      display: none;
+    }
   }
 
   a {
-    color: $bb-charcoal;
-    font-size: 0.82rem;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
 
     &:hover {
-      color: $bb-green;
+      color: var(--olive);
     }
   }
 
   .active {
     a {
-      color: $bb-green !important;
+      color: var(--olive) !important;
       font-weight: 600;
     }
   }
 }
 
 // ============================================================
-// LINKS — Green
+// LINKS
 // ============================================================
 
 a {
-  color: $bb-green-accent;
+  color: var(--olive);
+  transition: color 0.15s ease;
 
   &:hover {
-    color: $bb-green;
+    color: var(--olive-deep);
   }
 }
 
+// ============================================================
+// FOCUS STATES — accessible + on-brand
+// ============================================================
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2.5px solid var(--olive);
+  outline-offset: 2px;
+  border-radius: 0;
+}
 
 // ============================================================
-// FOOTER — Dark green
+// SITE FOOTER
 // ============================================================
 
-.page__footer {
-  background: $bb-green-dark;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.82rem;
+.site-footer {
+  background: var(--ink);
+  color: rgba(239, 230, 210, 0.78);
+  padding: 3rem 1.25rem 2rem;
+}
+.site-footer__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+.site-footer__top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(239, 230, 210, 0.16);
+}
+.site-footer__brand {
+  max-width: 380px;
+}
+.site-footer__brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--paper);
+  margin: 0 0 0.6rem;
+}
+.site-footer__brand-line {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(239, 230, 210, 0.72);
+  line-height: 1.6;
+  margin: 0;
+}
+.site-footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+.site-footer__col h4 {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--olive-on-dark);
+  margin: 0 0 0.85rem;
+}
+.site-footer__col ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.site-footer__col li {
+  margin-bottom: 0.55rem;
+}
+.site-footer__col a {
+  color: rgba(239, 230, 210, 0.82);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  text-decoration: none;
 
-  a {
-    color: rgba(255, 255, 255, 0.8);
-    &:hover {
-      color: $bb-white;
-    }
+  &:hover {
+    color: var(--paper);
   }
+}
+.site-footer__bottom {
+  padding-top: 1.5rem;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(239, 230, 210, 0.55);
+}
+.site-footer__bottom a {
+  color: rgba(239, 230, 210, 0.72);
+  &:hover { color: var(--paper); }
+}
+
+// reset the theme's default footer chrome; our real footer content
+// lives in .site-footer, injected via _includes/footer/custom.html
+.page__footer {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.page__footer-copyright,
+.page__footer-follow {
+  display: none;
 }

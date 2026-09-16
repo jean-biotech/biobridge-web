@@ -1,0 +1,37 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <p class="site-footer__brand-name">BioBridge</p>
+        <p class="site-footer__brand-line">{{ site.description }}</p>
+      </div>
+      <nav class="site-footer__nav" aria-label="Footer">
+        <div class="site-footer__col">
+          <h4>Explore</h4>
+          <ul>
+            {% for link in site.data.navigation.main %}
+            <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Connect</h4>
+          <ul>
+            {% for link in site.footer.links %}
+            <li><a href="{{ link.url }}"{% if link.url contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="site-footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="{{ '/privacy/' | relative_url }}">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <span>&copy; {{ 'now' | date: "%Y" }} BioBridge. Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>.</span>
+    </div>
+  </div>
+</footer>

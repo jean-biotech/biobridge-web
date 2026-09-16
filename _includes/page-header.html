@@ -1,0 +1,11 @@
+{% comment %}
+  Flat field-guide page header. Replaces the old dark gradient banner
+  on every interior page.
+  Usage: {% include page-header.html kicker="CAREERS" title="Careers in Biotechnology" deck="One line description." %}
+{% endcomment %}
+<div class="pg-header">
+  <span class="eyebrow">{{ include.kicker }}</span>
+  <h1>{{ include.title }}</h1>
+  {% if include.deck %}<p class="pg-header__deck">{{ include.deck }}</p>{% endif %}
+  <hr class="pg-header__rule">
+</div>

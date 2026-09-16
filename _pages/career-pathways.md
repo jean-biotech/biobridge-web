@@ -5,65 +5,30 @@ permalink: /career-pathways/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3, h4 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
-  --bb-teal: #0E7490;
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
+  --bb-teal: #5C6335;
 }
 
 /* ============================================
-   CAROUSEL WRAPPER — Full width
+   CAROUSEL WRAPPER (full width)
    ============================================ */
 .bb-carousel-wrap {
   position: relative;
@@ -73,14 +38,14 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   box-sizing: border-box;
 }
 
-/* Navigation arrows — circular, Penn style */
+/* Navigation arrows, circular */
 .bb-carousel-btn {
   position: absolute;
   top: 40%;
   transform: translateY(-50%);
   background: var(--bb-white);
   border: 1.5px solid var(--bb-border);
-  border-radius: 50%;
+  border-radius: 0;
   width: 40px;
   height: 40px;
   display: flex;
@@ -89,30 +54,27 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   cursor: pointer;
   font-size: 1.1rem;
   color: var(--bb-navy);
-  transition: all 0.2s ease;
+  transition: border-color 0.2s ease, color 0.2s ease;
   z-index: 10;
   line-height: 1;
   font-family: Georgia, serif;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   padding: 0;
 }
 .bb-carousel-btn:hover {
   border-color: var(--bb-green-accent);
   color: var(--bb-green-accent);
-  box-shadow: 0 4px 14px rgba(45,95,63,0.2);
 }
 .bb-carousel-btn.prev { left: 0; }
 .bb-carousel-btn.next { right: 0; }
 .bb-carousel-btn:disabled {
   opacity: 0.3;
   cursor: default;
-  box-shadow: none;
 }
 
 /* Carousel viewport */
 .bb-carousel-viewport {
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 0;
 }
 
 /* Cards track */
@@ -122,21 +84,20 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   will-change: transform;
 }
 
-/* Individual card — viewport height constrained */
+/* Individual card (viewport height constrained) */
 .bb-career-slide {
   min-width: 100%;
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
+  border-radius: 0;
   overflow: hidden;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
   display: flex;
   flex-direction: column;
 }
 
-/* Card image — fills width, fixed height */
+/* Card image (fills width, fixed height) */
 .bb-card-img {
-  background: linear-gradient(135deg, #d1e8d8, #e8f4ea);
+  background: var(--bb-off-white);
   border-bottom: 1px solid var(--bb-border);
   width: 100%;
   height: 140px;
@@ -154,11 +115,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-card-img-label {
   display: inline-block;
-  background: rgba(45,95,63,0.1);
-  border: 1px dashed rgba(45,95,63,0.3);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.1);
+  border: 1px dashed rgba(92,99,53,0.3);
+  border-radius: 2px;
   padding: 0.3rem 0.85rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.72rem;
   font-weight: 500;
   color: var(--bb-green);
@@ -172,7 +133,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   flex: 1;
 }
 .bb-card-body h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 1.05rem;
   font-weight: 700;
@@ -185,7 +146,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin-bottom: 0.75rem;
 }
 .bb-detail-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-green);
   font-size: 0.67rem;
   text-transform: uppercase;
@@ -215,7 +176,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   border-top: 1px solid var(--bb-border);
 }
 .bb-companies-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-gray);
   font-size: 0.67rem;
   text-transform: uppercase;
@@ -228,14 +189,14 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   flex-wrap: wrap;
   gap: 0.4rem;
 }
-/* Distinct teal accent for org badges — not the same muted green */
+/* Org badges, olive accent */
 .bb-logo-badge {
   display: inline-block;
-  background: rgba(14,116,144,0.1);
-  border: 1px solid rgba(14,116,144,0.25);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.1);
+  border: 1px solid rgba(92,99,53,0.25);
+  border-radius: 2px;
   padding: 0.25rem 0.65rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
   font-weight: 600;
   color: var(--bb-teal);
@@ -257,19 +218,20 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-dot {
   width: 7px;
   height: 7px;
-  border-radius: 50%;
+  border-radius: 0;
   background: var(--bb-border);
-  transition: all 0.2s ease;
+  transition: background 0.2s ease, width 0.2s ease, height 0.2s ease;
   cursor: pointer;
   border: none;
   padding: 0;
 }
 .bb-dot.active {
   background: var(--bb-green-accent);
-  transform: scale(1.25);
+  width: 9px;
+  height: 9px;
 }
 .bb-carousel-counter {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   color: var(--bb-gray);
   font-weight: 500;
@@ -279,12 +241,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-next-steps {
   background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 1.25rem 1.5rem;
   margin-top: 0.5rem;
 }
 .bb-next-steps h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 0.9rem;
   font-weight: 700;
@@ -307,9 +269,6 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Desktop enhancements */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-card-img { height: 180px; }
   .bb-card-body { padding: 1.5rem 2rem; }
   .bb-carousel-wrap { padding: 0 3.5rem; }
@@ -320,9 +279,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
    CREAM SECTION BACKGROUNDS
    ============================================ */
 .bb-cream-wrap {
-  background: #FAF7F2;
-  border-top: 1px solid #ede8e0;
-  border-bottom: 1px solid #ede8e0;
+  background: var(--bb-off-white);
+  border-top: 1px solid var(--bb-border);
+  border-bottom: 1px solid var(--bb-border);
   margin: 2rem -48px;
   padding: 2rem 48px;
 }
@@ -348,7 +307,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-border);
 }
 .bb-section-divider-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -363,12 +322,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-internship-section {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.5rem;
 }
 .bb-internship-section h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-green);
   font-size: 1.25rem;
   font-weight: 700;
@@ -376,7 +335,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   letter-spacing: -0.02em;
 }
 .bb-internship-section .bb-section-intro {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
   font-size: 0.88rem;
   line-height: 1.75;
@@ -397,11 +356,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
   border-left: 3px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 0;
   padding: 1rem 1.1rem;
 }
 .bb-internship-block h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -410,7 +369,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0 0 0.5rem;
 }
 .bb-internship-block p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.84rem;
   color: var(--bb-text-secondary);
   line-height: 1.7;
@@ -435,11 +394,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-program-badge {
   display: inline-block;
-  background: rgba(45,95,63,0.08);
-  border: 1px solid rgba(45,95,63,0.2);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.08);
+  border: 1px solid rgba(92,99,53,0.2);
+  border-radius: 2px;
   padding: 0.22rem 0.6rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.73rem;
   font-weight: 600;
   color: var(--bb-green);
@@ -451,12 +410,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-future-section {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 10px;
+  border-radius: 0;
   padding: 1.75rem 1.5rem;
   margin-bottom: 1.5rem;
 }
 .bb-future-section h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Fraunces', Georgia, serif;
   color: var(--bb-green);
   font-size: 1.25rem;
   font-weight: 700;
@@ -464,7 +423,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   letter-spacing: -0.02em;
 }
 .bb-future-section .bb-section-intro {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-text-secondary);
   font-size: 0.88rem;
   line-height: 1.75;
@@ -483,18 +442,18 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-future-card {
   background: var(--bb-green-bg-subtle);
   border: 1px solid var(--bb-border);
-  border-radius: 8px;
+  border-radius: 0;
   padding: 1.1rem 1.25rem;
 }
 .bb-future-card h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--bb-navy);
   margin: 0 0 0.6rem;
 }
 .bb-future-card p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.84rem;
   color: var(--bb-text-secondary);
   line-height: 1.75;
@@ -505,15 +464,15 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
    INTERNATIONAL CALLOUT
    ============================================ */
 .bb-international-callout {
-  background: #FAF7F2;
-  border: 1px solid #e8dfd0;
+  background: var(--bb-off-white);
+  border: 1px solid var(--bb-border);
   border-left: 4px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 0;
   padding: 1rem 1.25rem;
   margin: 1.5rem 0;
 }
 .bb-international-callout .bb-intl-header {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -523,7 +482,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   gap: 0.4rem;
 }
 .bb-international-callout p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-style: italic;
   color: var(--bb-text-secondary);
@@ -537,12 +496,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-program-category {
   margin-bottom: 0.45rem;
   border: 1px solid var(--bb-border);
-  border-radius: 5px;
+  border-radius: 0;
   overflow: hidden;
 }
 .bb-program-category summary {
   padding: 0.45rem 0.75rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -550,7 +509,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   list-style: none;
   display: flex;
   align-items: center;
-  background: rgba(45,95,63,0.04);
+  background: rgba(92,99,53,0.04);
   user-select: none;
 }
 .bb-program-category summary::-webkit-details-marker { display: none; }
@@ -568,16 +527,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 /* ============================================
-   FLIP CARDS — Industry Trends
+   FLIP CARDS: Industry Trends
    ============================================ */
 .bb-flip-card {
   cursor: pointer;
   position: relative;
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
-}
-.bb-flip-card:hover {
-  box-shadow: 0 4px 18px rgba(45,95,63,0.15);
-  transform: translateY(-2px);
 }
 .bb-flip-icon {
   font-size: 1.9rem;
@@ -603,8 +557,8 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   letter-spacing: 0.02em;
 }
 .bb-flip-card.is-flipped {
-  background: var(--bb-navy);
-  border-color: var(--bb-navy);
+  background: var(--bb-green-dark);
+  border-color: var(--bb-green-dark);
 }
 .bb-flip-card.is-flipped .bb-flip-front { display: none; }
 .bb-flip-back { display: none; }
@@ -623,12 +577,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-flip-back-link {
   display: inline-block;
   font-size: 0.73rem;
-  color: #66BB6A;
+  color: #96A05A;
   font-weight: 600;
   text-decoration: none;
-  border-bottom: 1px solid rgba(76,175,80,0.4);
+  border-bottom: 1px solid rgba(150,160,90,0.4);
 }
-.bb-flip-back-link:hover { color: #81C784; }
+.bb-flip-back-link:hover { color: var(--bb-white); }
 .bb-flip-close {
   display: block;
   font-size: 0.71rem;
@@ -638,10 +592,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 }
 </style>
 
-<div class="bb-page-hero">
-  <h1>Careers in Biotechnology</h1>
-  <p>There is no single path into biotech. Explore the major routes, one card at a time, with realistic entry points for every background.</p>
-</div>
+{% include page-header.html kicker="CAREER PATHWAYS" title="Careers in Biotechnology" deck="There is no single path into biotech. Explore the major routes, one card at a time, with realistic entry points for every background." %}
 
 <!-- CAROUSEL -->
 <div class="bb-carousel-wrap">
@@ -894,7 +845,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
           <h2>Bioinformatics &amp; Computational Biology</h2>
           <div class="bb-detail">
             <div class="bb-detail-label">What it is</div>
-            <p class="bb-detail-value">Using coding, statistics, and algorithms to analyze biological data—genomics, proteomics, drug discovery, and more.</p>
+            <p class="bb-detail-value">Using coding, statistics, and algorithms to analyze biological data: genomics, proteomics, drug discovery, and more.</p>
           </div>
           <div class="bb-detail">
             <div class="bb-detail-label">Where you'll work</div>
@@ -945,7 +896,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   </ul>
 </div>
 
-<!-- International callout — career structure note -->
+<!-- International callout: career structure note -->
 <div class="bb-international-callout">
   <div class="bb-intl-header"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;flex-shrink:0"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg> Outside the US?</div>
   <p>The biotech industry structure differs internationally. Europe and Asia have more publicly funded research conducted through universities and government institutes, with fewer venture-backed startups than you'd find in Boston or the Bay Area. In the UK, Germany, and the Netherlands, many biotech roles are embedded within academic medical centers or government research councils. If you're outside the US, look for roles with national research institutes (e.g., the Wellcome Sanger Institute, EMBL, or RIKEN in Japan) alongside commercial opportunities.</p>
@@ -961,14 +912,15 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 <div class="bb-cream-wrap">
 <!-- FINDING YOUR FIRST INTERNSHIP -->
 <div class="bb-internship-section">
+  <span class="section-number">01</span>
   <h2>Finding Your First Internship</h2>
-  <p class="bb-section-intro">Your first biotech internship doesn't need to be at Pfizer. It needs to get you in the room. Here's a practical guide to navigating the process—from well-known formal programs to cold outreach to academic labs.</p>
+  <p class="bb-section-intro">Your first biotech internship doesn't need to be at Pfizer. It needs to get you in the room. Here's a practical guide to navigating the process, from well-known formal programs to cold outreach to academic labs.</p>
 
   <div class="bb-internship-grid">
 
     <div class="bb-internship-block">
       <h3>Well-Known Programs to Apply To</h3>
-      <p>These are competitive but well worth applying—they're structured, paid, and recognized by hiring managers. Browse by sector:</p>
+      <p>These are competitive but well worth applying. They're structured, paid, and recognized by hiring managers. Browse by sector:</p>
 
       <details class="bb-program-category">
         <summary>🔬 Research, Pharma &amp; Biotech</summary>
@@ -1027,17 +979,17 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
         </div>
       </details>
 
-      <p style="margin-top:0.65rem;">Check each company's careers page directly—most open applications between October and February for summer positions.</p>
+      <p style="margin-top:0.65rem;">Check each company's careers page directly. Most open applications between October and February for summer positions.</p>
     </div>
 
     <div class="bb-internship-block">
       <h3>Application Timeline</h3>
       <ul>
-        <li><strong>August–October (fall):</strong> Start researching programs. Update your resume. Identify 15–20 target programs and companies.</li>
-        <li><strong>October–December:</strong> Major pharma/biotech applications open. Apply early—most use rolling review.</li>
-        <li><strong>January–February:</strong> Academic lab programs (REU, NIH SIP) open, and startup internship postings spike on LinkedIn. This is also when you should start hearing back from fall applications to major pharma programs—responses typically take 8–12 weeks, so don't panic if your inbox is still quiet.</li>
-        <li><strong>March–April:</strong> Follow-up and interviews. Smaller companies often post well into spring.</li>
-        <li><strong>May–June:</strong> Last-minute opportunities—keep checking even if you haven't heard back from early applications.</li>
+        <li><strong>August to October (fall):</strong> Start researching programs. Update your resume. Identify 15 to 20 target programs and companies.</li>
+        <li><strong>October to December:</strong> Major pharma/biotech applications open. Apply early. Most use rolling review.</li>
+        <li><strong>January to February:</strong> Academic lab programs (REU, NIH SIP) open, and startup internship postings spike on LinkedIn. This is also when you should start hearing back from fall applications to major pharma programs: responses typically take 8 to 12 weeks, so don't panic if your inbox is still quiet.</li>
+        <li><strong>March to April:</strong> Follow-up and interviews. Smaller companies often post well into spring.</li>
+        <li><strong>May to June:</strong> Last-minute opportunities. Keep checking even if you haven't heard back from early applications.</li>
       </ul>
     </div>
 
@@ -1046,11 +998,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <ul>
         <li><strong>Resume:</strong> 1 page, reverse chronological, tailored to each role. Lead with relevant coursework and skills if you don't yet have experience.</li>
         <li><strong>Cover letter:</strong> Short (3 paragraphs). Why this company, why this role, what you bring. Skip generic openers.</li>
-        <li><strong>Research statement (for academic labs):</strong> 1–2 paragraphs on your interests and what you hope to learn.</li>
-        <li><strong>References:</strong> Have 2–3 professors or supervisors ready. Ask them in advance.</li>
+        <li><strong>Research statement (for academic labs):</strong> 1 to 2 paragraphs on your interests and what you hope to learn.</li>
+        <li><strong>References:</strong> Have 2 to 3 professors or supervisors ready. Ask them in advance.</li>
         <li><strong>Writing sample (if requested):</strong> A lab report, class paper, or anything that demonstrates your ability to communicate science clearly.</li>
       </ul>
-      <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--bb-text-secondary); font-style:italic;">Want real examples? <a href="/products/" style="font-style:normal; color:var(--bb-green-accent); font-weight:600;">The Biotech Blueprint</a> includes annotated resume samples, cover letter templates, and cold email scripts built specifically for biotech applications—if you want to see what a strong application actually looks like, start there.</p>
+      <p style="margin-top:0.75rem; font-size:0.82rem; color:var(--bb-text-secondary); font-style:italic;">Want real examples? <a href="/products/" style="font-style:normal; color:var(--bb-green-accent); font-weight:600;">The Biotech Blueprint</a> includes annotated resume samples, cover letter templates, and cold email scripts built specifically for biotech applications. If you want to see what a strong application actually looks like, start there.</p>
     </div>
 
     <div class="bb-internship-block">
@@ -1058,7 +1010,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <ul>
         <li><strong>LinkedIn:</strong> Filter by "Internship" and "Biotech" or "Pharmaceutical." Set alerts for new postings.</li>
         <li><strong>Handshake:</strong> Best for university-specific postings, especially for smaller regional biotech companies that recruit campus-to-campus.</li>
-        <li><strong>Company career pages:</strong> Always check directly—many roles aren't posted on aggregators. Bookmark 10–15 companies you'd want to work for.</li>
+        <li><strong>Company career pages:</strong> Always check directly. Many roles aren't posted on aggregators. Bookmark 10 to 15 companies you'd want to work for.</li>
         <li><strong>University career center:</strong> Often has exclusive postings from alumni-affiliated companies. Ask about biotech-specific fairs.</li>
         <li><strong>Cold outreach:</strong> Email professors with funded labs. A well-written cold email to a principal investigator can get you into a research lab even without a formal posting.</li>
       </ul>
@@ -1068,7 +1020,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <h3>What to Expect: Pharma vs. Startup vs. Gov/Academic</h3>
       <ul>
         <li><strong>Big Pharma (Pfizer, Merck, J&J):</strong> Structured programs, assigned mentors, formal presentations, intern cohort events. Slower-paced, process-heavy. Good for learning how large organizations operate and building a network.</li>
-        <li><strong>Biotech Startup:</strong> Less structure, broader responsibilities, often more hands-on from day one. You may be the only intern. Fast-paced and unpredictable—you'll learn a lot, but you'll need to drive your own experience.</li>
+        <li><strong>Biotech Startup:</strong> Less structure, broader responsibilities, often more hands-on from day one. You may be the only intern. Fast-paced and unpredictable: you'll learn a lot, but you'll need to drive your own experience.</li>
         <li><strong>Government/Academic Lab (NIH, university labs, REU):</strong> Research-focused, usually stipend-based. Excellent for students considering graduate school. Slower publication cycles but deep scientific exposure. Independent project work is common.</li>
       </ul>
     </div>
@@ -1077,9 +1029,9 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <h3>Quick Tips That Actually Help</h3>
       <ul>
         <li>Apply broadly early, then narrow your focus in February. Don't wait for your "dream" company to post before applying anywhere.</li>
-        <li>Tailor your resume keywords to match each job posting—many companies use ATS screening before a human sees your application.</li>
+        <li>Tailor your resume keywords to match each job posting. Many companies use ATS screening before a human sees your application.</li>
         <li>A warm introduction beats a cold application every time. LinkedIn alumni tools and professor connections are underutilized by most students.</li>
-        <li>Don't overlook smaller CROs, CDMOs, and regional biotech companies—they often offer more hands-on work than large programs.</li>
+        <li>Don't overlook smaller CROs, CDMOs, and regional biotech companies. They often offer more hands-on work than large programs.</li>
       </ul>
     </div>
 
@@ -1096,10 +1048,11 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
 
 <!-- WHERE BIOTECH IS HEADING -->
 <div class="bb-future-section">
+  <span class="section-number">02</span>
   <h2>Where Biotech Is Heading</h2>
-  <p class="bb-section-intro">The biotech industry is changing faster than most career guides acknowledge. These five areas are shaping where the jobs, funding, and scientific energy are flowing in the next decade—and what that means for you.</p>
+  <p class="bb-section-intro">The biotech industry is changing faster than most career guides acknowledge. These five areas are shaping where the jobs, funding, and scientific energy are flowing in the next decade, and what that means for you.</p>
 
-  <p style="font-size:0.78rem; color:var(--bb-gray); margin: -0.75rem 0 1.25rem; font-family:'Inter',sans-serif;">Click any card to expand the full picture.</p>
+  <p style="font-size:0.78rem; color:var(--bb-gray); margin: -0.75rem 0 1.25rem; font-family:'Instrument Sans',sans-serif;">Click any card to expand the full picture.</p>
 
   <div class="bb-future-grid">
 
@@ -1107,12 +1060,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-front">
         <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg></span>
         <h3>AI &amp; Drug Discovery</h3>
-        <p class="bb-flip-teaser">AlphaFold changed what computational biology teams can do in months. New career paths are emerging fast at the ML–biology intersection.</p>
+        <p class="bb-flip-teaser">AlphaFold changed what computational biology teams can do in months. New career paths are emerging fast at the intersection of ML and biology.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg> AI &amp; Drug Discovery</h3>
-        <p>AlphaFold's protein structure predictions changed what computational biology teams can accomplish in months rather than years. AI-assisted clinical trial design is reducing the time it takes to identify patient cohorts and predict drug responses. New roles are emerging at the intersection of machine learning and wet lab science—computational biologists, AI research scientists, and data engineers focused on genomics pipelines are among the fastest-growing positions in pharma and early-stage biotech. You don't need to be a programmer to contribute: biology domain expertise is increasingly what distinguishes useful AI tools from ones that fail in practice.</p>
+        <p>AlphaFold's protein structure predictions changed what computational biology teams can accomplish in months rather than years. AI-assisted clinical trial design is reducing the time it takes to identify patient cohorts and predict drug responses. New roles are emerging at the intersection of machine learning and wet lab science: computational biologists, AI research scientists, and data engineers focused on genomics pipelines are among the fastest-growing positions in pharma and early-stage biotech. You don't need to be a programmer to contribute: biology domain expertise is increasingly what distinguishes useful AI tools from ones that fail in practice.</p>
         <a href="https://www.statnews.com" class="bb-flip-back-link" target="_blank" rel="noopener">Explore on STAT News →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1127,7 +1080,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2"/><path d="M6.453 15h11.094"/><path d="M8.5 2h7"/></svg> Synthetic Biology</h3>
-        <p>Companies like Ginkgo Bioworks have built platform-level infrastructure for engineering organisms to produce everything from fragrances to industrial chemicals to therapeutic proteins. Biomanufacturing—using engineered microbes and cell lines to produce products that previously required petroleum chemistry or animal agriculture—is attracting significant investment. Roles range from metabolic engineering and strain development to process scale-up and fermentation operations. Synthetic biology also intersects with food, materials, and agriculture, making it one of the broader application areas for biology training outside traditional pharma.</p>
+        <p>Companies like Ginkgo Bioworks have built platform-level infrastructure for engineering organisms to produce everything from fragrances to industrial chemicals to therapeutic proteins. Biomanufacturing (using engineered microbes and cell lines to produce products that previously required petroleum chemistry or animal agriculture) is attracting significant investment. Roles range from metabolic engineering and strain development to process scale-up and fermentation operations. Synthetic biology also intersects with food, materials, and agriculture, making it one of the broader application areas for biology training outside traditional pharma.</p>
         <a href="https://www.nature.com" class="bb-flip-back-link" target="_blank" rel="noopener">Read on Nature →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1142,7 +1095,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></svg> Longevity &amp; Aging Biotech</h3>
-        <p>Venture capital interest in longevity science has grown substantially, with firms like Calico (backed by Alphabet) and Unity Biotechnology pursuing interventions targeting the biology of aging itself rather than individual diseases. The field remains scientifically early-stage, but it's generating roles in translational research, clinical development, and biomarker science. For students interested in this space, a strong foundation in cell biology, metabolism, or genetics—combined with an understanding of the long and uncertain clinical timelines involved—puts you ahead of most applicants entering this niche.</p>
+        <p>Venture capital interest in longevity science has grown substantially, with firms like Calico (backed by Alphabet) and Unity Biotechnology pursuing interventions targeting the biology of aging itself rather than individual diseases. The field remains scientifically early-stage, but it's generating roles in translational research, clinical development, and biomarker science. For students interested in this space, a strong foundation in cell biology, metabolism, or genetics (combined with an understanding of the long and uncertain clinical timelines involved) puts you ahead of most applicants entering this niche.</p>
         <a href="https://www.nia.nih.gov" class="bb-flip-back-link" target="_blank" rel="noopener">Explore at NIA (NIH) →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1157,7 +1110,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="m10 16 1.5 1.5"/><path d="m14 8-1.5-1.5"/><path d="M15 2c-1.798 1.998-2.518 3.995-2.807 5.993"/><path d="m16.5 10.5 1 1"/><path d="m17 6-2.891-2.891"/><path d="M2 15c6.667-6 13.333 0 20-6"/><path d="m20 9 .891.891"/><path d="M3.109 14.109 4 15"/><path d="m6.5 12.5 1 1"/><path d="m7 18 2.891 2.891"/><path d="M9 22c1.798-1.998 2.518-3.995 2.807-5.993"/></svg> Personalized Medicine &amp; Diagnostics</h3>
-        <p>Genomic sequencing costs have dropped dramatically, making population-scale genomics programs feasible. Companion diagnostics—tests that determine whether a patient will respond to a specific therapy—are now required for many oncology drug approvals. Liquid biopsy, which detects cancer-related DNA fragments in blood rather than tissue, is reshaping early detection. Roles in this space include clinical genomics scientists, bioinformatics analysts, regulatory affairs specialists focused on IVD (in vitro diagnostics), and commercial teams that work with oncologists and hospital systems to implement these tools in clinical practice.</p>
+        <p>Genomic sequencing costs have dropped dramatically, making population-scale genomics programs feasible. Companion diagnostics (tests that determine whether a patient will respond to a specific therapy) are now required for many oncology drug approvals. Liquid biopsy, which detects cancer-related DNA fragments in blood rather than tissue, is reshaping early detection. Roles in this space include clinical genomics scientists, bioinformatics analysts, regulatory affairs specialists focused on IVD (in vitro diagnostics), and commercial teams that work with oncologists and hospital systems to implement these tools in clinical practice.</p>
         <a href="https://www.genome.gov" class="bb-flip-back-link" target="_blank" rel="noopener">Explore at genome.gov →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1167,12 +1120,12 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
       <div class="bb-flip-front">
         <span class="bb-flip-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--bb-green-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></svg></span>
         <h3>How AI Is Changing (Not Eliminating) Wet Lab Roles</h3>
-        <p class="bb-flip-teaser">The most common student concern—addressed directly. AI accelerates hypothesis generation; it doesn't pipette, troubleshoot assays, or navigate biological unpredictability.</p>
+        <p class="bb-flip-teaser">The most common student concern, addressed directly: AI accelerates hypothesis generation; it doesn't pipette, troubleshoot assays, or navigate biological unpredictability.</p>
         <span class="bb-flip-hint">Click to explore →</span>
       </div>
       <div class="bb-flip-back">
         <h3><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:4px"><path d="M14.5 2v17.5c0 1.4-1.1 2.5-2.5 2.5c-1.4 0-2.5-1.1-2.5-2.5V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/></svg> How AI Is Changing (Not Eliminating) Wet Lab Roles</h3>
-        <p>A common concern among students is that AI will automate laboratory work and reduce the need for bench scientists. This misreads what AI actually does in a biotech context. AI accelerates hypothesis generation and data interpretation—it does not yet pipette, culture cells, troubleshoot failed assays, or navigate the physical unpredictability of biological systems. What is changing: scientists spend less time on routine data analysis and more time on experimental design, interpretation, and cross-functional communication. The human skills that remain essential are precisely the ones that are hardest to automate: deep domain intuition, the ability to recognize when something unexpected in your data is noise versus signal, and the judgment to know when to abandon a hypothesis and why. If anything, the growing role of AI in biotech increases the premium on scientists who can both run experiments and engage meaningfully with computational outputs—a combination that is currently rare and therefore valuable.</p>
+        <p>A common concern among students is that AI will automate laboratory work and reduce the need for bench scientists. This misreads what AI actually does in a biotech context. AI accelerates hypothesis generation and data interpretation; it does not yet pipette, culture cells, troubleshoot failed assays, or navigate the physical unpredictability of biological systems. What is changing: scientists spend less time on routine data analysis and more time on experimental design, interpretation, and cross-functional communication. The human skills that remain essential are precisely the ones that are hardest to automate: deep domain intuition, the ability to recognize when something unexpected in your data is noise versus signal, and the judgment to know when to abandon a hypothesis and why. If anything, the growing role of AI in biotech increases the premium on scientists who can both run experiments and engage meaningfully with computational outputs, a combination that is currently rare and therefore valuable.</p>
         <a href="https://www.nature.com" class="bb-flip-back-link" target="_blank" rel="noopener">Read on Nature →</a>
         <span class="bb-flip-close">← Click to flip back</span>
       </div>
@@ -1237,7 +1190,7 @@ h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
   goTo(0);
 })();
 
-// Flip cards — industry trends
+// Flip cards: industry trends
 (function() {
   document.querySelectorAll('.bb-flip-card').forEach(function(card) {
     card.addEventListener('click', function(e) {

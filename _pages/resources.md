@@ -5,71 +5,25 @@ permalink: /resources/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero .bb-hero-sub {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bb-green-hover);
-  margin-bottom: 0.5rem;
-  display: block;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
 }
 
 /* Section header */
@@ -82,7 +36,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   border-bottom: 2px solid var(--bb-green-accent);
 }
 .bb-section-head h2 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 0.95rem;
   font-weight: 700;
@@ -108,23 +62,22 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 .bb-resource-card {
   background: var(--bb-white);
   border: 1px solid var(--bb-border);
-  border-radius: 7px;
+  border-radius: 2px;
   padding: 0.85rem 1rem;
-  transition: all 0.22s ease;
+  transition: border-color 0.22s ease;
   display: flex;
   align-items: flex-start;
   gap: 0.85rem;
 }
 .bb-resource-card:hover {
-  box-shadow: 0 3px 14px rgba(0,0,0,0.07);
-  transform: translateY(-1px);
+  border-color: var(--bb-green-accent);
 }
 .bb-resource-thumb {
   width: 44px;
   height: 44px;
   min-width: 44px;
-  background: linear-gradient(135deg, #d1e8d8, #c8dfe0);
-  border-radius: 5px;
+  background: var(--bb-off-white);
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,11 +90,11 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   height: 100%;
   object-fit: cover;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 2px;
   display: block;
 }
 .bb-resource-thumb-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.52rem;
   color: var(--bb-gray);
   font-weight: 500;
@@ -155,7 +108,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-resource-card h3 {
   margin: 0 0 0.2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
 }
@@ -172,16 +125,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0;
 }
 
-/* Book cards — with thumbnail like other cards */
+/* Book cards: with thumbnail like other cards */
 .bb-book-card h3 { font-style: italic; }
 
-/* Book cover thumbnail — taller ratio for books */
+/* Book cover thumbnail: taller ratio for books */
 .bb-book-thumb {
   width: 44px;
   height: 60px;
   min-width: 44px;
-  background: linear-gradient(160deg, #c8dac4, #b8d0cc);
-  border-radius: 3px;
+  background: var(--bb-green-dark);
+  border-radius: 2px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -195,7 +148,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   display: block;
 }
 .bb-book-thumb-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.5rem;
   color: var(--bb-green);
   font-weight: 600;
@@ -211,7 +164,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   text-align: center;
   padding: 1.25rem 1.5rem;
   background: var(--bb-green-bg-subtle);
-  border-radius: 7px;
+  border-radius: 2px;
   border: 1px solid var(--bb-border);
 }
 .bb-cta-footer p {
@@ -226,9 +179,6 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-resource-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
   .bb-section-head h2 { font-size: 1rem; }
   .bb-cta-footer { padding: 1.5rem 2rem; }
@@ -238,15 +188,12 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 </style>
 
-<div class="bb-page-hero">
-  <span class="bb-hero-sub">Curated Science Media</span>
-  <h1>The Learning Lab</h1>
-  <p>Media and resources for exploring biotech: newsletters, podcasts, videos, courses, and books, all hand-picked for quality and accessibility.</p>
-</div>
+{% include page-header.html kicker="LEARNING LAB" title="The Learning Lab" deck="Media and resources for exploring biotech: newsletters, podcasts, videos, courses, and books, all hand-picked for quality and accessibility." %}
 
 <!-- NEWSLETTERS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">01</span>
     <h2>Newsletters</h2>
   </div>
   <div class="bb-resource-grid">
@@ -310,6 +257,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- PODCASTS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">02</span>
     <h2>Podcasts</h2>
   </div>
   <div class="bb-resource-grid">
@@ -346,7 +294,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://hiddenbrain.org/" target="_blank">Hidden Brain</a></h3>
-        <p>Explores the unconscious patterns that drive human behavior — including how scientists think, make decisions, and navigate uncertainty. Surprisingly relevant for anyone in research.</p>
+        <p>Explores the unconscious patterns that drive human behavior, including how scientists think, make decisions, and navigate uncertainty. Surprisingly relevant for anyone in research.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -373,6 +321,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- BEGINNER READS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">03</span>
     <h2>Beginner-Friendly Reads</h2>
   </div>
   <div class="bb-resource-grid">
@@ -381,7 +330,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <img src="/assets/images/logo-pipeline.png" alt="In the Pipeline logo" width="44" height="44">
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.science.org/blogs/pipeline" target="_blank">In the Pipeline — Derek Lowe</a></h3>
+        <h3><a href="https://www.science.org/blogs/pipeline" target="_blank">In the Pipeline (Derek Lowe)</a></h3>
         <p>A medicinal chemist's honest take on drug discovery, lab failures, and what actually happens inside pharma.</p>
       </div>
     </div>
@@ -409,7 +358,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://fortune.com/2023/03/31/ai-cure-cancer-chatgpt-drug-discovery/" target="_blank">Fortune: "Will AI Cure Cancer?"</a></h3>
-        <p>A fascinating look at how artificial intelligence is transforming drug discovery and cancer research — a perfect window into where biotech is heading and why it matters beyond the lab.</p>
+        <p>A fascinating look at how artificial intelligence is transforming drug discovery and cancer research, a perfect window into where biotech is heading and why it matters beyond the lab.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -427,7 +376,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.wired.com/story/wired-guide-to-crispr/" target="_blank">The WIRED Guide to CRISPR</a></h3>
-        <p>WIRED's definitive guide to CRISPR gene editing — how it works, where it came from, and what it means for the future of medicine, agriculture, and life itself.</p>
+        <p>WIRED's definitive guide to CRISPR gene editing: how it works, where it came from, and what it means for the future of medicine, agriculture, and life itself.</p>
       </div>
     </div>
   </div>
@@ -436,6 +385,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- YOUTUBE -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">04</span>
     <h2>YouTube Channels</h2>
   </div>
   <div class="bb-resource-grid">
@@ -481,7 +431,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
       </div>
       <div class="bb-resource-info">
         <h3><a href="https://www.youtube.com/watch?v=naqbi_qVoVY" target="_blank">The Birth of Biotech | Recombinant DNA, Genentech, and Insulin Analogs</a></h3>
-        <p>The origin story of the modern biotech industry — how recombinant DNA technology and Genentech changed medicine forever. Essential history for any biotech student.</p>
+        <p>The origin story of the modern biotech industry: how recombinant DNA technology and Genentech changed medicine forever. Essential history for any biotech student.</p>
       </div>
     </div>
     <div class="bb-resource-card">
@@ -489,7 +439,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <img src="/assets/images/jared-friedman-video.png" alt="Jared Friedman video thumbnail" width="44" height="44">
       </div>
       <div class="bb-resource-info">
-        <h3><a href="https://www.youtube.com/watch?v=C1DlZWfI6rk" target="_blank">Jared Friedman — Advice for Hard-tech and Biotech Founders</a></h3>
+        <h3><a href="https://www.youtube.com/watch?v=C1DlZWfI6rk" target="_blank">Jared Friedman: Advice for Hard-tech and Biotech Founders</a></h3>
         <p>YC partner Jared Friedman shares honest advice for anyone building a hard-tech or biotech company. Great perspective on the startup side of the industry.</p>
       </div>
     </div>
@@ -499,9 +449,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- COURSES -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">05</span>
     <h2>Online Courses (Free)</h2>
   </div>
-  <p style="font-family: 'Inter', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills — all free.</p>
+  <p style="font-family: 'Instrument Sans', sans-serif; font-size: 0.85rem; color: var(--bb-text-secondary); margin-top: -0.5rem; margin-bottom: 1rem;">From lab fundamentals to data science, regulatory affairs, and industry business skills. All free.</p>
   <div class="bb-resource-grid">
     <div class="bb-resource-card">
       <div class="bb-resource-thumb">
@@ -563,6 +514,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- BOOKS -->
 <div class="bb-resource-section">
   <div class="bb-section-head">
+    <span class="section-number">06</span>
     <h2>Books Worth Reading</h2>
   </div>
   <div class="bb-resource-grid">

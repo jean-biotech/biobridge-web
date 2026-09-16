@@ -5,60 +5,25 @@ permalink: /faq/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
 }
 
 /* Accordion container */
@@ -69,14 +34,13 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 /* Individual accordion item */
 .bb-accordion-item {
   border: 1px solid var(--bb-border);
-  border-radius: 7px;
+  border-radius: 2px;
   margin-bottom: 0.6rem;
   background: var(--bb-white);
   overflow: hidden;
-  transition: box-shadow 0.2s ease;
 }
 .bb-accordion-item.open {
-  box-shadow: 0 3px 14px rgba(0,0,0,0.06);
+  border-color: var(--bb-green-accent);
 }
 
 /* Question button */
@@ -91,7 +55,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   align-items: center;
   justify-content: space-between;
   gap: 0.85rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
   color: var(--bb-navy);
@@ -112,7 +76,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   width: 18px;
   height: 18px;
   border: 1px solid var(--bb-border);
-  border-radius: 50%;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,18 +128,12 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-accordion-btn { font-size: 0.92rem; padding: 1rem 1.25rem; }
   .bb-accordion-body { padding: 0 1.25rem 1.25rem; }
 }
 </style>
 
-<div class="bb-page-hero">
-  <h1>Frequently Asked Questions</h1>
-  <p>Common questions from people exploring biotechnology. Click any question to expand the answer.</p>
-</div>
+{% include page-header.html kicker="FREQUENTLY ASKED" title="Frequently Asked Questions" deck="Common questions from people exploring biotechnology. Click any question to expand the answer." %}
 
 <div class="bb-accordion" id="bb-accordion">
 
@@ -277,7 +235,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
     </button>
     <div class="bb-accordion-panel">
       <div class="bb-accordion-body">
-        <p>Entry-level salaries in lab or operations roles typically start around $50–60k, but with a few years of experience can reach $90–100k+. Data, computational, and engineering roles in hubs like Boston or the Bay Area often pay more. The industry goes through cycles. Layoffs happen, especially at smaller biotechs after funding rounds, but core functions like manufacturing, quality control, and regulatory affairs have historically remained more stable.</p>
+        <p>Entry-level salaries in lab or operations roles typically start around $50k to $60k, but with a few years of experience can reach $90k to $100k+. Data, computational, and engineering roles in hubs like Boston or the Bay Area often pay more. The industry goes through cycles. Layoffs happen, especially at smaller biotechs after funding rounds, but core functions like manufacturing, quality control, and regulatory affairs have historically remained more stable.</p>
         <p>Overall it's a growing field, and it rewards people who keep building expertise over time.</p>
       </div>
     </div>

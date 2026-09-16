@@ -7,121 +7,62 @@ toc_label: "On This Page"
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+body { font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif; }
+h1, h2, h3 { font-family: 'Fraunces', Georgia, serif; }
 
 :root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #757575;
-  --bb-border: #e2e8f0;
-}
-
-/* Page Header */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.4rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
+  --bb-green: #24221A;
+  --bb-green-accent: #5C6335;
+  --bb-green-bright: #5C6335;
+  --bb-green-hover: #3B4223;
+  --bb-green-dark: #3B4223;
+  --bb-green-bg: #E6DBC2;
+  --bb-green-bg-subtle: #E6DBC2;
+  --bb-navy: #24221A;
+  --bb-charcoal: #24221A;
+  --bb-white: #EFE6D2;
+  --bb-off-white: #E6DBC2;
+  --bb-text-secondary: #5B5745;
+  --bb-gray: #5B5745;
+  --bb-border: rgba(36,34,26,0.22);
 }
 
 /* Image Placeholder */
 .bb-img-placeholder {
-  background: linear-gradient(135deg, var(--bb-green-bg), #e8f4f5);
+  background: var(--bb-off-white);
   border: 1px dashed var(--bb-border);
-  border-radius: 8px;
+  border-radius: 2px;
   padding: 1.5rem 1rem;
   text-align: center;
   color: var(--bb-gray);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.75rem;
   font-weight: 500;
   line-height: 1.5;
 }
 
-/* Reduced callout box */
-.bb-callout {
-  background: var(--bb-navy);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  margin: 1.5rem 0;
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  width: 100%;
+/* Pull statement (plain serif definition, no box) */
+.pull-statement {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 500;
+  color: var(--ink);
+  margin: 1.5rem 0 0.4rem;
+  line-height: 1.3;
 }
-.bb-callout::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  width: 3px; height: 100%;
-  background: linear-gradient(180deg, var(--bb-green-bright), var(--bb-green-accent));
-}
-.bb-callout p {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--bb-white);
-  margin: 0;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  padding-left: 0.75rem;
-}
-.bb-callout span {
-  display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 400;
-  color: rgba(255,255,255,0.5);
-  margin-top: 0.35rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  padding-left: 0.75rem;
+.pull-caption {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  margin: 0 0 1.5rem;
 }
 
 /* Section intro text */
 .bb-intro-text {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.9rem;
-  color: #334155;
+  color: #24221A;
   line-height: 1.8;
   margin-bottom: 1.25rem;
 }
@@ -139,7 +80,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-border);
 }
 .bb-divider-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.67rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -149,7 +90,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 
 /* ============================================
-   FLIP CARDS — Real-World Examples
+   FLIP CARDS: Real-World Examples
    ============================================ */
 .bb-flip-grid {
   display: grid;
@@ -172,8 +113,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   transform-style: preserve-3d;
 }
 
-.bb-flip-card.flipped .bb-flip-card-inner,
-.bb-flip-card:hover .bb-flip-card-inner {
+.bb-flip-card.flipped .bb-flip-card-inner {
   transform: rotateY(180deg);
 }
 
@@ -184,7 +124,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   height: 100%;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-  border-radius: 8px;
+  border-radius: 2px;
   border: 1px solid var(--bb-border);
   overflow: hidden;
 }
@@ -196,7 +136,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   flex-direction: column;
 }
 .bb-flip-front-img {
-  background: linear-gradient(135deg, #d1e8d8, #e8f4ea);
+  background: var(--bb-off-white);
   height: 110px;
   width: 100%;
   display: flex;
@@ -206,13 +146,13 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   border-bottom: 1px solid var(--bb-border);
 }
 .bb-flip-front-img span {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.68rem;
   font-weight: 500;
   color: var(--bb-green);
-  background: rgba(45,95,63,0.1);
-  border: 1px dashed rgba(45,95,63,0.3);
-  border-radius: 4px;
+  background: rgba(92,99,53,0.1);
+  border: 1px dashed rgba(92,99,53,0.3);
+  border-radius: 2px;
   padding: 0.25rem 0.6rem;
 }
 .bb-flip-front-body {
@@ -220,7 +160,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   flex: 1;
 }
 .bb-flip-front-body h3 {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   color: var(--bb-navy);
   font-size: 0.92rem;
   font-weight: 700;
@@ -232,7 +172,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   margin: 0;
 }
 .bb-flip-hint {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.62rem;
   color: var(--bb-gray);
   letter-spacing: 0.05em;
@@ -249,8 +189,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   justify-content: center;
 }
 .bb-flip-back h3 {
-  font-family: 'Inter', sans-serif;
-  color: var(--bb-green-hover);
+  font-family: 'Instrument Sans', sans-serif;
+  color: var(--bb-green-accent);
   font-size: 0.82rem;
   font-weight: 700;
   margin: 0 0 0.5rem;
@@ -273,14 +213,14 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 .bb-flip-org-badge {
   display: inline-block;
-  background: rgba(14,116,144,0.18);
-  border: 1px solid rgba(14,116,144,0.38);
-  border-radius: 20px;
+  background: rgba(92,99,53,0.18);
+  border: 1px solid rgba(92,99,53,0.38);
+  border-radius: 2px;
   padding: 0.18rem 0.6rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #7ECFE0;
+  color: var(--bb-green-accent);
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -294,8 +234,8 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   align-items: start;
 }
 .bb-two-col-text p {
-  font-family: 'Inter', sans-serif;
-  color: #334155;
+  font-family: 'Instrument Sans', sans-serif;
+  color: #24221A;
   font-size: 0.9rem;
   line-height: 1.8;
   margin: 0 0 0.85rem;
@@ -307,13 +247,13 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   background: var(--bb-off-white);
   border: 1px solid var(--bb-border);
   border-left: 3px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 2px;
   padding: 1rem 1.25rem;
   margin-bottom: 0.75rem;
 }
 .bb-misconception strong {
   color: var(--bb-navy);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.88rem;
   font-weight: 600;
 }
@@ -336,20 +276,16 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 /* Beyond the Science image */
 .bb-beyond-img {
   width: 100%;
-  border-radius: 8px;
+  border-radius: 2px;
   display: block;
 }
 
 /* Desktop */
 @media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
   .bb-flip-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
   .bb-flip-card { height: 240px; }
   .bb-flip-front-img { height: 120px; }
   .bb-two-col { grid-template-columns: 3fr 2fr; gap: 2.25rem; }
-  .bb-callout p { font-size: 1rem; }
 }
 @media (min-width: 1024px) {
   .bb-flip-grid { grid-template-columns: repeat(4, 1fr); }
@@ -357,15 +293,15 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 /* International callout (shared style) */
 .bb-international-callout {
-  background: #FAF7F2;
-  border: 1px solid #e8dfd0;
+  background: var(--bb-white);
+  border: 1px solid var(--bb-off-white);
   border-left: 4px solid var(--bb-green-accent);
-  border-radius: 7px;
+  border-radius: 2px;
   padding: 1rem 1.25rem;
   margin: 1.75rem 0;
 }
 .bb-international-callout .bb-intl-header {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-weight: 700;
   color: var(--bb-green);
@@ -375,7 +311,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   gap: 0.4rem;
 }
 .bb-international-callout p {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Instrument Sans', sans-serif;
   font-size: 0.82rem;
   font-style: italic;
   color: var(--bb-text-secondary);
@@ -384,17 +320,12 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 }
 </style>
 
-<div class="bb-page-hero">
-  <h1>What is Biotechnology, Really?</h1>
-  <p>Understanding the science shaping our future, in plain language, no prerequisites required.</p>
-</div>
+{% include page-header.html kicker="WHAT IS BIOTECH" title="What is Biotechnology, Really?" deck="Understanding the science shaping our future, in plain language, no prerequisites required." %}
 
 <p class="bb-intro-text">Biotechnology is using living systems (cells, bacteria, proteins, DNA) to create useful products or solve real problems.</p>
 
-<div class="bb-callout">
-  <p>Biotech = biology + technology to solve real problems.</p>
-  <span>The simplest definition that actually holds up</span>
-</div>
+<p class="pull-statement">Biotech = biology + technology to solve real problems.</p>
+<p class="pull-caption">The simplest definition that actually holds up.</p>
 
 <p class="bb-intro-text">It sounds vague because biotech is <strong>incredibly broad</strong>. It touches medicine, agriculture, environmental science, manufacturing, and more. The best way to understand it is through examples.</p>
 
@@ -404,9 +335,10 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-divider-line"></div>
 </div>
 
+<span class="section-number">01</span>
 ## Real-World Examples
 
-<p class="bb-intro-text" style="font-size:0.82rem; color: var(--bb-gray);">Hover over each card (or tap on mobile) to see more.</p>
+<p class="bb-intro-text" style="font-size:0.82rem; color: var(--bb-gray);">Click each card to see more.</p>
 
 <div class="bb-flip-grid">
 
@@ -416,7 +348,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-medicine.jpg" alt="Medicine"></div>
         <div class="bb-flip-front-body">
           <h3>Medicine</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -437,7 +369,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-agriculture.jpg" alt="Agriculture"></div>
         <div class="bb-flip-front-body">
           <h3>Agriculture</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -458,7 +390,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-environment.jpg" alt="Environment"></div>
         <div class="bb-flip-front-body">
           <h3>Environment</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -479,7 +411,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
         <div class="bb-flip-front-img"><img src="/assets/images/biotech-cuttingedge.jpg" alt="The Cutting Edge"></div>
         <div class="bb-flip-front-body">
           <h3>The Cutting Edge</h3>
-          <p class="bb-flip-hint">Hover to learn more</p>
+          <p class="bb-flip-hint">Click to learn more</p>
         </div>
       </div>
       <div class="bb-flip-back">
@@ -502,6 +434,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-divider-line"></div>
 </div>
 
+<span class="section-number">02</span>
 ## Beyond the Science
 
 <div class="bb-two-col">
@@ -522,6 +455,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
   <div class="bb-divider-line"></div>
 </div>
 
+<span class="section-number">03</span>
 ## Common Misconceptions
 
 <div class="bb-misconception">
@@ -531,7 +465,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 
 <div class="bb-misconception">
   <strong>"It's all lab work."</strong>
-  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #3A7D5C; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
+  <p>Lab work is one slice of a much bigger picture. There's also manufacturing, regulatory affairs, sales, policy, data analysis, and more. The <a href="/career-pathways/" style="color: #5C6335; font-weight: 600;">Career Pathways</a> page shows the full range.</p>
 </div>
 
 <div class="bb-misconception">
@@ -542,7 +476,7 @@ h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
 <!-- Regulatory context callout -->
 <div class="bb-international-callout">
   <div class="bb-intl-header">🌍 Outside the US?</div>
-  <p>Regulatory terminology varies by country. FDA = United States Food and Drug Administration. EMA = European Medicines Agency (EU). Health Canada oversees drug approvals in Canada. PMDA (Pharmaceuticals and Medical Devices Agency) regulates in Japan. When you see terms like "IND filing" or "NDA" below, those are US-specific — equivalent processes exist in other jurisdictions under different names and timelines.</p>
+  <p>Regulatory terminology varies by country. FDA = United States Food and Drug Administration. EMA = European Medicines Agency (EU). Health Canada oversees drug approvals in Canada. PMDA (Pharmaceuticals and Medical Devices Agency) regulates in Japan. When you see terms like "IND filing" or "NDA" below, those are US-specific. Equivalent processes exist in other jurisdictions under different names and timelines.</p>
 </div>
 
 <script>
