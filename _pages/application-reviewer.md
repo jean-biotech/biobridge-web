@@ -1,794 +1,584 @@
 ---
-layout: single
+layout: splash
 title: "Application Reviewer"
 permalink: /application-reviewer/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+/* ================================================================
+   APPLICATION REVIEWER
+   Shared pieces (type, bands, buttons, form fields, tags, index)
+   come from assets/css/biobridge.css. These are the parts only this
+   tool uses. The script at the bottom of the page swaps the form,
+   loading, and results blocks in and out of the same spot.
+   ================================================================ */
 
-:root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
-  --bb-teal: #0E7490;
-  --bb-amber: #b45309;
+.bb-reviewer {
+  --bb-error: #9b2c1c;
+  --bb-error-bg: #fbf0ec;
+  --bb-error-line: #efd0c6;
 }
 
-/* ============================================
-   HERO
-   ============================================ */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2rem 2rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin: 0 0 0.5rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: rgba(255,255,255,0.8);
-  margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
-}
-.bb-hero-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 4px;
-  padding: 0.2rem 0.6rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
+/* ---------- Page header: how it works ---------- */
+
+.bb-reviewer .bb-steps-label {
+  margin-top: 2.75rem;
+  font-size: 1rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.85);
-  margin-bottom: 0.75rem;
-  position: relative;
+  color: var(--bb-muted);
 }
 
-/* ============================================
-   SECTION DIVIDER
-   ============================================ */
-.bb-section-divider {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin: 2rem 0 1.5rem;
-}
-.bb-section-divider-line {
-  flex: 1;
-  height: 1px;
-  background: var(--bb-border);
-}
-.bb-section-divider-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.67rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bb-green-accent);
-  white-space: nowrap;
-}
-
-/* ============================================
-   HOW IT WORKS — 3-step strip
-   ============================================ */
-.bb-steps {
+.bb-reviewer .bb-steps {
+  list-style: none;
+  margin: 0.85rem 0 0;
+  padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.75rem;
-  margin-bottom: 2rem;
+  gap: 1.25rem;
 }
-@media (min-width: 600px) {
-  .bb-steps { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+
+.bb-reviewer .bb-steps li {
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid #d9cfba;
 }
-.bb-step {
-  background: var(--bb-green-bg-subtle);
-  border: 1px solid var(--bb-border);
-  border-radius: 8px;
-  padding: 1rem 1.1rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-.bb-step-num {
-  width: 24px;
-  height: 24px;
-  min-width: 24px;
-  background: var(--bb-green-accent);
-  color: var(--bb-white);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  margin-top: 1px;
-}
-.bb-step-text strong {
+
+.bb-reviewer .bb-step-title {
   display: block;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
-  font-weight: 700;
-  color: var(--bb-navy);
-  margin-bottom: 0.15rem;
+  font-weight: 600;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: var(--bb-ink);
 }
-.bb-step-text span {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.79rem;
-  color: var(--bb-text-secondary);
+
+.bb-reviewer .bb-step-text {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1.05rem;
   line-height: 1.5;
 }
 
-/* ============================================
-   FORM CARD
-   ============================================ */
-.bb-form-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.06);
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-.bb-form-card-top {
-  height: 4px;
-  background: linear-gradient(90deg, var(--bb-green-dark), var(--bb-green-accent));
-}
-.bb-form-card-body {
-  padding: 1.75rem 1.5rem;
-}
-.bb-form-eyebrow {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--bb-green-accent);
-  margin: 0 0 0.35rem;
-}
-.bb-form-heading {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--bb-navy);
-  margin: 0 0 0.4rem;
-  letter-spacing: -0.01em;
-}
-.bb-form-subhead {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.85rem;
-  color: var(--bb-text-secondary);
-  line-height: 1.65;
-  margin: 0 0 1.5rem;
+/* ---------- Form ---------- */
+
+/* The theme draws forms as a gray box; this form sits on the page */
+.bb-reviewer form {
+  margin: 0;
+  padding: 0;
+  background: none;
 }
 
-/* Textarea grid */
-.bb-form-grid {
+.bb-reviewer .bb-fields {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-@media (min-width: 769px) {
-  .bb-form-grid { grid-template-columns: 1fr 1fr; }
+  gap: 2.25rem;
 }
 
-/* Individual form group */
-.bb-form-group { display: flex; flex-direction: column; }
-.bb-field-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--bb-green);
-  margin-bottom: 0.25rem;
+.bb-reviewer .bb-field {
+  display: grid;
+  align-content: start;
+  min-width: 0;
 }
-.bb-field-hint {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  color: var(--bb-gray);
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+
+.bb-reviewer .bb-field label {
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
 }
-.bb-textarea {
-  width: 100%;
-  min-height: 220px;
-  border: 1.5px solid var(--bb-border);
-  border-radius: 7px;
-  padding: 0.85rem 1rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
-  line-height: 1.65;
-  color: var(--bb-charcoal);
-  background: var(--bb-white);
+
+.bb-reviewer .bb-field-hint {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--bb-muted);
+  margin-bottom: 0.8rem;
+}
+
+.bb-reviewer textarea {
+  display: block;
+  margin: 0;
+  min-height: 15rem;
   resize: vertical;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-  box-sizing: border-box;
 }
-.bb-textarea:focus {
-  outline: none;
-  border-color: var(--bb-green-accent);
-  box-shadow: 0 0 0 3px rgba(58,125,92,0.1);
+
+.bb-reviewer textarea::placeholder {
+  color: #767f7a;
+  opacity: 1;
 }
-.bb-textarea::placeholder {
-  color: #aab4c0;
-  font-size: 0.81rem;
-  line-height: 1.55;
+
+.bb-reviewer textarea.bb-field-error {
+  border-color: var(--bb-error);
+  box-shadow: 0 0 0 1px var(--bb-error);
 }
-.bb-textarea.bb-field-error {
-  border-color: #dc2626;
-  box-shadow: 0 0 0 3px rgba(220,38,38,0.08);
-}
-.bb-char-counter {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  color: var(--bb-gray);
-  margin-top: 0.35rem;
+
+/* The script rewrites this element's class, so keep its name */
+.bb-reviewer .bb-char-counter {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: var(--bb-muted);
   text-align: right;
-  transition: color 0.2s ease;
+  font-variant-numeric: tabular-nums;
 }
-.bb-char-counter.warn { color: var(--bb-amber); }
-.bb-char-counter.over { color: #dc2626; font-weight: 600; }
 
-/* Validation message */
-.bb-validation-msg {
-  display: none;
-  align-items: center;
-  gap: 0.5rem;
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  border-radius: 6px;
-  padding: 0.65rem 1rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.82rem;
-  color: #dc2626;
-  margin-bottom: 1rem;
-}
-.bb-validation-msg.visible { display: flex; }
-
-/* Submit row */
-.bb-form-footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.6rem;
-}
-.bb-analyze-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--bb-green-accent);
-  color: var(--bb-white);
-  border: none;
-  border-radius: 6px;
-  padding: 0.875rem 2.75rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.92rem;
+.bb-reviewer .bb-char-counter.warn {
+  color: var(--bb-ink);
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.22s ease;
-  letter-spacing: 0.01em;
-  width: 100%;
-  justify-content: center;
-}
-@media (min-width: 600px) {
-  .bb-analyze-btn { width: auto; }
-}
-.bb-analyze-btn:hover:not(:disabled) {
-  background: var(--bb-green);
-  transform: translateY(-1px);
-  box-shadow: 0 5px 18px rgba(45,95,63,0.28);
-}
-.bb-analyze-btn:active:not(:disabled) { transform: translateY(0); }
-.bb-analyze-btn:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
-}
-.bb-btn-note {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  color: var(--bb-gray);
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-}
-.bb-btn-note-dot {
-  width: 5px;
-  height: 5px;
-  background: var(--bb-green-accent);
-  border-radius: 50%;
-  display: inline-block;
 }
 
-/* Desktop tweaks */
-@media (min-width: 769px) {
-  .bb-page-hero { padding: 2.5rem 2.5rem; border-radius: 10px; }
-  .bb-page-hero h1 { font-size: 1.65rem; }
-  .bb-page-hero p { font-size: 0.93rem; }
-  .bb-form-card-body { padding: 2rem 2.25rem; }
-  .bb-form-heading { font-size: 1.4rem; }
-  .bb-textarea { min-height: 260px; }
+.bb-reviewer .bb-char-counter.over {
+  color: var(--bb-error);
+  font-weight: 600;
 }
 
-/* ============================================
-   LOADING STATE
-   ============================================ */
-.bb-loading {
+/* Validation and error message (shown by the script) */
+.bb-reviewer .bb-validation-msg {
   display: none;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 3.5rem 1.5rem 3rem;
-}
-.bb-loading.visible { display: flex; }
-.bb-spinner {
-  width: 44px;
-  height: 44px;
-  border: 3px solid var(--bb-green-bg);
-  border-top-color: var(--bb-green-accent);
-  border-radius: 50%;
-  animation: bb-spin 0.85s linear infinite;
-  margin-bottom: 1.25rem;
-}
-@keyframes bb-spin { to { transform: rotate(360deg); } }
-.bb-loading-heading {
-  font-family: 'Playfair Display', Georgia, serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--bb-navy);
-  margin: 0 0 0.4rem;
-}
-.bb-loading-sub {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.83rem;
-  color: var(--bb-text-secondary);
-  line-height: 1.65;
-  max-width: 360px;
-  margin: 0;
-}
-.bb-loading-dots {
-  display: flex;
-  gap: 5px;
-  margin-top: 1.5rem;
-}
-.bb-loading-dots span {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--bb-green-accent);
-  animation: bb-dot-pulse 1.4s ease-in-out infinite;
-}
-.bb-loading-dots span:nth-child(2) { animation-delay: 0.2s; }
-.bb-loading-dots span:nth-child(3) { animation-delay: 0.4s; }
-@keyframes bb-dot-pulse {
-  0%, 80%, 100% { opacity: 0.2; transform: scale(0.85); }
-  40%           { opacity: 1;   transform: scale(1); }
-}
-
-/* ============================================
-   RESULTS — FADE IN
-   ============================================ */
-@keyframes bb-fade-up {
-  from { opacity: 0; transform: translateY(10px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.bb-results {
-  display: none;
-}
-.bb-results.visible {
-  display: block;
-  animation: bb-fade-up 0.4s ease;
-}
-
-/* ============================================
-   SCORE CARD
-   ============================================ */
-.bb-score-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-top: 3px solid var(--bb-green-accent);
-  border-radius: 10px;
-  box-shadow: 0 4px 28px rgba(0,0,0,0.09);
-  padding: 1.75rem 1.5rem;
-  margin-bottom: 1.25rem;
-}
-.bb-score-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  text-align: center;
-}
-@media (min-width: 580px) {
-  .bb-score-inner { flex-direction: row; align-items: flex-start; text-align: left; }
-}
-.bb-ring-wrap {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
-}
-.bb-ring-svg {
-  width: 120px;
-  height: 120px;
-  transform: rotate(-90deg);
-  display: block;
-}
-.bb-ring-track {
-  fill: none;
-  stroke: var(--bb-green-bg);
-  stroke-width: 9;
-}
-.bb-ring-fill {
-  fill: none;
-  stroke: var(--bb-teal);
-  stroke-width: 9;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 1s cubic-bezier(0.4,0,0.2,1), stroke 0.3s ease;
-}
-.bb-ring-center {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.bb-ring-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1;
-  color: var(--bb-navy);
-  transition: color 0.3s ease;
-}
-.bb-ring-denom {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.67rem;
-  color: var(--bb-gray);
-  font-weight: 500;
-  margin-top: 3px;
-}
-.bb-score-info { flex: 1; min-width: 0; }
-.bb-score-label {
-  display: inline-block;
-  padding: 0.28rem 0.85rem;
-  border-radius: 4px;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  margin-bottom: 0.85rem;
-  background: rgba(14,116,144,0.1);
-  border: 1px solid rgba(14,116,144,0.25);
-  color: var(--bb-teal);
-  transition: background 0.3s, border-color 0.3s, color 0.3s;
-}
-.bb-score-summary {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
-  color: var(--bb-text-secondary);
-  line-height: 1.75;
-  margin: 0;
-}
-@media (min-width: 769px) {
-  .bb-score-card { padding: 2rem 2.25rem; }
-}
-
-/* ============================================
-   DETAIL GRID — 2×2
-   ============================================ */
-.bb-detail-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.1rem;
-  margin-bottom: 1.1rem;
-}
-@media (min-width: 769px) {
-  .bb-detail-grid { grid-template-columns: 1fr 1fr; }
-}
-.bb-detail-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
-  overflow: hidden;
-}
-.bb-detail-card--green { border-top: 3px solid var(--bb-green-accent); }
-.bb-detail-card--amber { border-top: 3px solid var(--bb-amber); }
-.bb-detail-card--teal  { border-top: 3px solid var(--bb-teal); }
-.bb-detail-card--navy  { border-top: 3px solid var(--bb-navy); }
-.bb-card-header {
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.65rem;
-  padding: 0.9rem 1.25rem;
-  border-bottom: 1px solid var(--bb-border);
-  background: var(--bb-green-bg-subtle);
+  margin-top: 1.75rem;
+  padding: 0.9rem 1.1rem;
+  background: var(--bb-error-bg);
+  border: 1px solid var(--bb-error-line);
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--bb-error);
 }
-.bb-card-icon {
-  width: 28px;
-  height: 28px;
-  min-width: 28px;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.bb-card-icon--green { background: rgba(45,95,63,0.13); }
-.bb-card-icon--amber { background: rgba(180,83,9,0.13); }
-.bb-card-icon--teal  { background: rgba(14,116,144,0.13); }
-.bb-card-icon--navy  { background: rgba(26,26,46,0.10); }
-.bb-card-title {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.69rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--bb-navy);
-  margin: 0;
-}
-.bb-result-list {
-  list-style: none;
-  padding: 0.2rem 0 0;
-  margin: 0;
-}
-.bb-result-item {
-  display: flex;
-  gap: 0.6rem;
-  padding: 0.65rem 1.25rem;
-  border-bottom: 1px solid #f1f5f9;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.84rem;
-  color: var(--bb-charcoal);
-  line-height: 1.65;
-}
-.bb-result-item:last-child { border-bottom: none; }
-.bb-item-marker {
-  font-size: 0.8rem;
-  font-weight: 700;
-  flex-shrink: 0;
-  margin-top: 0.13rem;
-  width: 14px;
-  text-align: center;
-  line-height: 1.6;
-}
-.bb-item-marker--green { color: var(--bb-green-accent); }
-.bb-item-marker--amber { color: var(--bb-amber); }
-.bb-item-marker--teal  { color: var(--bb-teal); }
-.bb-item-marker--navy  { color: var(--bb-navy); }
 
-/* ============================================
-   KEYWORDS CARD — full width
-   ============================================ */
-.bb-keywords-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  box-shadow: 0 3px 18px rgba(0,0,0,0.07);
-  overflow: hidden;
-  margin-bottom: 1.75rem;
+.bb-reviewer .bb-validation-msg.visible {
+  display: flex;
 }
-.bb-kw-body {
-  padding: 1.1rem 1.25rem;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.1rem;
+
+.bb-reviewer .bb-validation-msg svg {
+  flex: none;
+  margin-top: 0.15em;
 }
-@media (min-width: 580px) {
-  .bb-kw-body { grid-template-columns: 1fr 1fr; }
+
+.bb-reviewer .bb-submit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  margin-top: 1.75rem;
 }
-.bb-kw-col-label {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  margin: 0 0 0.6rem;
+
+.bb-reviewer .bb-submit-note {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--bb-muted);
 }
-.bb-kw-col-label--green { color: var(--bb-green-accent); }
-.bb-kw-col-label--amber { color: var(--bb-amber); }
-.bb-kw-chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-.bb-kw-badge {
+
+/* ---------- Buttons on this page ---------- */
+
+.bb-reviewer button:focus {
+  outline: none;
+}
+
+.bb-reviewer button:focus-visible {
+  outline: 2px solid var(--bb-green);
+  outline-offset: 3px;
+}
+
+.bb-reviewer [tabindex="-1"]:focus {
+  outline: none;
+}
+
+/* A button that looks like the site's text links */
+.bb-reviewer .bb-copy {
   display: inline-block;
-  border-radius: 4px;
-  padding: 0.22rem 0.65rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.73rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  background: none;
+  border: 0;
+  font-family: var(--bb-sans);
+  font-size: 1.05rem;
   font-weight: 600;
-}
-.bb-kw-matched {
-  background: rgba(45,95,63,0.08);
-  border: 1px solid rgba(45,95,63,0.2);
+  line-height: 1.4;
   color: var(--bb-green);
-}
-.bb-kw-missing {
-  background: rgba(180,83,9,0.07);
-  border: 1px solid rgba(180,83,9,0.2);
-  color: var(--bb-amber);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+  transition: color 0.15s ease;
 }
 
-/* ============================================
-   SHARE BUTTON
-   ============================================ */
-.bb-share-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  background: transparent;
-  color: var(--bb-green-accent);
-  border: 1px solid rgba(58,125,92,0.35);
-  border-radius: 5px;
-  padding: 0.45rem 0.9rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.18s ease;
-  margin-top: 0.9rem;
+.bb-reviewer .bb-copy:hover {
+  color: var(--bb-green-dark);
 }
-.bb-share-btn:hover {
-  background: var(--bb-green-bg-subtle);
-  border-color: var(--bb-green-accent);
-}
-.bb-share-btn.bb-share-copied {
-  color: var(--bb-green);
-  border-color: var(--bb-green-accent);
-  background: var(--bb-green-bg);
+
+.bb-reviewer .bb-copy.bb-share-copied {
+  color: var(--bb-ink);
+  text-decoration: none;
   cursor: default;
 }
 
-/* ============================================
-   RESULTS FOOTER
-   ============================================ */
-.bb-results-footer {
-  text-align: center;
-  padding-bottom: 1rem;
+/* ---------- Loading ---------- */
+
+.bb-reviewer .bb-loading {
+  display: none;
+  max-width: 40rem;
+  padding: 1.75rem 1.5rem;
+  background: var(--bb-cream);
+  border-radius: var(--bb-radius);
 }
-.bb-disclaimer {
-  font-family: 'Inter', sans-serif;
-  font-size: 0.75rem;
-  color: var(--bb-gray);
-  line-height: 1.65;
-  margin: 0 auto 1.1rem;
-  max-width: 460px;
-  font-style: italic;
+
+.bb-reviewer .bb-loading.visible {
+  display: block;
 }
-.bb-try-again-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  background: var(--bb-white);
-  color: var(--bb-green-accent);
-  border: 1.5px solid var(--bb-green-accent);
-  border-radius: 6px;
-  padding: 0.7rem 1.75rem;
-  font-family: 'Inter', sans-serif;
-  font-size: 0.88rem;
+
+.bb-reviewer .bb-spinner {
+  display: block;
+  width: 1.9rem;
+  height: 1.9rem;
+  margin-bottom: 1rem;
+  border: 3px solid rgba(45, 95, 63, 0.18);
+  border-top-color: var(--bb-green);
+  border-radius: 50%;
+  animation: bb-reviewer-spin 0.9s linear infinite;
+}
+
+@keyframes bb-reviewer-spin {
+  to { transform: rotate(360deg); }
+}
+
+.bb-reviewer .bb-loading-heading {
+  font-family: var(--bb-serif);
   font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
+  font-size: 1.5rem;
+  line-height: 1.25;
+  color: var(--bb-ink);
 }
-.bb-try-again-btn:hover {
-  background: var(--bb-green-bg-subtle);
-  transform: translateY(-1px);
-  box-shadow: 0 3px 10px rgba(45,95,63,0.15);
+
+.bb-reviewer .bb-loading-sub {
+  margin-top: 0.4rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* ---------- Results ---------- */
+
+.bb-reviewer .bb-results {
+  display: none;
+}
+
+.bb-reviewer .bb-results.visible {
+  display: block;
+  animation: bb-reviewer-fade 0.4s ease both;
+}
+
+@keyframes bb-reviewer-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.bb-reviewer .bb-results .bb-section-head {
+  margin-bottom: 2rem;
+}
+
+/* Score: the number, a meter, the label, and the summary */
+.bb-reviewer .bb-score {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem 1.25rem 1.75rem;
+  background: var(--bb-cream);
+  border-radius: var(--bb-radius);
+}
+
+.bb-reviewer .bb-score-caption {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--bb-muted);
+}
+
+.bb-reviewer .bb-score-num {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-top: 0.35rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--bb-ink);
+}
+
+.bb-reviewer .bb-score-num span {
+  transition: none;
+}
+
+.bb-reviewer #bb-ring-num {
+  font-size: 4.5rem;
+  letter-spacing: -0.02em;
+}
+
+.bb-reviewer .bb-score-outof {
+  font-size: 1.3rem;
+  color: var(--bb-muted);
+}
+
+.bb-reviewer .bb-meter {
+  height: 8px;
+  margin-top: 1.1rem;
+  background: rgba(45, 95, 63, 0.16);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bb-reviewer .bb-meter-fill {
+  width: 0;
+  height: 100%;
+  background: var(--bb-green);
+  border-radius: 4px;
+}
+
+.bb-reviewer .bb-score-label {
+  font-size: 1.75rem;
+}
+
+.bb-reviewer .bb-score-summary {
+  margin-top: 0.6rem;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  max-width: 38em;
+}
+
+/* Strengths, gaps, tips: titled lists on a green rule */
+.bb-reviewer .bb-findings {
+  display: grid;
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.bb-reviewer .bb-finding {
+  min-width: 0;
+  padding-top: 1.1rem;
+  border-top: 2px solid var(--bb-green);
+}
+
+.bb-reviewer .bb-finding h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.bb-reviewer .bb-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bb-reviewer .bb-list li {
+  position: relative;
+  margin: 0;
+  padding-left: 1.65rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+.bb-reviewer .bb-list li + li {
+  margin-top: 0.85rem;
+}
+
+/* Default marker: a small green dot */
+.bb-reviewer .bb-list li::before {
+  content: "";
+  position: absolute;
+  left: 0.3rem;
+  top: 0.62em;
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: var(--bb-green);
+}
+
+/* Strengths: a check mark */
+.bb-reviewer .bb-list--strengths li::before {
+  left: 0.32rem;
+  top: 0.3em;
+  width: 0.36rem;
+  height: 0.7rem;
+  border: solid var(--bb-green);
+  border-width: 0 2px 2px 0;
+  border-radius: 0;
+  background: none;
+  transform: rotate(45deg);
+}
+
+/* Gaps: an open circle, something still to fill */
+.bb-reviewer .bb-list--gaps li::before {
+  left: 0.2rem;
+  top: 0.52em;
+  width: 0.6rem;
+  height: 0.6rem;
+  border: 1.5px solid var(--bb-green);
+  background: none;
+}
+
+/* Keywords */
+.bb-reviewer .bb-keywords {
+  margin-top: 3rem;
+}
+
+.bb-reviewer .bb-keyword-groups {
+  display: grid;
+  gap: 1.75rem;
+}
+
+.bb-reviewer .bb-keyword-groups h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.7rem;
+}
+
+.bb-reviewer .bb-tags--matched li {
+  background: rgba(45, 95, 63, 0.08);
+  border-color: rgba(45, 95, 63, 0.3);
+  color: var(--bb-green-dark);
+}
+
+.bb-reviewer .bb-tags--missing li {
+  border-style: dashed;
+  border-color: #a9b2ac;
+}
+
+.bb-reviewer .bb-tags .bb-tags-none {
+  padding-left: 0;
+  background: none;
+  border: 0;
+  color: var(--bb-muted);
+}
+
+/* Disclaimer and start over */
+.bb-reviewer .bb-results-end {
+  display: grid;
+  justify-items: start;
+  gap: 1.5rem;
+  margin-top: 3.5rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--bb-line);
+}
+
+.bb-reviewer .bb-disclaimer {
+  max-width: 42em;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--bb-muted);
+}
+
+/* ---------- Wider screens ---------- */
+
+@media (min-width: 700px) {
+  .bb-reviewer .bb-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+  }
+
+  .bb-reviewer .bb-loading {
+    padding: 2rem 2.25rem;
+  }
+
+  .bb-reviewer .bb-score {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 3rem;
+    padding: 2.25rem 2.5rem 2.5rem;
+  }
+
+  .bb-reviewer .bb-findings,
+  .bb-reviewer .bb-keyword-groups {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 3rem;
+  }
+
+  /* Three links in one row, rather than two plus one on tablets */
+  .bb-reviewer .bb-index {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  /* Side by side, with labels, hints, and boxes lined up across both fields */
+  .bb-reviewer .bb-fields {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 2.5rem;
+  }
+
+  .bb-reviewer .bb-field {
+    grid-row: span 4;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+
+  .bb-reviewer textarea {
+    min-height: 20rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bb-reviewer .bb-results.visible {
+    animation: none;
+  }
+
+  .bb-reviewer .bb-spinner {
+    animation-duration: 2.4s;
+  }
 }
 </style>
 
-<div class="bb-page-hero">
-  <div class="bb-hero-badge">
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-    Free Tool &middot; Powered by Claude
-  </div>
-  <h1>AI Application Reviewer</h1>
-  <p>Paste a biotech job description and your resume—Claude analyzes the match, surfaces your gaps, and tells you exactly how to strengthen your application before you submit.</p>
-</div>
+<div class="bb-page bb-reviewer">
 
-<div class="bb-steps">
-  <div class="bb-step">
-    <div class="bb-step-num">1</div>
-    <div class="bb-step-text">
-      <strong>Paste the job description</strong>
-      <span>Copy the full posting, including requirements and preferred qualifications.</span>
-    </div>
-  </div>
-  <div class="bb-step">
-    <div class="bb-step-num">2</div>
-    <div class="bb-step-text">
-      <strong>Paste your resume</strong>
-      <span>Plain text works best—copy directly from your Word doc or PDF.</span>
-    </div>
-  </div>
-  <div class="bb-step">
-    <div class="bb-step-num">3</div>
-    <div class="bb-step-text">
-      <strong>Get your analysis</strong>
-      <span>Match score, strengths, gaps, and biotech-specific suggestions in about 20 seconds.</span>
-    </div>
-  </div>
-</div>
+<header class="bb-pagehead bb-band bb-band--cream">
+  <div class="bb-wrap">
+    <p class="bb-kicker">Tools</p>
+    <h1>Application reviewer</h1>
+    <p class="bb-lede">Paste a biotech job description and your resume. Claude, an AI model, analyzes the match, points out your gaps, and tells you how to strengthen your application before you submit. It's free.</p>
 
-<div class="bb-section-divider">
-  <div class="bb-section-divider-line"></div>
-  <div class="bb-section-divider-label">Your Application</div>
-  <div class="bb-section-divider-line"></div>
-</div>
+    <p class="bb-steps-label" id="bb-steps-label">How it works</p>
+    <ol class="bb-steps" aria-labelledby="bb-steps-label">
+      <li>
+        <span class="bb-step-title">Paste the job description</span>
+        <span class="bb-step-text">Copy the full posting, including requirements and preferred qualifications.</span>
+      </li>
+      <li>
+        <span class="bb-step-title">Paste your resume</span>
+        <span class="bb-step-text">Plain text works best. Copy it directly from your Word doc or PDF.</span>
+      </li>
+      <li>
+        <span class="bb-step-title">Get your analysis</span>
+        <span class="bb-step-text">Match score, strengths, gaps, and biotech-specific suggestions in about 20 seconds.</span>
+      </li>
+    </ol>
+  </div>
+</header>
 
-<div id="bb-form-section">
-  <div class="bb-form-card">
-    <div class="bb-form-card-top"></div>
-    <div class="bb-form-card-body">
+<section class="bb-section">
+  <div class="bb-wrap">
 
-      <p class="bb-form-eyebrow">Step-by-step review</p>
-      <h2 class="bb-form-heading">Review Your Application</h2>
-      <p class="bb-form-subhead">Both fields are required. The more complete the job description and resume, the more specific the feedback will be.</p>
+    <!-- Form -->
+    <div id="bb-form-section">
+      <div class="bb-section-head">
+        <h2 id="bb-form-title" tabindex="-1">Your application</h2>
+        <p>Both fields are required. The more complete the job description and resume, the more specific the feedback will be.</p>
+      </div>
 
       <form id="bb-review-form" novalidate>
+        <div class="bb-fields">
 
-        <div class="bb-form-grid">
-
-          <div class="bb-form-group">
-            <label class="bb-field-label" for="bb-jd">Job Description</label>
-            <p class="bb-field-hint">Paste the full posting—include the requirements section and any preferred qualifications.</p>
+          <div class="bb-field">
+            <label for="bb-jd">Job description</label>
+            <p class="bb-field-hint" id="bb-jd-hint">Paste the full posting, including the requirements section and any preferred qualifications.</p>
             <textarea
               id="bb-jd"
-              class="bb-textarea"
               maxlength="8000"
+              required
+              aria-describedby="bb-jd-hint bb-jd-counter"
               placeholder="Paste the job description here...
 
 Example:
 We are seeking a motivated undergraduate student for a summer internship in our Computational Biology group. The ideal candidate will have experience with Python or R, familiarity with RNA-seq data analysis, and a strong foundation in molecular biology..."></textarea>
-            <div class="bb-char-counter" id="bb-jd-counter">0 / 8,000</div>
+            <p class="bb-char-counter" id="bb-jd-counter">0 / 8,000</p>
           </div>
 
-          <div class="bb-form-group">
-            <label class="bb-field-label" for="bb-resume">Your Resume</label>
-            <p class="bb-field-hint">Paste your resume as plain text. Copy from your Word doc, Google Doc, or PDF reader.</p>
+          <div class="bb-field">
+            <label for="bb-resume">Your resume</label>
+            <p class="bb-field-hint" id="bb-resume-hint">Paste your resume as plain text. Copy from your Word doc, Google Doc, or PDF reader.</p>
             <textarea
               id="bb-resume"
-              class="bb-textarea"
               maxlength="8000"
+              required
+              aria-describedby="bb-resume-hint bb-resume-counter"
               placeholder="Paste your resume text here...
 
 Example:
@@ -801,143 +591,123 @@ GPA: 3.7 / 4.0
 
 RESEARCH EXPERIENCE
 Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
-            <div class="bb-char-counter" id="bb-resume-counter">0 / 8,000</div>
+            <p class="bb-char-counter" id="bb-resume-counter">0 / 8,000</p>
           </div>
 
         </div>
 
-        <div class="bb-validation-msg" id="bb-validation-msg">
-          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="bb-validation-msg" id="bb-validation-msg" role="alert">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           <span id="bb-validation-text">Please fill in both fields before analyzing.</span>
         </div>
 
-        <div class="bb-form-footer">
-          <button type="submit" class="bb-analyze-btn" id="bb-submit-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-            Analyze My Application
-          </button>
-          <span class="bb-btn-note">
-            <span class="bb-btn-note-dot"></span>
-            Takes about 15–20 seconds &middot; Your text is not stored
-          </span>
+        <div class="bb-submit">
+          <button type="submit" class="bb-button" id="bb-submit-btn">Analyze my application</button>
+          <p class="bb-submit-note">Takes about 15–20 seconds. Your text is not stored.</p>
         </div>
-
       </form>
     </div>
-  </div>
-</div>
 
-<div id="bb-loading" class="bb-loading">
-  <div class="bb-spinner"></div>
-  <p class="bb-loading-heading">Analyzing your application&hellip;</p>
-  <p class="bb-loading-sub">Claude is reviewing the job description and your resume. This usually takes 15&ndash;20 seconds.</p>
-  <div class="bb-loading-dots">
-    <span></span><span></span><span></span>
-  </div>
-</div>
+    <!-- Loading -->
+    <div id="bb-loading" class="bb-loading" role="status">
+      <span class="bb-spinner" aria-hidden="true"></span>
+      <p class="bb-loading-heading">Analyzing your application&hellip;</p>
+      <p class="bb-loading-sub">Claude is reviewing the job description and your resume. This usually takes 15–20 seconds.</p>
+    </div>
 
-<div id="bb-results" class="bb-results">
+    <!-- Results -->
+    <div id="bb-results" class="bb-results">
+      <div class="bb-section-head">
+        <h2 id="bb-results-title" tabindex="-1">Your results</h2>
+        <p id="bb-results-role" hidden></p>
+      </div>
 
-  <div class="bb-section-divider">
-    <div class="bb-section-divider-line"></div>
-    <div class="bb-section-divider-label">Your Results</div>
-    <div class="bb-section-divider-line"></div>
-  </div>
-
-  <div class="bb-score-card">
-    <div class="bb-score-inner">
-      <div class="bb-ring-wrap">
-        <svg class="bb-ring-svg" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-          <circle class="bb-ring-track" cx="60" cy="60" r="52"/>
-          <circle id="bb-ring-fill" class="bb-ring-fill" cx="60" cy="60" r="52"
-            stroke-dasharray="326.73" stroke-dashoffset="326.73"/>
-        </svg>
-        <div class="bb-ring-center">
-          <span id="bb-ring-num" class="bb-ring-num">0</span>
-          <span class="bb-ring-denom">/ 100</span>
+      <div class="bb-score">
+        <div>
+          <p class="bb-score-caption">Match score</p>
+          <p class="bb-score-num"><span id="bb-ring-num">0</span><span class="bb-score-outof">/100</span></p>
+          <div class="bb-meter" aria-hidden="true"><div id="bb-ring-fill" class="bb-meter-fill"></div></div>
+        </div>
+        <div>
+          <h3 id="bb-score-label" class="bb-score-label"></h3>
+          <p id="bb-score-summary" class="bb-score-summary"></p>
+          <button type="button" id="bb-share-btn" class="bb-copy">Copy shareable summary</button>
         </div>
       </div>
-      <div class="bb-score-info">
-        <span id="bb-score-label" class="bb-score-label">&nbsp;</span>
-        <p id="bb-score-summary" class="bb-score-summary"></p>
-        <button type="button" id="bb-share-btn" class="bb-share-btn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-          Copy shareable summary
-        </button>
-      </div>
-    </div>
-  </div>
 
-  <div class="bb-detail-grid">
-
-    <div class="bb-detail-card bb-detail-card--green">
-      <div class="bb-card-header">
-        <div class="bb-card-icon bb-card-icon--green">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D5F3F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      <div class="bb-findings">
+        <div class="bb-finding">
+          <h3>Strengths</h3>
+          <ul id="bb-strengths-list" class="bb-list bb-list--strengths"></ul>
         </div>
-        <p class="bb-card-title">Strengths</p>
-      </div>
-      <ul id="bb-strengths-list" class="bb-result-list"></ul>
-    </div>
-
-    <div class="bb-detail-card bb-detail-card--amber">
-      <div class="bb-card-header">
-        <div class="bb-card-icon bb-card-icon--amber">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#b45309" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <div class="bb-finding">
+          <h3>Gaps</h3>
+          <ul id="bb-gaps-list" class="bb-list bb-list--gaps"></ul>
         </div>
-        <p class="bb-card-title">Gaps</p>
       </div>
-      <ul id="bb-gaps-list" class="bb-result-list"></ul>
-    </div>
 
-    <div class="bb-detail-card bb-detail-card--teal">
-      <div class="bb-card-header">
-        <div class="bb-card-icon bb-card-icon--teal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0E7490" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
+      <div class="bb-finding bb-keywords">
+        <h3>Keywords from the job description</h3>
+        <div class="bb-keyword-groups">
+          <div>
+            <h4>In your resume</h4>
+            <ul id="bb-kw-matched" class="bb-tags bb-tags--matched"></ul>
+          </div>
+          <div>
+            <h4>Missing from your resume</h4>
+            <ul id="bb-kw-missing" class="bb-tags bb-tags--missing"></ul>
+          </div>
         </div>
-        <p class="bb-card-title">Cover Letter Tips</p>
       </div>
-      <ul id="bb-cover-list" class="bb-result-list"></ul>
-    </div>
 
-    <div class="bb-detail-card bb-detail-card--navy">
-      <div class="bb-card-header">
-        <div class="bb-card-icon bb-card-icon--navy">
-          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <div class="bb-findings">
+        <div class="bb-finding">
+          <h3>Cover letter tips</h3>
+          <ul id="bb-cover-list" class="bb-list"></ul>
         </div>
-        <p class="bb-card-title">Action Items</p>
+        <div class="bb-finding">
+          <h3>Before you apply</h3>
+          <ul id="bb-actions-list" class="bb-list"></ul>
+        </div>
       </div>
-      <ul id="bb-actions-list" class="bb-result-list"></ul>
+
+      <div class="bb-results-end">
+        <p class="bb-disclaimer">This analysis is AI-generated. Use it as a starting point, not a definitive assessment. Results may not capture all your experience or the full context of the role.</p>
+        <button type="button" id="bb-try-again" class="bb-button">Try another application</button>
+      </div>
     </div>
 
   </div>
+</section>
 
-  <div class="bb-keywords-card">
-    <div class="bb-card-header">
-      <div class="bb-card-icon bb-card-icon--navy">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#1A1A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      </div>
-      <p class="bb-card-title">Keyword Match</p>
+<!-- Where to go next -->
+<section class="bb-section bb-band bb-band--cream">
+  <div class="bb-wrap">
+    <div class="bb-section-head">
+      <h2>Where to go next</h2>
     </div>
-    <div class="bb-kw-body">
-      <div>
-        <p class="bb-kw-col-label bb-kw-col-label--green">Matched</p>
-        <div id="bb-kw-matched" class="bb-kw-chips"></div>
-      </div>
-      <div>
-        <p class="bb-kw-col-label bb-kw-col-label--amber">Missing from Resume</p>
-        <div id="bb-kw-missing" class="bb-kw-chips"></div>
-      </div>
-    </div>
+    <ul class="bb-index">
+      <li>
+        <a href="/products/">
+          <span class="bb-index-title">The Biotech Blueprint</span>
+          <span class="bb-index-text">Real materials, annotated line by line: a resume that landed a pharma internship, cold emails that got replies, and real interview questions.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/career-pathways/">
+          <span class="bb-index-title">Careers</span>
+          <span class="bb-index-text">Seven paths into the field, from lab research to regulatory policy, with realistic entry points for each.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/resources/">
+          <span class="bb-index-title">The Learning Lab</span>
+          <span class="bb-index-text">Newsletters, podcasts, YouTube channels, courses, and books, picked for people who are new to the field.</span>
+        </a>
+      </li>
+    </ul>
   </div>
-
-  <div class="bb-results-footer">
-    <p class="bb-disclaimer">AI-generated analysis&mdash;use as a starting point, not a definitive assessment. Results may not capture all your experience or the full context of the role.</p>
-    <button type="button" id="bb-try-again" class="bb-try-again-btn">
-      <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.61"/></svg>
-      Try Another Application
-    </button>
-  </div>
+</section>
 
 </div>
 
@@ -945,21 +715,36 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 (function () {
   'use strict';
   var MAX        = 8000;
-  var CIRC       = 326.73;
   var WORKER_URL = 'https://biobridge-reviewer.jennifertranpk.workers.dev';
 
-  var jdEl        = document.getElementById('bb-jd');
-  var resumeEl    = document.getElementById('bb-resume');
-  var jdCount     = document.getElementById('bb-jd-counter');
-  var resCount    = document.getElementById('bb-resume-counter');
-  var form        = document.getElementById('bb-review-form');
-  var valMsg      = document.getElementById('bb-validation-msg');
-  var valText     = document.getElementById('bb-validation-text');
-  var formSec     = document.getElementById('bb-form-section');
-  var loadingSec  = document.getElementById('bb-loading');
-  var resultsSec  = document.getElementById('bb-results');
-  var tryAgainBtn = document.getElementById('bb-try-again');
-  var shareBtn    = document.getElementById('bb-share-btn');
+  var jdEl         = document.getElementById('bb-jd');
+  var resumeEl     = document.getElementById('bb-resume');
+  var jdCount      = document.getElementById('bb-jd-counter');
+  var resCount     = document.getElementById('bb-resume-counter');
+  var form         = document.getElementById('bb-review-form');
+  var formTitle    = document.getElementById('bb-form-title');
+  var valMsg       = document.getElementById('bb-validation-msg');
+  var valText      = document.getElementById('bb-validation-text');
+  var formSec      = document.getElementById('bb-form-section');
+  var loadingSec   = document.getElementById('bb-loading');
+  var resultsSec   = document.getElementById('bb-results');
+  var resultsTitle = document.getElementById('bb-results-title');
+  var tryAgainBtn  = document.getElementById('bb-try-again');
+  var shareBtn     = document.getElementById('bb-share-btn');
+
+  var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- Scrolling ----
+  // Elements with an id get scroll-margin-top from biobridge.css,
+  // which keeps them clear of the sticky header.
+  function scrollToEl(el, block) {
+    el.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: block || 'start' });
+  }
+
+  function scrollIfHidden(el, block) {
+    var r = el.getBoundingClientRect();
+    if (r.top < 80 || r.bottom > window.innerHeight) scrollToEl(el, block);
+  }
 
   // ---- Char counters ----
   function updateCounter(el, ctrEl) {
@@ -968,14 +753,25 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     ctrEl.className = 'bb-char-counter' +
       (n >= MAX ? ' over' : n >= MAX * 0.9 ? ' warn' : '');
   }
+
+  function flagField(el) {
+    el.classList.add('bb-field-error');
+    el.setAttribute('aria-invalid', 'true');
+  }
+
+  function clearField(el) {
+    el.classList.remove('bb-field-error');
+    el.removeAttribute('aria-invalid');
+  }
+
   jdEl.addEventListener('input', function () {
     updateCounter(jdEl, jdCount);
-    jdEl.classList.remove('bb-field-error');
+    clearField(jdEl);
     hideValidation();
   });
   resumeEl.addEventListener('input', function () {
     updateCounter(resumeEl, resCount);
-    resumeEl.classList.remove('bb-field-error');
+    clearField(resumeEl);
     hideValidation();
   });
 
@@ -989,68 +785,74 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     resultsSec.classList[state === 'results' ? 'add' : 'remove']('visible');
   }
 
-  // ---- Score colors ----
-  function scoreColors(s) {
-    if (s >= 76) return { stroke: '#2D5F3F', text: '#2D5F3F', bg: 'rgba(45,95,63,0.1)',    border: 'rgba(45,95,63,0.25)' };
-    if (s >= 51) return { stroke: '#0E7490', text: '#0E7490', bg: 'rgba(14,116,144,0.1)',  border: 'rgba(14,116,144,0.25)' };
-    if (s >= 26) return { stroke: '#d97706', text: '#b45309', bg: 'rgba(180,83,9,0.08)',   border: 'rgba(180,83,9,0.25)' };
-    return         { stroke: '#dc2626', text: '#dc2626', bg: 'rgba(220,38,38,0.08)',   border: 'rgba(220,38,38,0.25)' };
-  }
-
-  // ---- Animate ring + count-up ----
+  // ---- Animate meter + count-up ----
   function animateScore(target) {
-    var fill    = document.getElementById('bb-ring-fill');
-    var numEl   = document.getElementById('bb-ring-num');
-    var labelEl = document.getElementById('bb-score-label');
-    var c       = scoreColors(target);
-    fill.style.stroke         = c.stroke;
-    numEl.style.color         = c.text;
-    labelEl.style.background  = c.bg;
-    labelEl.style.borderColor = c.border;
-    labelEl.style.color       = c.text;
+    var fill  = document.getElementById('bb-ring-fill');
+    var numEl = document.getElementById('bb-ring-num');
+    var score = Math.max(0, Math.min(100, Number(target) || 0));
+
+    if (reduceMotion) {
+      fill.style.width  = score + '%';
+      numEl.textContent = score;
+      return;
+    }
 
     var startTs = null;
     var dur     = 1200;
-    var endOff  = CIRC - (target / 100) * CIRC;
     function tick(ts) {
       if (!startTs) startTs = ts;
       var p    = Math.min((ts - startTs) / dur, 1);
       var ease = 1 - Math.pow(1 - p, 3);
-      fill.style.strokeDashoffset = CIRC - (CIRC - endOff) * ease;
-      numEl.textContent = Math.round(target * ease);
+      fill.style.width  = (score * ease) + '%';
+      numEl.textContent = Math.round(score * ease);
       if (p < 1) requestAnimationFrame(tick);
     }
     requestAnimationFrame(tick);
   }
 
-  // ---- Helpers ----
-  function esc(s) {
-    return String(s)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;');
+  function resetScore() {
+    document.getElementById('bb-ring-fill').style.width = '0%';
+    document.getElementById('bb-ring-num').textContent  = '0';
   }
 
-  function renderList(ulId, items, markerCls, markerChar) {
+  // ---- Helpers ----
+  function renderList(ulId, items) {
     var ul = document.getElementById(ulId);
     ul.innerHTML = '';
     (items || []).forEach(function (text) {
       var li = document.createElement('li');
-      li.className = 'bb-result-item';
-      li.innerHTML = '<span class="bb-item-marker ' + markerCls + '">' + markerChar + '</span><span>' + esc(text) + '</span>';
+      li.textContent = String(text);
       ul.appendChild(li);
     });
   }
 
-  function renderKeywords(matched, missing) {
-    function chips(arr, cls) {
-      return (arr || []).map(function (k) {
-        return '<span class="bb-kw-badge ' + cls + '">' + esc(k) + '</span>';
-      }).join('');
+  function renderTags(ulId, words) {
+    var ul = document.getElementById(ulId);
+    ul.innerHTML = '';
+    (words || []).forEach(function (word) {
+      var li = document.createElement('li');
+      li.textContent = String(word);
+      ul.appendChild(li);
+    });
+    if (!ul.children.length) {
+      var none = document.createElement('li');
+      none.className = 'bb-tags-none';
+      none.textContent = 'None';
+      ul.appendChild(none);
     }
-    document.getElementById('bb-kw-matched').innerHTML = chips(matched, 'bb-kw-matched');
-    document.getElementById('bb-kw-missing').innerHTML = chips(missing, 'bb-kw-missing');
+  }
+
+  // "Good Match" from the service reads as "Good match" on the page
+  function sentenceCase(s) {
+    s = String(s || '');
+    return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+  }
+
+  function renderRole(title, co) {
+    var el = document.getElementById('bb-results-role');
+    var text = title && co ? title + ' at ' + co : title ? title : co ? 'A role at ' + co : '';
+    el.textContent = text;
+    el.hidden = !text;
   }
 
   // ---- Share ----
@@ -1061,37 +863,42 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     var co    = data.company   || null;
     var url   = 'biotechbridge.org/application-reviewer/';
     var base  = 'I got a ' + score + '/100 ' + label;
-    if (title && co) return base + ' for ' + title + ' at ' + co + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    if (title)       return base + ' for ' + title + '\u2014analyzed by BioBridge \u00b7 ' + url;
-    return base + '\u2014analyzed by BioBridge \u00b7 ' + url;
+    if (title && co) return base + ' for ' + title + ' at ' + co + ', analyzed by BioBridge · ' + url;
+    if (title)       return base + ' for ' + title + ', analyzed by BioBridge · ' + url;
+    return base + ', analyzed by BioBridge · ' + url;
   }
 
-  var CLIPBOARD_ICON = shareBtn.innerHTML;
+  var SHARE_LABEL = shareBtn.innerHTML;
 
   shareBtn.addEventListener('click', function () {
     var text = shareBtn.dataset.shareText;
     if (!text) return;
     navigator.clipboard.writeText(text).then(function () {
       shareBtn.classList.add('bb-share-copied');
-      shareBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+      shareBtn.textContent = 'Copied!';
       setTimeout(function () {
         shareBtn.classList.remove('bb-share-copied');
-        shareBtn.innerHTML = CLIPBOARD_ICON;
+        shareBtn.innerHTML = SHARE_LABEL;
       }, 2000);
     });
   });
 
   function renderResults(data) {
-    document.getElementById('bb-score-label').textContent   = data.matchLabel || '';
-    document.getElementById('bb-score-summary').textContent = data.summary    || '';
+    var keywords = data.keywords || {};
+    document.getElementById('bb-score-label').textContent   = sentenceCase(data.matchLabel);
+    document.getElementById('bb-score-summary').textContent = data.summary || '';
+    renderRole(data.jobTitle, data.company);
     shareBtn.dataset.shareText = buildShareText(data);
-    renderList('bb-strengths-list', data.strengths,       'bb-item-marker--green', '\u2713');
-    renderList('bb-gaps-list',      data.gaps,            'bb-item-marker--amber', '!');
-    renderList('bb-cover-list',     data.coverLetterTips, 'bb-item-marker--teal',  '\u2192');
-    renderList('bb-actions-list',   data.actionItems,     'bb-item-marker--navy',  '\u2192');
-    renderKeywords(data.keywords.matched, data.keywords.missing);
+    renderList('bb-strengths-list', data.strengths);
+    renderList('bb-gaps-list',      data.gaps);
+    renderList('bb-cover-list',     data.coverLetterTips);
+    renderList('bb-actions-list',   data.actionItems);
+    renderTags('bb-kw-matched',     keywords.matched);
+    renderTags('bb-kw-missing',     keywords.missing);
+    resetScore();
     showState('results');
-    window.scrollTo({ top: resultsSec.offsetTop - 24, behavior: 'smooth' });
+    scrollToEl(resultsSec);
+    resultsTitle.focus({ preventScroll: true });
     setTimeout(function () { animateScore(data.matchScore); }, 100);
   }
 
@@ -1102,18 +909,19 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     var resume = resumeEl.value.trim();
 
     if (!jd && !resume) {
-      jdEl.classList.add('bb-field-error');
-      resumeEl.classList.add('bb-field-error');
+      flagField(jdEl);
+      flagField(resumeEl);
       showValidation('Please paste a job description and your resume before analyzing.');
       return;
     }
-    if (!jd)     { jdEl.classList.add('bb-field-error');     showValidation('Please paste the job description.'); return; }
-    if (!resume)  { resumeEl.classList.add('bb-field-error'); showValidation('Please paste your resume text.');    return; }
-    if (jd.length < 100)     { jdEl.classList.add('bb-field-error');     showValidation('The job description looks too short\u2014paste the full posting for accurate results.'); return; }
-    if (resume.length < 100) { resumeEl.classList.add('bb-field-error'); showValidation('The resume text looks too short\u2014paste your full resume for accurate results.');    return; }
+    if (!jd)     { flagField(jdEl);     showValidation('Please paste the job description.'); return; }
+    if (!resume) { flagField(resumeEl); showValidation('Please paste your resume text.');    return; }
+    if (jd.length < 100)     { flagField(jdEl);     showValidation('The job description looks too short. Paste the full posting for accurate results.'); return; }
+    if (resume.length < 100) { flagField(resumeEl); showValidation('The resume text looks too short. Paste your full resume for accurate results.');    return; }
 
     hideValidation();
     showState('loading');
+    scrollIfHidden(loadingSec);
 
     fetch(WORKER_URL, {
       method: 'POST',
@@ -1124,7 +932,13 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
       return res.json().then(function (data) {
         if (!res.ok) throw new Error(data.error || 'Analysis service unavailable. Please try again.');
         return data;
+      }, function () {
+        // The reply wasn't JSON, so there's no message from the service to show
+        throw new Error('Analysis service unavailable. Please try again.');
       });
+    }, function () {
+      // The request never got an answer (offline, blocked, or unreachable)
+      throw new Error('Couldn\'t reach the analysis service. Check your connection and try again.');
     })
     .then(function (data) {
       renderResults(data);
@@ -1132,13 +946,15 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     .catch(function (err) {
       showState('form');
       showValidation(err.message || 'Something went wrong. Please try again.');
+      scrollIfHidden(valMsg, 'center');
     });
   });
 
   // ---- Try again ----
   tryAgainBtn.addEventListener('click', function () {
     showState('form');
-    window.scrollTo({ top: formSec.offsetTop - 24, behavior: 'smooth' });
+    scrollToEl(formSec);
+    formTitle.focus({ preventScroll: true });
   });
 
 }());

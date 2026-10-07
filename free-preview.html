@@ -1,504 +1,221 @@
 ---
-layout: none
-title: "Free Preview — The Biotech Blueprint"
-description: "Download a free chapter from The Biotech Blueprint by Jean Tran — the exact templates used to land responses from senior people at Pfizer, J&J, and top consulting firms."
+layout: splash
+title: "Free preview: The Biotech Blueprint"
+description: "Download a free chapter from The Biotech Blueprint by Jean Tran: the exact cold outreach templates used to land responses from senior people at Pfizer, J&J, and top consulting firms."
+permalink: /free-preview
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Preview — The Biotech Blueprint | BioBridge</title>
-  <meta name="description" content="Download a free chapter from The Biotech Blueprint — the exact cold outreach templates used to land responses from senior people at Pfizer, J&J, and top consulting firms." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
 
-  <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+/* ================================================================
+   FREE PREVIEW
+   Shared pieces (type, bands, buttons) come from
+   assets/css/biobridge.css. These are the parts only this page uses.
+   ================================================================ */
 
-    :root {
-      --green-dark:   #2D4A2D;
-      --green-mid:    #3A5E3A;
-      --green-light:  #8FB88F;
-      --gold:         #C4A882;
-      --gold-hover:   #B5956C;
-      --cream:        #FAF7F2;
-      --cream-mid:    #F3EDE3;
-      --cream-border: #E8DED0;
-      --text-dark:    #1C2B1C;
-      --text-body:    #3D4F3D;
-      --text-muted:   #6B7F6B;
-      --white:        #FFFFFF;
-      --shadow-sm:    0 1px 3px rgba(45,74,45,0.08);
-      --shadow-md:    0 4px 16px rgba(45,74,45,0.12);
-      --shadow-lg:    0 12px 40px rgba(45,74,45,0.18);
-    }
+/* ---------- Hero: what the preview is, and the download ---------- */
 
-    html {
-      font-size: 16px;
-      scroll-behavior: smooth;
-    }
+.bb-free-preview-hero {
+  display: grid;
+  gap: 2.75rem;
+}
 
-    body {
-      font-family: 'DM Sans', system-ui, sans-serif;
-      background-color: var(--cream);
-      color: var(--text-body);
-      line-height: 1.6;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+.bb-free-preview .bb-free-preview-hero h1 {
+  max-width: 12em;
+}
 
-    /* ─── Layout ─── */
-    .page-wrap {
-      width: 100%;
-      max-width: 680px;
-      padding: 0 24px;
-    }
+.bb-free-preview .bb-free-preview-hero .bb-lede {
+  max-width: 30em;
+}
 
-    /* ─── Hero block ─── */
-    .hero {
-      width: 100%;
-      background: linear-gradient(160deg, var(--green-dark) 0%, var(--green-mid) 100%);
-      padding: 40px 24px 72px;
-      display: flex;
-      justify-content: center;
-    }
+.bb-free-preview .bb-free-preview-intro {
+  max-width: 34em;
+  margin-top: 1rem;
+}
 
-    .hero-logo {
-      display: block;
-      height: 48px;
-      width: auto;
-      margin: 0 auto 36px;
-      filter: brightness(0) invert(1);
-    }
+.bb-free-preview .bb-free-preview-note {
+  font-size: 1rem;
+  color: var(--bb-muted);
+}
 
-    .hero-inner {
-      max-width: 640px;
-      text-align: center;
-    }
+.bb-free-preview-byline {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: 2.5rem;
+}
 
-    .eyebrow {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      background: rgba(196,168,130,0.12);
-      border: 1px solid rgba(196,168,130,0.3);
-      border-radius: 100px;
-      padding: 6px 16px;
-      margin-bottom: 28px;
-    }
+.bb-free-preview .bb-free-preview-byline img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex: none;
+}
 
-    .hero h1 {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 400;
-      line-height: 1.15;
-      color: var(--white);
-      margin-bottom: 20px;
-      letter-spacing: -0.01em;
-    }
+.bb-free-preview .bb-free-preview-byline p {
+  font-size: 1rem;
+  line-height: 1.45;
+  color: var(--bb-muted);
+}
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--gold);
-    }
+.bb-free-preview .bb-free-preview-cover {
+  display: block;
+  width: 150px;
+  height: auto;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(23, 33, 28, 0.12), 0 14px 30px rgba(23, 33, 28, 0.2);
+}
 
-    .hero-sub {
-      font-size: 1.0625rem;
-      line-height: 1.7;
-      color: rgba(255,255,255,0.82);
-      max-width: 520px;
-      margin: 0 auto 36px;
-    }
+/* ---------- Inside the free chapter ---------- */
 
-    .hero-sub strong {
-      color: var(--white);
-      font-weight: 600;
-    }
+.bb-free-preview-chapter {
+  display: grid;
+  gap: 1.75rem;
+}
 
-    /* ─── Download button ─── */
-    .btn-download {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: var(--gold);
-      color: var(--green-dark);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 700;
-      letter-spacing: 0.01em;
-      padding: 16px 36px;
-      border-radius: 6px;
-      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 20px rgba(196,168,130,0.35);
-    }
+.bb-free-preview .bb-free-preview-chapter-text > p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  max-width: 41rem;
+}
 
-    .btn-download:hover {
-      background: var(--gold-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 28px rgba(196,168,130,0.45);
-    }
+.bb-free-preview .bb-free-preview-chapter-text .bb-free-preview-meta {
+  margin-top: 1.75rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(246, 241, 230, 0.2);
+  font-size: 1rem;
+  line-height: 1.6;
+}
 
-    .btn-download:active {
-      transform: translateY(0);
-    }
+/* ---------- The complete guide ---------- */
 
-    .btn-download svg {
-      flex-shrink: 0;
-    }
+.bb-free-preview-full {
+  display: grid;
+  gap: 2rem;
+}
 
-    .btn-note {
-      display: block;
-      margin-top: 14px;
-      font-size: 0.8125rem;
-      color: rgba(255,255,255,0.5);
-      letter-spacing: 0.01em;
-    }
+.bb-free-preview .bb-free-preview-full .bb-actions {
+  margin-top: 0;
+}
 
-    /* ─── Content card ─── */
-    .card {
-      background: var(--white);
-      border: 1px solid var(--cream-border);
-      border-radius: 12px;
-      padding: 48px 40px;
-      box-shadow: var(--shadow-md);
-      margin: 0 auto;
-    }
+.bb-free-preview .bb-free-preview-list li:last-child {
+  margin-bottom: 0;
+}
 
-    .section-wrap {
-      width: 100%;
-      max-width: 680px;
-      padding: 56px 24px 0;
-    }
+/* No one-word last lines */
+.bb-free-preview p,
+.bb-free-preview li {
+  text-wrap: pretty;
+}
 
-    /* ─── Preview content section ─── */
-    .preview-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--green-light);
-      margin-bottom: 14px;
-    }
+/* ---------- Wider screens ---------- */
 
-    .preview-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(1.35rem, 3vw, 1.75rem);
-      font-weight: 400;
-      color: var(--text-dark);
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
+@media (min-width: 700px) {
+  .bb-free-preview-hero {
+    grid-template-columns: minmax(0, 1fr) 200px;
+    gap: 3rem;
+    align-items: center;
+  }
 
-    .divider {
-      width: 48px;
-      height: 3px;
-      background: var(--gold);
-      border-radius: 2px;
-      margin-bottom: 24px;
-    }
+  .bb-free-preview .bb-free-preview-cover {
+    width: 100%;
+  }
+}
 
-    .preview-text {
-      font-size: 1rem;
-      line-height: 1.75;
-      color: var(--text-body);
-    }
+@media (min-width: 900px) {
+  .bb-free-preview-hero {
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+    gap: 4rem;
+  }
 
-    .preview-text + .preview-text {
-      margin-top: 14px;
-    }
+  .bb-free-preview .bb-free-preview-cover {
+    width: 260px;
+    justify-self: end;
+  }
 
-    /* ─── What's in preview list ─── */
-    .chapter-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--cream-mid);
-      border: 1px solid var(--cream-border);
-      border-left: 3px solid var(--green-light);
-      border-radius: 6px;
-      padding: 12px 16px;
-      margin: 24px 0 0;
-      width: 100%;
-    }
+  .bb-free-preview-chapter {
+    grid-template-columns: 280px minmax(0, 1fr);
+    column-gap: 4.5rem;
+  }
 
-    .chapter-badge-text {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-dark);
-    }
+  .bb-free-preview-full {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas:
+      "head list"
+      "actions list";
+    grid-template-rows: auto 1fr;
+    column-gap: 4.5rem;
+    row-gap: 2rem;
+    align-items: start;
+  }
 
-    .chapter-badge-sub {
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      font-weight: 400;
-    }
+  .bb-free-preview-full-head { grid-area: head; }
+  .bb-free-preview-full .bb-prose { grid-area: list; }
+  .bb-free-preview .bb-free-preview-full .bb-actions { grid-area: actions; }
+}
+</style>
 
-    /* ─── Full guide section ─── */
-    .full-guide-card {
-      background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-mid) 100%);
-      border-radius: 12px;
-      padding: 48px 40px;
-      box-shadow: var(--shadow-lg);
-      position: relative;
-      overflow: hidden;
-    }
+<div class="bb-page bb-free-preview">
 
-    .full-guide-card::before {
-      content: '';
-      position: absolute;
-      top: -60px;
-      right: -60px;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background: rgba(143,184,143,0.08);
-      pointer-events: none;
-    }
-
-    .full-guide-card::after {
-      content: '';
-      position: absolute;
-      bottom: -40px;
-      left: -40px;
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      background: rgba(196,168,130,0.06);
-      pointer-events: none;
-    }
-
-    .guide-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 14px;
-    }
-
-    .guide-title {
-      font-family: 'DM Serif Display', Georgia, serif;
-      font-size: clamp(1.35rem, 3vw, 1.75rem);
-      color: var(--white);
-      font-weight: 400;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .guide-list {
-      list-style: none;
-      margin: 0 0 32px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .guide-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-size: 0.9375rem;
-      color: rgba(255,255,255,0.85);
-      line-height: 1.5;
-    }
-
-    .guide-list li::before {
-      content: '';
-      display: block;
-      flex-shrink: 0;
-      width: 18px;
-      height: 18px;
-      margin-top: 2px;
-      background: var(--gold);
-      border-radius: 50%;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M3 8l3.5 3.5L13 4.5' stroke='%232D4A2D' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-      background-size: 12px 12px;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .btn-full-guide {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--white);
-      color: var(--green-dark);
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: 700;
-      padding: 15px 32px;
-      border-radius: 6px;
-      transition: background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-    }
-
-    .btn-full-guide:hover {
-      background: var(--cream);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.22);
-    }
-
-    /* ─── Footer ─── */
-    .site-footer {
-      width: 100%;
-      padding: 40px 24px 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      margin-top: 56px;
-      border-top: 1px solid var(--cream-border);
-    }
-
-    .footer-brand {
-      font-size: 0.875rem;
-      font-weight: 600;
-      color: var(--text-dark);
-      letter-spacing: 0.01em;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .footer-links a {
-      font-size: 0.8125rem;
-      color: var(--text-muted);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover {
-      color: var(--green-dark);
-    }
-
-    .footer-copy {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
-    /* ─── Responsive ─── */
-    @media (max-width: 600px) {
-      .card,
-      .full-guide-card {
-        padding: 36px 24px;
-      }
-
-      .hero {
-        padding: 48px 20px 60px;
-      }
-
-      .btn-download {
-        padding: 15px 28px;
-        font-size: 0.9375rem;
-      }
-
-      .section-wrap {
-        padding: 40px 20px 0;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- ── Hero (logo + headline unified) ── -->
-  <section class="hero">
-    <div class="hero-inner">
-      <a href="https://biotechbridge.org" aria-label="BioBridge Home">
-        <img src="/assets/images/BioBridge.png" alt="BioBridge logo" class="hero-logo" />
-      </a>
-      <span class="eyebrow">Free Chapter Download</span>
-      <h1>Get the Free Preview of<br /><em>The Biotech Blueprint</em></h1>
-      <p class="hero-sub">
-        Before you invest in the full guide, see exactly how it reads and what it teaches.
-        This free preview gives you <strong>Chapter 4: The Cold Outreach Playbook</strong>—the exact
-        templates and strategy used to get replies from senior people at Pfizer, J&amp;J,
-        and top consulting firms. real advice based on real results.
-      </p>
-      <a
-        href="/assets/images/biotech-blueprint-free-preview.pdf.pdf"
-        class="btn-download"
-        download
-        aria-label="Download the free preview PDF"
-      >
-        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M9 1v10m0 0l-3.5-3.5M9 11l3.5-3.5M2 13.5v1A2.5 2.5 0 0 0 4.5 17h9a2.5 2.5 0 0 0 2.5-2.5v-1" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-        Download Free Preview — PDF
-      </a>
-      <span class="btn-note">Free · No email required · Instant download</span>
+<!-- Hero -->
+<header class="bb-pagehead bb-band bb-band--cream">
+  <div class="bb-wrap bb-free-preview-hero">
+    <div>
+      <p class="bb-kicker">Guides</p>
+      <h1>Get the free preview of<br> <em>The Biotech Blueprint</em></h1>
+      <p class="bb-lede">Before you invest in the full guide, see exactly how it reads and what it teaches.</p>
+      <p class="bb-free-preview-intro">This free preview gives you <strong>Chapter 4: The Cold Outreach Playbook</strong>, the exact templates and strategy used to get replies from senior people at Pfizer, J&amp;J, and top consulting firms. Real advice based on real results.</p>
+      <div class="bb-actions">
+        <a class="bb-button" href="/assets/images/biotech-blueprint-free-preview.pdf.pdf" download="biotech-blueprint-free-preview.pdf">Download the free preview (PDF)</a>
+        <p class="bb-free-preview-note">Free, no email required, instant download</p>
+      </div>
+      <div class="bb-free-preview-byline">
+        <img src="/assets/images/profile-photo.jpg" alt="" width="48" height="48">
+        <p>By <strong>Jean Tran</strong>, founder of BioBridge</p>
+      </div>
     </div>
-  </section>
+    <img class="bb-free-preview-cover" src="/assets/images/blueprint-cover-600.jpg" alt="Cover of The Biotech Blueprint" width="600" height="900">
+  </div>
+</header>
 
-  <!-- ── What's inside the preview ── -->
-  <div class="section-wrap">
-    <div class="card">
-      <p class="preview-label">Inside the Free Chapter</p>
-      <h2 class="preview-title">Chapter 4: The Cold Outreach Playbook</h2>
-      <div class="divider"></div>
-      <p class="preview-text">
-        Most people send cold messages and hear nothing back. Chapter 4 breaks down why—and shows you exactly what to say instead. You'll see the real subject lines,
-        message structures, and follow-up timing that generated responses from Directors
-        and VPs at companies like Pfizer and Johnson &amp; Johnson, and partners at top
-        life sciences consulting firms.
-      </p>
-
-      <div class="chapter-badge">
-        <div>
-          <div class="chapter-badge-text">Chapter 4 · 18 pages</div>
-          <div class="chapter-badge-sub">Templates · Real examples · Step-by-step framework</div>
-        </div>
+<!-- Inside the free chapter -->
+<section class="bb-section bb-band bb-band--forest">
+  <div class="bb-wrap bb-free-preview-chapter">
+    <div>
+      <p class="bb-kicker">Inside the free chapter</p>
+      <h2>Chapter 4: The Cold Outreach Playbook</h2>
+    </div>
+    <div class="bb-free-preview-chapter-text">
+      <p>Most people send cold messages and hear nothing back. Chapter 4 breaks down why, and shows you exactly what to say instead. You'll see the real subject lines, message structures, and follow-up timing that generated responses from directors and VPs at companies like Pfizer and Johnson &amp; Johnson, and partners at top life sciences consulting firms.</p>
+      <p class="bb-free-preview-meta"><strong>Chapter 4 · 18 pages</strong><br>Templates · Real examples · Step-by-step framework</p>
+      <div class="bb-actions">
+        <a class="bb-button bb-button--light" href="/assets/images/biotech-blueprint-free-preview.pdf.pdf" download="biotech-blueprint-free-preview.pdf">Download the free preview (PDF)</a>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- ── Full guide CTA ── -->
-  <div class="section-wrap" style="padding-bottom: 0;">
-    <div class="full-guide-card">
-      <p class="guide-label">The Complete Guide</p>
-      <h2 class="guide-title">Ready to go further?<br />Get the full Biotech Blueprint.</h2>
-      <ul class="guide-list">
+<!-- The complete guide -->
+<section class="bb-section bb-band bb-band--cream">
+  <div class="bb-wrap bb-free-preview-full">
+    <div class="bb-free-preview-full-head">
+      <p class="bb-kicker">The complete guide</p>
+      <h2>Ready to go further?<br> Get the full Biotech Blueprint.</h2>
+    </div>
+    <div class="bb-prose">
+      <ul class="bb-free-preview-list">
         <li>How to map the biotech landscape and identify roles worth pursuing</li>
         <li>Networking frameworks built specifically for science backgrounds</li>
         <li>Interview strategies for breaking in without a business degree</li>
-        <li>The full cold outreach system — all 6 chapters, not just Chapter 4</li>
+        <li>The full cold outreach system: all 6 chapters, not just Chapter 4</li>
         <li>Bonus templates: LinkedIn connection requests, informational asks, and follow-ups</li>
       </ul>
-      <a
-        href="https://tranquility120.gumroad.com/l/the-biotech-blueprint"
-        class="btn-full-guide"
-        aria-label="Get the full Biotech Blueprint guide"
-      >
-        Get the Full Guide &rarr;
-      </a>
+    </div>
+    <div class="bb-actions">
+      <a class="bb-button" href="https://tranquility120.gumroad.com/l/the-biotech-blueprint">Get the full guide</a>
+      <a class="bb-textlink" href="/products/">See what's included</a>
     </div>
   </div>
+</section>
 
-  <!-- ── Footer ── -->
-  <footer class="site-footer">
-    <p class="footer-brand">By Jean Tran &nbsp;|&nbsp; BioBridge</p>
-    <nav class="footer-links" aria-label="Footer navigation">
-      <a href="https://biotechbridge.org">Home</a>
-      <a href="https://biotechbridge.org/resources">Resources</a>
-      <a href="https://biotechbridge.org/get-involved">Contact</a>
-    </nav>
-    <p class="footer-copy">&copy; {% raw %}{{ site.time | date: '%Y' }}{% endraw %} BioBridge. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+</div>
