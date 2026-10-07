@@ -252,7 +252,7 @@ permalink: /resources/
       <ul class="bb-res-list">
         <li class="bb-res">
           <img class="bb-res-logo" src="/assets/images/logo-shortwave.png" alt="" width="40" height="40" loading="lazy">
-          <h3 class="bb-res-name"><a href="https://www.npr.org/podcasts/510351/short-wave" target="_blank" rel="noopener">Shortwave (NPR)</a></h3>
+          <h3 class="bb-res-name"><a href="https://www.npr.org/podcasts/510351/short-wave" target="_blank" rel="noopener">Short Wave (NPR)</a></h3>
           <p class="bb-res-text">Short daily science stories from NPR: accessible, lively, and great for beginners.</p>
         </li>
         <li class="bb-res">
@@ -423,6 +423,7 @@ permalink: /resources/
         <img class="bb-book-cover" src="/assets/images/book-henrietta-lacks-300.jpg" alt="" width="300" height="400" loading="lazy">
         <div>
           <h3>The Immortal Life of Henrietta Lacks</h3>
+          <p class="bb-book-author">Rebecca Skloot</p>
           <p class="bb-book-text">Science, ethics, and race: an essential read on how cell biology intersects with human dignity.</p>
         </div>
       </li>
