@@ -165,6 +165,11 @@ permalink: /application-reviewer/
   color: var(--bb-muted);
 }
 
+/* Keeps "15–20 seconds" on one line */
+.bb-reviewer .bb-nowrap {
+  white-space: nowrap;
+}
+
 /* ---------- Buttons on this page ---------- */
 
 .bb-reviewer button:focus {
@@ -603,7 +608,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
 
         <div class="bb-submit">
           <button type="submit" class="bb-button" id="bb-submit-btn">Analyze my application</button>
-          <p class="bb-submit-note">Takes about 15–20 seconds. Your text is not stored.</p>
+          <p class="bb-submit-note">Takes about <span class="bb-nowrap">15–20 seconds</span>. Your text is not stored.</p>
         </div>
       </form>
     </div>
@@ -612,7 +617,7 @@ Undergraduate Research Assistant, Dr. Chen Lab..."></textarea>
     <div id="bb-loading" class="bb-loading" role="status">
       <span class="bb-spinner" aria-hidden="true"></span>
       <p class="bb-loading-heading">Analyzing your application&hellip;</p>
-      <p class="bb-loading-sub">Claude is reviewing the job description and your resume. This usually takes 15–20 seconds.</p>
+      <p class="bb-loading-sub">Claude is reviewing the job description and your resume. This usually takes <span class="bb-nowrap">15–20 seconds</span>.</p>
     </div>
 
     <!-- Results -->
