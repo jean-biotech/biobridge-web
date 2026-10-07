@@ -225,11 +225,16 @@ permalink: /career-pathways/
 
 .bb-careers .bb-feature-text .bb-feature-link {
   margin-top: 1.5rem;
-  font-weight: 600;
-  font-size: 1.05rem;
 }
 
 /* ---------- Wider screens ---------- */
+
+/* Three cards in a two-column grid: let the last one take the full row */
+@media (min-width: 640px) and (max-width: 999px) {
+  .bb-careers .bb-cards--3 > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+}
 
 @media (min-width: 700px) {
   /* A little wider than the shared 11rem so labels such as
@@ -245,13 +250,6 @@ permalink: /career-pathways/
   /* Three short links fit on one row from tablet width up */
   .bb-careers .bb-next .bb-index {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-/* Three cards in a two-column grid: let the last one take the full row */
-@media (min-width: 640px) and (max-width: 999px) {
-  .bb-careers .bb-cards--3 > :last-child:nth-child(odd) {
-    grid-column: 1 / -1;
   }
 }
 
@@ -290,8 +288,8 @@ permalink: /career-pathways/
       <h1>There's no <em>single</em> path into biotech</h1>
       <p class="bb-lede">Here are the seven major routes into the field, with realistic entry points for every background, plus a practical guide to <a href="#internship">landing your first internship</a>.</p>
     </div>
-    <nav class="bb-toc" aria-label="The seven paths">
-      <p class="bb-toc-label">The seven paths</p>
+    <nav class="bb-toc" aria-labelledby="toc-label">
+      <p class="bb-toc-label" id="toc-label">The seven paths</p>
       <ul>
         <li><a href="#research">Research</a></li>
         <li><a href="#manufacturing">Industry &amp; manufacturing</a></li>
@@ -780,25 +778,25 @@ permalink: /career-pathways/
         <h3>AI &amp; drug discovery</h3>
         <p>AlphaFold's protein structure predictions changed what computational biology teams can accomplish in months rather than years. AI-assisted clinical trial design is reducing the time it takes to identify patient cohorts and predict drug responses.</p>
         <p>New roles are emerging at the intersection of machine learning and wet lab science. Computational biologists, AI research scientists, and data engineers focused on genomics pipelines are among the fastest-growing positions in pharma and early-stage biotech. You don't need to be a programmer to contribute: biology domain expertise is increasingly what distinguishes useful AI tools from ones that fail in practice.</p>
-        <p><a href="https://www.statnews.com" target="_blank" rel="noopener">Explore on STAT News</a></p>
+        <p><a class="bb-textlink" href="https://www.statnews.com" target="_blank" rel="noopener">Explore on STAT News</a></p>
       </article>
       <article>
         <h3>Synthetic biology</h3>
         <p>Companies like Ginkgo Bioworks have built platform-level infrastructure for engineering organisms to produce everything from fragrances to industrial chemicals to therapeutic proteins. Biomanufacturing (using engineered microbes and cell lines to produce products that previously required petroleum chemistry or animal agriculture) is attracting significant investment.</p>
         <p>Roles range from metabolic engineering and strain development to process scale-up and fermentation operations. Synthetic biology also intersects with food, materials, and agriculture, making it one of the broader application areas for biology training outside traditional pharma.</p>
-        <p><a href="https://www.nature.com" target="_blank" rel="noopener">Read on Nature</a></p>
+        <p><a class="bb-textlink" href="https://www.nature.com" target="_blank" rel="noopener">Read on Nature</a></p>
       </article>
       <article>
         <h3>Longevity &amp; aging biotech</h3>
         <p>Venture capital interest in longevity science has grown substantially, with firms like Calico (backed by Alphabet) and Unity Biotechnology pursuing interventions targeting the biology of aging itself rather than individual diseases. The field remains scientifically early-stage, but it's generating roles in translational research, clinical development, and biomarker science.</p>
         <p>For students interested in this space, a strong foundation in cell biology, metabolism, or genetics, combined with an understanding of the long and uncertain clinical timelines involved, puts you ahead of most applicants entering this niche.</p>
-        <p><a href="https://www.nia.nih.gov" target="_blank" rel="noopener">Explore at NIA (NIH)</a></p>
+        <p><a class="bb-textlink" href="https://www.nia.nih.gov" target="_blank" rel="noopener">Explore at NIA (NIH)</a></p>
       </article>
       <article>
         <h3>Personalized medicine &amp; diagnostics</h3>
         <p>Genomic sequencing costs have dropped dramatically, making population-scale genomics programs feasible. Companion diagnostics (tests that determine whether a patient will respond to a specific therapy) are now required for many oncology drug approvals. Liquid biopsy, which detects cancer-related DNA fragments in blood rather than tissue, is reshaping early detection.</p>
         <p>Roles in this space include clinical genomics scientists, bioinformatics analysts, regulatory affairs specialists focused on IVD (in vitro diagnostics), and commercial teams that work with oncologists and hospital systems to implement these tools in clinical practice.</p>
-        <p><a href="https://www.genome.gov" target="_blank" rel="noopener">Explore at genome.gov</a></p>
+        <p><a class="bb-textlink" href="https://www.genome.gov" target="_blank" rel="noopener">Explore at genome.gov</a></p>
       </article>
     </div>
   </div>
@@ -812,7 +810,7 @@ permalink: /career-pathways/
       <p>A common concern among students is that AI will automate laboratory work and reduce the need for bench scientists. This misreads what AI actually does in a biotech context. AI accelerates hypothesis generation and data interpretation. It does not yet pipette, culture cells, troubleshoot failed assays, or navigate the physical unpredictability of biological systems.</p>
       <p>What is changing: scientists spend less time on routine data analysis and more time on experimental design, interpretation, and cross-functional communication. The human skills that remain essential are precisely the ones that are hardest to automate: deep domain intuition, the ability to recognize when something unexpected in your data is noise versus signal, and the judgment to know when to abandon a hypothesis and why.</p>
       <p>If anything, the growing role of AI in biotech increases the premium on scientists who can both run experiments and engage meaningfully with computational outputs, a combination that is currently rare and therefore valuable.</p>
-      <p class="bb-feature-link"><a href="https://www.nature.com" target="_blank" rel="noopener">Read on Nature</a></p>
+      <p class="bb-feature-link"><a class="bb-textlink" href="https://www.nature.com" target="_blank" rel="noopener">Read on Nature</a></p>
     </div>
   </div>
 </section>

@@ -567,7 +567,7 @@ permalink: /application-reviewer/
             <textarea
               id="bb-jd"
               maxlength="8000"
-              required
+              aria-required="true"
               aria-describedby="bb-jd-hint bb-jd-counter"
               placeholder="Paste the job description here...
 
@@ -582,7 +582,7 @@ We are seeking a motivated undergraduate student for a summer internship in our 
             <textarea
               id="bb-resume"
               maxlength="8000"
-              required
+              aria-required="true"
               aria-describedby="bb-resume-hint bb-resume-counter"
               placeholder="Paste your resume text here...
 

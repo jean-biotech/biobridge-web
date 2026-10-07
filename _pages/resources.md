@@ -88,15 +88,16 @@ permalink: /resources/
   text-underline-offset: 0.18em;
 }
 
-.bb-resources .bb-nowrap {
-  white-space: nowrap;
-}
-
 .bb-resources .bb-res-text {
   grid-area: text;
   margin-top: 0.3rem;
   font-size: 1.05rem;
   line-height: 1.55;
+}
+
+/* Keeps a hyphenated word in a title from breaking across lines */
+.bb-resources .bb-nowrap {
+  white-space: nowrap;
 }
 
 /* ---------- Bookshelf ---------- */
