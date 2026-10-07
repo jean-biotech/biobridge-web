@@ -4,130 +4,12 @@ title: " "
 classes: wide
 ---
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=swap">
-
 <style>
 /* ================================================================
    HOMEPAGE
-   Everything is scoped to .bb-home so the theme's defaults
-   (heading borders, small paragraph sizes) don't leak in.
+   Shared pieces (type, bands, buttons, index) come from
+   assets/css/biobridge.css. These are the parts only the homepage uses.
    ================================================================ */
-
-.bb-home {
-  --ink: #17211c;
-  --text: #39443f;
-  --muted: #5f6964;
-  --green: #2d5f3f;
-  --green-dark: #22492f;
-  --forest: #1f3d2c;
-  --cream: #f6f1e6;
-  --cream-line: #e4dccb;
-  --lime: #d4e9a6;
-  --on-dark: #f6f1e6;
-  --on-dark-soft: rgba(246, 241, 230, 0.82);
-  --serif: 'Source Serif 4', Georgia, serif;
-  --sans: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-
-  font-family: var(--sans);
-  font-size: 1.125rem;
-  line-height: 1.6;
-  color: var(--text);
-}
-
-.bb-home p {
-  font-size: inherit;
-  line-height: inherit;
-  margin: 0;
-}
-
-.bb-home h1,
-.bb-home h2 {
-  font-family: var(--serif);
-  font-weight: 600;
-  color: var(--ink);
-  letter-spacing: -0.01em;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  text-wrap: balance;
-}
-
-.bb-home h2 {
-  font-size: clamp(1.85rem, 1.4rem + 1.4vw, 2.5rem);
-  line-height: 1.15;
-}
-
-.bb-home a {
-  color: var(--green);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.2em;
-}
-
-.bb-home a:hover {
-  color: var(--green-dark);
-}
-
-.bb-wrap {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 0.5rem;
-}
-
-.bb-section {
-  padding: 3.5rem 0;
-}
-
-/* Full-bleed background without causing horizontal scroll: the border
-   image paints past the sides but doesn't count toward page width */
-.bb-band {
-  background: var(--band);
-  border-image: conic-gradient(var(--band) 0 0) fill 0 // 0 100vmax;
-}
-
-.bb-band--cream { --band: var(--cream); }
-.bb-band--forest { --band: var(--forest); }
-
-/* The page ends on a colored band, so close the theme's gap above the footer */
-.layout--splash .page__footer {
-  margin-top: 0;
-}
-
-/* ---------- Buttons and links ---------- */
-
-.bb-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem 1.75rem;
-  margin-top: 2rem;
-}
-
-.bb-home .bb-button,
-.bb-home .bb-button:visited {
-  display: inline-block;
-  background: var(--green);
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.05rem;
-  line-height: 1;
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.15s ease;
-}
-
-.bb-home .bb-button:hover {
-  background: var(--green-dark);
-  color: #fff;
-  text-decoration: none;
-}
-
-.bb-home .bb-textlink {
-  font-weight: 600;
-  font-size: 1.05rem;
-}
 
 /* ---------- Hero ---------- */
 
@@ -141,19 +23,10 @@ classes: wide
 }
 
 .bb-home .bb-hero h1 {
-  font-size: clamp(2.4rem, 1.5rem + 3vw, 3.6rem);
-  line-height: 1.08;
   max-width: 12em;
 }
 
-.bb-home .bb-hero h1 em {
-  font-style: italic;
-  color: var(--green);
-}
-
-.bb-home .bb-lede {
-  font-size: 1.2rem;
-  line-height: 1.55;
+.bb-home .bb-hero .bb-lede {
   max-width: 30em;
   margin-top: 1.5rem;
 }
@@ -176,12 +49,7 @@ classes: wide
 .bb-home .bb-byline p {
   font-size: 1rem;
   line-height: 1.45;
-  color: var(--muted);
-}
-
-.bb-byline strong {
-  color: var(--ink);
-  font-weight: 600;
+  color: var(--bb-muted);
 }
 
 /* Questions from Instagram, drawn as a message thread */
@@ -195,87 +63,35 @@ classes: wide
 
 .bb-home .bb-dms-label {
   font-size: 0.95rem;
-  color: var(--muted);
+  color: var(--bb-muted);
   margin-bottom: 0.4rem;
 }
 
 .bb-home .bb-dm {
   background: #fff;
-  border: 1px solid var(--cream-line);
+  border: 1px solid var(--bb-cream-line);
   border-radius: 1.4rem 1.4rem 1.4rem 0.4rem;
   padding: 0.6rem 1.15rem 0.7rem;
-  font-family: var(--serif);
+  font-family: var(--bb-serif);
   font-weight: 600;
   font-size: 1.4rem;
   line-height: 1.25;
-  color: var(--ink);
+  color: var(--bb-ink);
 }
 
 .bb-home .bb-dm-reply {
   align-self: flex-end;
   margin-top: 0.5rem;
   max-width: 17em;
-  background: var(--green);
-  border-color: var(--green);
+  background: var(--bb-green);
+  border-color: var(--bb-green);
   border-radius: 1.4rem 1.4rem 0.4rem 1.4rem;
   padding: 0.75rem 1.15rem;
-  font-family: var(--sans);
+  font-family: var(--bb-sans);
   font-weight: 400;
   font-size: 1.05rem;
   line-height: 1.45;
   color: #fff;
-}
-
-/* ---------- Where to start ---------- */
-
-.bb-home .bb-index {
-  list-style: none;
-  margin: 2.25rem 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 2.5rem;
-}
-
-.bb-home .bb-index li {
-  margin: 0;
-  max-width: none;
-  border-top: 2px solid var(--green);
-}
-
-.bb-home .bb-index li a {
-  display: block;
-  padding: 1.1rem 0 2rem;
-  color: inherit;
-  text-decoration: none;
-}
-
-.bb-index-title {
-  display: block;
-  font-family: var(--serif);
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.25;
-  color: var(--ink);
-  margin-bottom: 0.4rem;
-}
-
-.bb-index-text {
-  display: block;
-  font-size: 1.05rem;
-  line-height: 1.55;
-  color: var(--text);
-}
-
-.bb-home .bb-index li a:hover {
-  text-decoration: none;
-}
-
-.bb-home .bb-index li a:hover .bb-index-title {
-  color: var(--green);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 0.18em;
 }
 
 /* ---------- Founder story ---------- */
@@ -289,10 +105,7 @@ classes: wide
   gap: 1.75rem;
 }
 
-.bb-home .bb-founder h2 {
-  grid-area: head;
-  color: var(--on-dark);
-}
+.bb-founder h2 { grid-area: head; }
 
 .bb-home .bb-founder-photo {
   grid-area: photo;
@@ -319,17 +132,15 @@ classes: wide
 .bb-home .bb-founder-photo figcaption {
   width: auto;
   margin: 0;
-  font-family: var(--sans);
+  font-family: var(--bb-sans);
   font-size: 1rem;
   line-height: 1.45;
-  color: var(--on-dark-soft);
+  color: var(--bb-on-dark-soft);
 }
 
 .bb-founder-photo strong {
   display: block;
-  color: var(--on-dark);
   font-size: 1.1rem;
-  font-weight: 600;
 }
 
 .bb-founder-story { grid-area: story; }
@@ -339,21 +150,12 @@ classes: wide
   line-height: 1.7;
   max-width: 36em;
   margin-bottom: 1.1em;
-  color: var(--on-dark-soft);
 }
 
 .bb-home .bb-founder-story .bb-founder-links {
   margin: 1.5rem 0 0;
   font-weight: 600;
   font-size: 1.05rem;
-}
-
-.bb-home .bb-founder-links a {
-  color: var(--lime);
-}
-
-.bb-home .bb-founder-links a:hover {
-  color: #fff;
 }
 
 .bb-founder-links a + a {
@@ -376,31 +178,14 @@ classes: wide
   box-shadow: 0 1px 2px rgba(23, 33, 28, 0.12), 0 14px 30px rgba(23, 33, 28, 0.2);
 }
 
-.bb-home .bb-kicker {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--green);
-  margin-bottom: 0.5rem;
-}
-
 .bb-home .bb-guide-text > p:not(.bb-kicker) {
   max-width: 32em;
   margin-top: 1rem;
 }
 
-/* ---------- Tablet and up ---------- */
-
-@media (min-width: 640px) {
-  .bb-home .bb-index {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+/* ---------- Wider screens ---------- */
 
 @media (min-width: 900px) {
-  .bb-section {
-    padding: 5rem 0;
-  }
-
   .bb-hero {
     padding: 4.5rem 0 5rem;
   }
@@ -413,10 +198,6 @@ classes: wide
 
   .bb-dms {
     justify-self: end;
-  }
-
-  .bb-home .bb-lede {
-    font-size: 1.3rem;
   }
 
   .bb-founder {
@@ -452,15 +233,9 @@ classes: wide
     width: 100%;
   }
 }
-
-@media (min-width: 1000px) {
-  .bb-home .bb-index {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 </style>
 
-<div class="bb-home">
+<div class="bb-page bb-home">
 
 <!-- Hero -->
 <section class="bb-hero bb-band bb-band--cream">
@@ -490,7 +265,9 @@ classes: wide
 <!-- Where to start -->
 <section class="bb-section">
   <div class="bb-wrap">
-    <h2>Where to start</h2>
+    <div class="bb-section-head">
+      <h2>Where to start</h2>
+    </div>
     <ul class="bb-index">
       <li>
         <a href="/what-is-biotech/">

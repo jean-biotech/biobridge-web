@@ -34,6 +34,10 @@ defaults:
       layout: single
       author_profile: false
 
+# No feed is generated, so don't link to one in the footer
+atom_feed:
+  hide: true
+
 # Footer
 footer:
   links:
