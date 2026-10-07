@@ -1,251 +1,251 @@
 ---
-layout: single
+layout: splash
 title: "Get Involved"
 permalink: /get-involved/
 ---
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
-h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; }
+/* ================================================================
+   GET INVOLVED
+   Shared pieces come from assets/css/biobridge.css. These rules lay
+   out the three ways to take part, the email band, and the closing.
+   ================================================================ */
 
-:root {
-  --bb-green: #2D5F3F;
-  --bb-green-accent: #3A7D5C;
-  --bb-green-bright: #4CAF50;
-  --bb-green-hover: #66BB6A;
-  --bb-green-dark: #1A3A28;
-  --bb-green-bg: #E8F5E9;
-  --bb-green-bg-subtle: #F1F8F4;
-  --bb-navy: #1A1A2E;
-  --bb-charcoal: #2C3E50;
-  --bb-white: #ffffff;
-  --bb-off-white: #FAFAFA;
-  --bb-text-secondary: #475569;
-  --bb-gray: #64748b;
-  --bb-border: #e2e8f0;
-}
+/* ---------- Ways to take part ---------- */
 
-/* Page Header — Mobile First */
-.bb-page-hero {
-  background: linear-gradient(160deg, var(--bb-navy) 0%, var(--bb-green-dark) 100%);
-  color: var(--bb-white);
-  padding: 2.5rem 1.5rem;
-  border-radius: 10px;
-  margin-bottom: 2.5rem;
-  position: relative;
-  overflow: hidden;
-}
-.bb-page-hero::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background: radial-gradient(ellipse at 80% 20%, rgba(45,95,63,0.15) 0%, transparent 60%);
-  pointer-events: none;
-}
-.bb-page-hero h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin: 0 0 0.75rem;
-  color: var(--bb-white);
-  letter-spacing: -0.02em;
-  position: relative;
-}
-.bb-page-hero p {
-  font-family: 'Inter', sans-serif;
-  font-size: 1rem;
-  color: rgba(255,255,255,0.8);
+.bb-involve .bb-roles {
+  list-style: none;
   margin: 0;
-  font-weight: 300;
-  line-height: 1.6;
-  position: relative;
-}
-
-/* Involvement Cards — Mobile First */
-.bb-involve-grid {
+  padding: 0;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-bottom: 2.5rem;
-}
-.bb-involve-card {
-  background: var(--bb-white);
-  border: 1px solid var(--bb-border);
-  border-radius: 8px;
-  padding: 1.75rem 1.5rem;
-  transition: all 0.25s ease;
-  position: relative;
-}
-.bb-involve-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--bb-green-accent), var(--bb-green-hover));
-  border-radius: 8px 8px 0 0;
-}
-.bb-involve-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-}
-.bb-involve-card h2 {
-  font-family: 'Inter', sans-serif;
-  color: var(--bb-navy);
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
-.bb-involve-card p {
-  color: var(--bb-text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.75;
-}
-.bb-involve-card ul {
-  color: var(--bb-text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.75;
-  padding-left: 1.25rem;
-}
-.bb-involve-card li {
-  margin-bottom: 0.35rem;
-}
-.bb-involve-card em {
-  color: var(--bb-gray);
-  font-size: 0.875rem;
+  gap: 2.75rem;
 }
 
-/* Contact Section */
-.bb-contact-section {
-  background: var(--bb-green-bg);
-  border: 1px solid var(--bb-border);
-  border-radius: 10px;
-  padding: 2rem 1.5rem;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-.bb-contact-section h2 {
-  font-family: 'Inter', sans-serif;
-  color: var(--bb-navy);
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0 0 1.25rem;
-}
-.bb-contact-links {
+.bb-involve .bb-role {
   display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.5rem;
-}
-.bb-contact-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1.25rem;
-  border-radius: 6px;
-  border: 1px solid var(--bb-border);
-  background: var(--bb-white);
-  color: var(--bb-navy) !important;
-  text-decoration: none !important;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-  min-height: 44px;
-}
-.bb-contact-link:hover {
-  border-color: var(--bb-green-accent);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  color: var(--bb-green-accent) !important;
-}
-.bb-feedback-note {
-  color: var(--bb-gray);
-  font-family: 'Inter', sans-serif;
-  font-size: 0.9rem;
-  line-height: 1.7;
-  max-width: 560px;
-  margin: 0 auto;
+  flex-direction: column;
+  max-width: 36em;
+  margin: 0;
+  padding-top: 1.1rem;
+  border-top: 2px solid var(--bb-green);
 }
 
-/* Desktop */
-@media (min-width: 769px) {
-  .bb-page-hero {
-    padding: 3.5rem 3rem;
-    border-radius: 12px;
+.bb-involve .bb-role h3 {
+  margin-bottom: 0.7rem;
+}
+
+.bb-involve .bb-role p,
+.bb-involve .bb-role li {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  text-wrap: pretty;
+}
+
+.bb-involve .bb-role p + p,
+.bb-involve .bb-role p + ul {
+  margin-top: 0.75rem;
+}
+
+.bb-involve .bb-role ul {
+  list-style: disc;
+  margin-bottom: 0;
+  padding-left: 1.2em;
+}
+
+.bb-involve .bb-role li {
+  margin: 0 0 0.3rem;
+}
+
+.bb-involve .bb-role li::marker {
+  color: var(--bb-green);
+}
+
+/* What to do today, set off by a thin rule at the foot of each column */
+.bb-involve .bb-role-now {
+  margin-top: auto;
+  padding-top: 1.5rem;
+}
+
+.bb-involve .bb-role-now p {
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--bb-line);
+}
+
+.bb-involve .bb-role-now a {
+  font-weight: 600;
+}
+
+/* ---------- Email band ---------- */
+
+.bb-involve .bb-contact {
+  display: grid;
+  gap: 2rem;
+}
+
+.bb-involve .bb-contact h2 + p {
+  max-width: 30em;
+  margin-top: 1rem;
+}
+
+.bb-involve .bb-contact-email {
+  font-family: var(--bb-serif);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 1.1rem + 1.6vw, 2.25rem);
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.bb-involve .bb-contact-email a {
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.2em;
+}
+
+.bb-involve .bb-contact-links {
+  margin-top: 1.25rem;
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.bb-involve .bb-contact-links a + a {
+  margin-left: 1.5rem;
+}
+
+/* ---------- Closing: feedback ---------- */
+
+.bb-involve .bb-feedback h2 {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.bb-involve .bb-feedback p {
+  max-width: 34em;
+  margin-top: 0.9rem;
+}
+
+/* ---------- Wider screens ---------- */
+
+@media (min-width: 900px) {
+  .bb-involve .bb-roles {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0 2.5rem;
   }
-  .bb-page-hero h1 {
-    font-size: 2.25rem;
+
+  /* Share the heading, text, and note rows across the three columns,
+     so the notes start on one line however long each column runs */
+  @supports (grid-template-rows: subgrid) {
+    .bb-involve .bb-role {
+      display: grid;
+      grid-row: span 3;
+      grid-template-rows: subgrid;
+      row-gap: 0;
+    }
+
+    .bb-involve .bb-role-now {
+      margin-top: 0;
+    }
   }
-  .bb-page-hero p {
-    font-size: 1.1rem;
+
+  /* The address sits on the same line as the heading */
+  .bb-involve .bb-contact {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 4.5rem;
+    align-items: baseline;
   }
-  .bb-involve-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+
+  .bb-involve .bb-feedback {
+    display: grid;
+    grid-template-columns: 260px minmax(0, 1fr);
+    column-gap: 4.5rem;
+    align-items: baseline;
   }
-  .bb-involve-card {
-    padding: 2rem;
-  }
-  .bb-involve-card h2 {
-    font-size: 1.25rem;
-  }
-  .bb-contact-section {
-    padding: 2.5rem 3rem;
-    border-radius: 12px;
+
+  .bb-involve .bb-feedback p {
+    margin-top: 0;
   }
 }
 </style>
 
-<div class="bb-page-hero">
-  <h1>Get Involved with BioBridge</h1>
-  <p>BioBridge is a student-led initiative, and we are always looking for people who want to help make biotech more accessible.</p>
-</div>
+<div class="bb-page bb-involve">
 
-
-<div class="bb-involve-grid">
-
-  <div class="bb-involve-card">
-    <h2>For Students</h2>
-    <p><strong>Email signup:</strong> Get updates on new resources, mentorship opportunities, and events.</p>
-    <p><strong>Interest form:</strong> Tell us what you are looking for and we will help connect you with resources.</p>
-    <p><em>(Forms coming soon -- for now, email us directly)</em></p>
+<header class="bb-pagehead bb-band bb-band--cream">
+  <div class="bb-wrap">
+    <p class="bb-kicker">Get involved</p>
+    <h1>Help make biotech more <em>accessible</em></h1>
+    <p class="bb-lede">BioBridge is student-led, and there's a place here for students, for people who work in biotech, and for anyone with something to share. For now, taking part starts with an email.</p>
   </div>
+</header>
 
-  <div class="bb-involve-card">
-    <h2>For Mentors</h2>
-    <p>If you work in biotech and want to help students navigate the field, we would love to hear from you.</p>
-    <p>We are building a mentorship program to connect curious students with professionals who remember what it was like to start.</p>
-    <p><em>Mentor interest form (coming soon)</em></p>
-  </div>
-
-  <div class="bb-involve-card">
-    <h2>For Contributors</h2>
-    <p>Have a resource, article, or story to share? Want to write a guest post about your biotech journey?</p>
-    <p>We are always looking for:</p>
-    <ul>
-      <li>Beginner-friendly resources to add to our hub</li>
-      <li>Career stories from diverse pathways</li>
-      <li>Guest posts explaining biotech concepts</li>
-      <li>Feedback on how to improve BioBridge</li>
+<section class="bb-section">
+  <div class="bb-wrap">
+    <div class="bb-section-head">
+      <h2>Ways to take part</h2>
+    </div>
+    <ul class="bb-roles">
+      <li class="bb-role">
+        <h3>For students</h3>
+        <div class="bb-role-body">
+          <p><strong>Email signup:</strong> get updates on new resources, mentorship opportunities, and events.</p>
+          <p><strong>Interest form:</strong> tell us what you're looking for, and we'll help connect you with resources.</p>
+        </div>
+        <div class="bb-role-now">
+          <p>For now, <a href="mailto:jeans.connects@gmail.com">email us directly</a>. Both forms are coming soon.</p>
+        </div>
+      </li>
+      <li class="bb-role">
+        <h3>For mentors</h3>
+        <div class="bb-role-body">
+          <p>If you work in biotech and want to help students navigate the field, we'd love to hear from you.</p>
+          <p>We're building a mentorship program to connect curious students with professionals who remember what it was like to start.</p>
+        </div>
+        <div class="bb-role-now">
+          <p>For now, <a href="mailto:jeans.connects@gmail.com">email us directly</a>. A mentor interest form is coming soon.</p>
+        </div>
+      </li>
+      <li class="bb-role">
+        <h3>For contributors</h3>
+        <div class="bb-role-body">
+          <p>Have a resource, article, or story to share? Want to write a guest post about your biotech journey? We're always looking for:</p>
+          <ul>
+            <li>Beginner-friendly resources to add to our hub</li>
+            <li>Career stories from diverse pathways</li>
+            <li>Guest posts explaining biotech concepts</li>
+            <li>Feedback on how to improve BioBridge</li>
+          </ul>
+        </div>
+        <div class="bb-role-now">
+          <p><a href="mailto:jeans.connects@gmail.com">Email us</a> with your idea.</p>
+        </div>
+      </li>
     </ul>
   </div>
+</section>
 
-</div>
-
-<div class="bb-contact-section">
-  <h2>Stay Connected</h2>
-  <div class="bb-contact-links">
-    <a href="mailto:jeans.connects@gmail.com" class="bb-contact-link">
-      <i class="fas fa-envelope"></i> jeans.connects@gmail.com
-    </a>
-    <a href="https://github.com/jean-biotech/biobridge" target="_blank" class="bb-contact-link">
-      <i class="fab fa-github"></i> GitHub
-    </a>
-    <a href="https://linkedin.com/in/jeantrann" target="_blank" class="bb-contact-link">
-      <i class="fab fa-linkedin"></i> LinkedIn
-    </a>
+<section class="bb-section bb-band bb-band--forest" id="contact">
+  <div class="bb-wrap bb-contact">
+    <div>
+      <h2>Start with an email</h2>
+      <p>Until the forms are ready, email is the way to take part. Tell us who you are and what you're looking for, or what you'd like to share.</p>
+    </div>
+    <div>
+      <p class="bb-contact-email"><a href="mailto:jeans.connects@gmail.com">jeans.connects@gmail.com</a></p>
+      <p class="bb-contact-links">
+        <a href="https://github.com/jean-biotech/biobridge" target="_blank" rel="noopener">BioBridge on GitHub</a>
+        <a href="https://linkedin.com/in/jeantrann" target="_blank" rel="noopener">Jean Tran on LinkedIn</a>
+      </p>
+    </div>
   </div>
-  <p class="bb-feedback-note">See something that could be better? Have an idea for a new resource or page? We are constantly improving BioBridge based on feedback from students and professionals. Let us know what would make this more useful for you.</p>
+</section>
+
+<section class="bb-section bb-band bb-band--cream">
+  <div class="bb-wrap bb-feedback">
+    <h2>See something that could be better?</h2>
+    <div>
+      <p>Have an idea for a new resource or page? We're constantly improving BioBridge based on feedback from students and professionals. Let us know what would make it more useful for you.</p>
+      <div class="bb-actions">
+        <a class="bb-button" href="mailto:jeans.connects@gmail.com">Send feedback</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 </div>

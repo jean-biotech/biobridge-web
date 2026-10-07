@@ -1,35 +1,92 @@
 ---
+layout: splash
+title: "Page not found"
 permalink: /404.html
-layout: page
 ---
 
-<style type="text/css" media="screen">
-  .bb-404 {
-    margin: 3rem auto;
-    max-width: 500px;
-    text-align: center;
-    padding: 0 1.5rem;
+<style>
+/* ================================================================
+   404
+   A short not-found message, then the main sections of the site.
+   The section list uses the shared .bb-index.
+   ================================================================ */
+
+/* Avoid a lone word on the last line of a description */
+.bb-notfound .bb-index-text {
+  text-wrap: pretty;
+}
+
+/* Seven sections sit better four across than three */
+@media (min-width: 1000px) {
+  .bb-notfound .bb-index {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
-  .bb-404 h1 {
-    margin: 0 0 1rem;
-    font-size: 4rem;
-    line-height: 1;
-    color: #0f2b3c;
-    font-weight: 700;
-  }
-  .bb-404 p {
-    color: #64748b;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  .bb-404 a {
-    color: #0d7377;
-    font-weight: 600;
-  }
+}
 </style>
 
-<div class="bb-404">
-  <h1>404</h1>
-  <p><strong>Page not found.</strong></p>
-  <p>The page you are looking for does not exist or has been moved. <a href="/">Return to the homepage</a>.</p>
+<div class="bb-page bb-notfound">
+
+<header class="bb-pagehead bb-band bb-band--cream">
+  <div class="bb-wrap">
+    <p class="bb-kicker">Error 404</p>
+    <h1>Sorry, we couldn't find that page</h1>
+    <p class="bb-lede">The page you're looking for doesn't exist or has moved. Start again from the homepage, or pick one of the main sections below.</p>
+    <div class="bb-actions">
+      <a class="bb-button" href="/">Go to the homepage</a>
+    </div>
+  </div>
+</header>
+
+<section class="bb-section">
+  <div class="bb-wrap">
+    <div class="bb-section-head">
+      <h2>Main sections</h2>
+    </div>
+    <ul class="bb-index">
+      <li>
+        <a href="/what-is-biotech/">
+          <span class="bb-index-title">What is biotech?</span>
+          <span class="bb-index-text">What biotechnology actually is, explained through real examples.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/career-pathways/">
+          <span class="bb-index-title">Careers</span>
+          <span class="bb-index-text">Seven paths into the field, with realistic entry points for each.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/products/">
+          <span class="bb-index-title">Guides</span>
+          <span class="bb-index-text">The Biotech Blueprint: real materials, annotated line by line.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/application-reviewer/">
+          <span class="bb-index-title">Application Reviewer</span>
+          <span class="bb-index-text">A free tool that shows how well your resume matches a job posting.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/resources/">
+          <span class="bb-index-title">The Learning Lab</span>
+          <span class="bb-index-text">Newsletters, podcasts, courses, and books for people new to the field.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/faq/">
+          <span class="bb-index-title">FAQ</span>
+          <span class="bb-index-text">Straight answers to common questions about getting into biotech.</span>
+        </a>
+      </li>
+      <li>
+        <a href="/get-involved/">
+          <span class="bb-index-title">Get involved</span>
+          <span class="bb-index-text">How students, mentors, and contributors can take part.</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+
 </div>
