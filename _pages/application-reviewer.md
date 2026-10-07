@@ -527,7 +527,7 @@ permalink: /application-reviewer/
 <header class="bb-pagehead bb-band bb-band--cream">
   <div class="bb-wrap">
     <p class="bb-kicker">Tools</p>
-    <h1>Application reviewer</h1>
+    <h1>Application Reviewer</h1>
     <p class="bb-lede">Paste a biotech job description and your resume. Claude, an AI model, analyzes the match, points out your gaps, and tells you how to strengthen your application before you submit. It's free.</p>
 
     <p class="bb-steps-label" id="bb-steps-label">How it works</p>
