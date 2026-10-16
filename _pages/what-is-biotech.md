@@ -265,8 +265,7 @@ permalink: /what-is-biotech/
 <!-- Page header -->
 <header class="bb-pagehead bb-band bb-band--cream">
   <div class="bb-wrap">
-    <p class="bb-kicker">The basics</p>
-    <h1>What is biotechnology, <em>really</em>?</h1>
+    <h1>What is biotechnology, really?</h1>
     <p class="bb-lede">The science shaping our future, explained in plain language. No prerequisites required.</p>
     <ul class="bb-jumpnav" aria-label="On this page">
       <li><a href="#real-world-examples">Real-world examples</a></li>

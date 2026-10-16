@@ -188,8 +188,7 @@ permalink: /resources/
 
 <header class="bb-pagehead bb-band bb-band--cream">
   <div class="bb-wrap">
-    <p class="bb-kicker">Resources</p>
-    <h1>The <em>Learning</em> Lab</h1>
+    <h1>The Learning Lab</h1>
     <p class="bb-lede">Newsletters, podcasts, videos, courses, and books for exploring biotech, all hand-picked for quality and accessibility.</p>
     <ul class="bb-jumpnav" aria-label="On this page">
       <li><a data-scroll-ignore href="#newsletters">Newsletters</a></li>

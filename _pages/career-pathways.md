@@ -284,8 +284,7 @@ permalink: /career-pathways/
 <header class="bb-pagehead bb-band bb-band--cream">
   <div class="bb-wrap bb-careers-head">
     <div>
-      <p class="bb-kicker">Careers</p>
-      <h1>There's no <em>single</em> path into biotech</h1>
+      <h1>There's no single path into biotech</h1>
       <p class="bb-lede">Here are the seven major routes into the field, with realistic entry points for every background, plus a practical guide to <a href="#internship">landing your first internship</a>.</p>
     </div>
     <nav class="bb-toc" aria-labelledby="toc-label">

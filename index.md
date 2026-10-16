@@ -31,24 +31,13 @@ classes: wide
   margin-top: 1.5rem;
 }
 
-.bb-byline {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
+.bb-home .bb-byline {
   margin-top: 2.5rem;
-}
-
-.bb-byline img {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex: none;
-}
-
-.bb-home .bb-byline p {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--bb-cream-line);
+  max-width: 30em;
   font-size: 1rem;
-  line-height: 1.45;
+  line-height: 1.5;
   color: var(--bb-muted);
 }
 
@@ -79,19 +68,57 @@ classes: wide
   color: var(--bb-ink);
 }
 
-.bb-home .bb-dm-reply {
-  align-self: flex-end;
-  margin-top: 0.5rem;
-  max-width: 17em;
-  background: var(--bb-green);
-  border-color: var(--bb-green);
-  border-radius: 1.4rem 1.4rem 0.4rem 1.4rem;
-  padding: 0.75rem 1.15rem;
-  font-family: var(--bb-sans);
-  font-weight: 400;
-  font-size: 1.05rem;
-  line-height: 1.45;
-  color: #fff;
+
+
+/* ---------- Photo band ---------- */
+
+.bb-photo-band {
+  padding-top: 3rem;
+}
+
+/* ---------- Where to start: heading beside a list of rows ---------- */
+
+.bb-start {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.bb-home .bb-start-intro p {
+  margin-top: 0.75rem;
+  color: var(--bb-muted);
+  max-width: 22em;
+}
+
+.bb-home .bb-rows {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--bb-line);
+}
+
+.bb-home .bb-rows li {
+  margin: 0;
+  border-bottom: 1px solid var(--bb-line);
+}
+
+.bb-home .bb-rows a {
+  display: grid;
+  gap: 0.25rem;
+  padding: 1.15rem 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.bb-home .bb-rows .bb-index-title {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.bb-home .bb-rows a:hover .bb-index-title {
+  color: var(--bb-green);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
 }
 
 /* ---------- Founder story ---------- */
@@ -200,8 +227,29 @@ classes: wide
     justify-self: end;
   }
 
+  .bb-photo-band {
+    padding-top: 4.5rem;
+  }
+
+  .bb-start {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr);
+    gap: 4.5rem;
+    align-items: start;
+  }
+
+  .bb-start-intro {
+    position: sticky;
+    top: 110px;
+  }
+
+  .bb-home .bb-rows a {
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: 2rem;
+    align-items: baseline;
+  }
+
   .bb-founder {
-    grid-template-columns: 280px minmax(0, 1fr);
+    grid-template-columns: 340px minmax(0, 1fr);
     grid-template-areas:
       "photo head"
       "photo story";
@@ -247,28 +295,32 @@ classes: wide
         <a class="bb-button" href="/what-is-biotech/">Start with the basics</a>
         <a class="bb-textlink" href="/career-pathways/">Explore careers</a>
       </div>
-      <div class="bb-byline">
-        <img src="/assets/images/profile-photo.jpg" alt="" width="48" height="48">
-        <p><strong>Jean Tran</strong>, founder<br>Community of 90K+ on Instagram at <a href="https://instagram.com/jeans.scenes">@jeans.scenes</a></p>
-      </div>
+      <p class="bb-byline">Started by <strong>Jean Tran</strong>, who shares the biotech journey with a community of 90K+ on Instagram at <a href="https://instagram.com/jeans.scenes">@jeans.scenes</a>.</p>
     </div>
     <div class="bb-dms">
       <p class="bb-dms-label">What people ask me on Instagram</p>
       <p class="bb-dm">What is biotech?</p>
       <p class="bb-dm">How do I get in?</p>
       <p class="bb-dm">Do I need a PhD?</p>
-      <p class="bb-dm bb-dm-reply">These come up constantly, so I built BioBridge to answer them.</p>
     </div>
+  </div>
+</section>
+
+<!-- Photo -->
+<section class="bb-photo-band">
+  <div class="bb-wrap">
+    <div class="bb-photo bb-photo--wide bb-photo-placeholder">Photo placeholder: a candid, wide photo of you, in the lab, in class, or on campus</div>
   </div>
 </section>
 
 <!-- Where to start -->
 <section class="bb-section">
-  <div class="bb-wrap">
-    <div class="bb-section-head">
+  <div class="bb-wrap bb-start">
+    <div class="bb-start-intro">
       <h2>Where to start</h2>
+      <p>Everything on BioBridge is free. Pick the question you have right now.</p>
     </div>
-    <ul class="bb-index">
+    <ul class="bb-rows">
       <li>
         <a href="/what-is-biotech/">
           <span class="bb-index-title">What is biotech?</span>
@@ -321,10 +373,10 @@ classes: wide
       </figcaption>
     </figure>
     <div class="bb-founder-story">
-      <p>I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
-      <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is: not just lab work, but business strategy, regulatory policy, manufacturing operations, and more.</p>
-      <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions: What is biotech? How do I get in? Do I need a PhD? People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
+      <p>I was certain I would become a doctor. But the closer I got to a future in clinical work, the more I questioned whether it was right for me. A combined BS/MS in biotechnology showed me how big the field actually is: not just lab work, but business strategy, regulatory policy, manufacturing operations, and more.</p>
+      <p>When I started sharing what I was learning on social media, the same questions kept coming in. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
       <p class="bb-founder-links">
+        <a href="/about/">Read my full story</a>
         <a href="https://instagram.com/jeans.scenes" target="_blank" rel="noopener">Instagram</a>
         <a href="https://linkedin.com/in/jeantrann" target="_blank" rel="noopener">LinkedIn</a>
       </p>

@@ -652,3 +652,41 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+/* ---------- Photo placeholder ----------
+   Marks where a real photo goes. To swap in the photo, replace the
+   whole element with <img class="bb-photo" src="..." alt="..."> and
+   keep any size class (bb-photo--wide, bb-photo--portrait). */
+
+.bb-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--bb-radius);
+}
+
+.bb-photo--wide { aspect-ratio: 21 / 9; }
+.bb-photo--portrait { aspect-ratio: 4 / 5; }
+
+.bb-photo-placeholder {
+  display: flex;
+  align-items: flex-end;
+  padding: 1.1rem 1.25rem;
+  background: #e8e3d6;
+  color: var(--bb-muted);
+  font-family: var(--bb-sans);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.bb-band--cream .bb-photo-placeholder { background: #e4ddcc; }
+
+.bb-band--forest .bb-photo-placeholder {
+  background: rgba(246, 241, 230, 0.1);
+  color: var(--bb-on-dark-soft);
+}
+
+@media (max-width: 639px) {
+  .bb-photo--wide { aspect-ratio: 4 / 3; }
+}

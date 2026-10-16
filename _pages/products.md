@@ -211,7 +211,6 @@ permalink: /products/
   <div class="bb-wrap bb-guides-hero">
     <img class="bb-guides-cover" src="/assets/images/blueprint-cover-600.jpg" alt="Cover of The Biotech Blueprint" width="600" height="900">
     <div>
-      <p class="bb-kicker">Guides</p>
       <h1>The Biotech Blueprint</h1>
       <p class="bb-lede">A comprehensive, practical guide for anyone taking their first steps into biotechnology. Real materials, annotated and explained, with roadmaps developed from direct experience navigating this field as a student.</p>
       <p class="bb-guides-price">$22</p>

@@ -169,8 +169,7 @@ permalink: /get-involved/
 
 <header class="bb-pagehead bb-band bb-band--cream">
   <div class="bb-wrap">
-    <p class="bb-kicker">Get involved</p>
-    <h1>Help make biotech more <em>accessible</em></h1>
+    <h1>Help make biotech more accessible</h1>
     <p class="bb-lede">BioBridge is student-led, and there's a place here for students, for people who work in biotech, and for anyone with something to share. For now, taking part starts with an email.</p>
   </div>
 </header>
@@ -217,6 +216,12 @@ permalink: /get-involved/
         </div>
       </li>
     </ul>
+  </div>
+</section>
+
+<section class="bb-section--tight" style="padding-top:0">
+  <div class="bb-wrap">
+    <div class="bb-photo bb-photo--wide bb-photo-placeholder">Photo placeholder: you with students, mentors, or at a BioBridge event</div>
   </div>
 </section>
 

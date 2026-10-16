@@ -88,8 +88,7 @@ permalink: /faq/
 
 <header class="bb-pagehead bb-band bb-band--cream">
   <div class="bb-wrap">
-    <p class="bb-kicker">FAQ</p>
-    <h1>Questions about getting into biotech, <em>answered</em></h1>
+    <h1>Questions about getting into biotech, answered</h1>
     <p class="bb-lede">Common questions from people exploring biotech: where to start, how to come in from another field, and what to know about finding a job.</p>
   </div>
 </header>
