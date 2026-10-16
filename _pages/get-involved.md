@@ -220,6 +220,12 @@ permalink: /get-involved/
 </section>
 
 
+<section class="bb-section--tight" style="padding-bottom:4rem">
+  <div class="bb-wrap">
+    <img class="bb-photo bb-photo--wide" src="/assets/images/hackathon.jpg" alt="Jean Tran working on a laptop alongside other builders" width="1179" height="663" loading="lazy">
+  </div>
+</section>
+
 <section class="bb-section bb-band bb-band--forest" id="contact">
   <div class="bb-wrap bb-contact">
     <div>
