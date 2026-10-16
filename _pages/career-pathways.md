@@ -275,6 +275,121 @@ permalink: /career-pathways/
     column-gap: 4rem;
   }
 }
+
+/* ---------- Section menu ----------
+   Default: a sticky bar under the site header that scrolls sideways.
+   1400px and up: a fixed rail in the left margin beside the content. */
+
+.bb-careers .bb-sectnav {
+  position: sticky;
+  top: 46px;
+  z-index: 20;
+  --bb-band: #fff;
+  background: #fff;
+  border-image-source: conic-gradient(#fff 0 0);
+  border-image-slice: 0 fill;
+  border-image-outset: 0 100vmax;
+  border-bottom: 1px solid var(--bb-line);
+  box-shadow: 0 1px 0 var(--bb-line);
+}
+
+.bb-careers .bb-sectnav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+  max-width: 1080px;
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.bb-careers .bb-sectnav ul::-webkit-scrollbar { display: none; }
+
+.bb-careers .bb-sectnav li {
+  margin: 0;
+  flex: none;
+}
+
+.bb-careers .bb-sectnav a {
+  display: block;
+  padding: 0.8rem 0;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--bb-muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+}
+
+.bb-careers .bb-sectnav a:hover {
+  color: var(--bb-green);
+}
+
+.bb-careers .bb-sectnav a.is-active {
+  color: var(--bb-ink);
+  border-bottom-color: var(--bb-green);
+}
+
+/* Leave room for the site header plus the section bar */
+.bb-careers [id] {
+  scroll-margin-top: 120px;
+}
+
+@media (min-width: 769px) {
+  .bb-careers .bb-sectnav { top: 62px; }
+  .bb-careers [id] { scroll-margin-top: 140px; }
+}
+
+@media (min-width: 1400px) {
+  .bb-careers .bb-sectnav {
+    position: fixed;
+    top: 120px;
+    left: 24px;
+    width: calc((100vw - 1080px) / 2 - 48px);
+    max-width: 210px;
+    background: none;
+    border: 0;
+    border-image: none;
+    box-shadow: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s;
+  }
+
+  .bb-careers .bb-sectnav.is-shown {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .bb-careers .bb-sectnav ul {
+    display: block;
+    padding: 0 0 0 0.9rem;
+    border-left: 1px solid var(--bb-line);
+    overflow: visible;
+  }
+
+  .bb-careers .bb-sectnav a {
+    padding: 0.35rem 0;
+    font-size: 0.95rem;
+    line-height: 1.3;
+    white-space: normal;
+    border-bottom: 0;
+    position: relative;
+  }
+
+  .bb-careers .bb-sectnav a.is-active::before {
+    content: "";
+    position: absolute;
+    left: calc(-0.9rem - 1px);
+    top: 0.25rem;
+    bottom: 0.25rem;
+    width: 2px;
+    background: var(--bb-green);
+  }
+
+  .bb-careers [id] { scroll-margin-top: 90px; }
+}
 </style>
 
 <!-- data-scroll-ignore: the theme's scroll script lands links under the sticky
@@ -301,6 +416,20 @@ permalink: /career-pathways/
     </nav>
   </div>
 </header>
+
+<!-- Section menu: a bar under the site header, a side rail on wide screens -->
+<nav class="bb-sectnav" aria-label="On this page">
+  <ul>
+    <li><a href="#paths">Career paths</a></li>
+    <li><a href="#internship">Internship programs</a></li>
+    <li><a href="#timeline">Application timeline</a></li>
+    <li><a href="#applying">What to include</a></li>
+    <li><a href="#search">Where to search</a></li>
+    <li><a href="#what-to-expect">What to expect</a></li>
+    <li><a href="#trends">Where biotech is heading</a></li>
+    <li><a href="#ai-and-lab-work">AI and lab work</a></li>
+  </ul>
+</nav>
 
 <!-- The seven paths -->
 <section class="bb-section" id="paths">
@@ -651,7 +780,7 @@ permalink: /career-pathways/
       </div>
     </div>
 
-    <div class="bb-row">
+    <div class="bb-row" id="timeline">
       <h3>Application timeline</h3>
       <dl class="bb-facts">
         <div>
@@ -677,7 +806,7 @@ permalink: /career-pathways/
       </dl>
     </div>
 
-    <div class="bb-row">
+    <div class="bb-row" id="applying">
       <h3>What to include in your application</h3>
       <div>
         <dl class="bb-facts">
@@ -706,7 +835,7 @@ permalink: /career-pathways/
       </div>
     </div>
 
-    <div class="bb-row">
+    <div class="bb-row" id="search">
       <h3>Where to search</h3>
       <dl class="bb-facts">
         <div>
@@ -732,7 +861,7 @@ permalink: /career-pathways/
       </dl>
     </div>
 
-    <div class="bb-row bb-row--wide">
+    <div class="bb-row bb-row--wide" id="what-to-expect">
       <h3>What to expect</h3>
       <div class="bb-cards bb-cards--3">
         <div class="bb-card">
@@ -752,7 +881,7 @@ permalink: /career-pathways/
       </div>
     </div>
 
-    <div class="bb-row">
+    <div class="bb-row" id="tips">
       <h3>Quick tips that actually help</h3>
       <ul class="bb-tips">
         <li>Apply broadly early, then narrow your focus in February. Don't wait for your "dream" company to post before applying anywhere.</li>
@@ -844,3 +973,31 @@ permalink: /career-pathways/
 </section>
 
 </div>
+
+<script>
+  // Highlight the section in view; on wide screens, show the side rail
+  // once the page header has scrolled away.
+  (function () {
+    var nav = document.querySelector('.bb-careers .bb-sectnav');
+    if (!nav) return;
+    var links = Array.prototype.slice.call(nav.querySelectorAll('a'));
+    var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); });
+    var head = document.querySelector('.bb-careers .bb-pagehead');
+    function update() {
+      var line = window.innerHeight * 0.3;
+      var current = 0;
+      targets.forEach(function (t, i) { if (t && t.getBoundingClientRect().top <= line) current = i; });
+      links.forEach(function (a, i) { a.classList.toggle('is-active', i === current); });
+      nav.classList.toggle('is-shown', head.getBoundingClientRect().bottom < 80);
+      var active = links[current];
+      if (getComputedStyle(nav).position === 'sticky' && active) {
+        var ul = active.parentNode.parentNode;
+        var l = active.offsetLeft, r = l + active.offsetWidth;
+        if (l < ul.scrollLeft || r > ul.scrollLeft + ul.clientWidth) ul.scrollLeft = l - 16;
+      }
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
+  })();
+</script>
