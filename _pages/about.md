@@ -85,11 +85,6 @@ permalink: /about/
   </div>
 </section>
 
-<section class="bb-section bb-section--tight">
-  <div class="bb-wrap">
-    <div class="bb-photo bb-photo--wide bb-photo-placeholder">Photo placeholder: you during the BS/MS program, in the lab or with classmates</div>
-  </div>
-</section>
 
 <section class="bb-section bb-band bb-band--cream">
   <div class="bb-wrap">
