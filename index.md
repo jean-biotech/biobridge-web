@@ -328,8 +328,8 @@ classes: wide
 <section class="bb-photo-band">
   <div class="bb-wrap">
     <figure class="bb-photo-figure">
-      <img class="bb-photo" src="/assets/images/panel-talk.jpg" alt="Jean Tran speaking on a student panel" width="907" height="510" loading="lazy">
-      <figcaption>Jean speaking on a student panel.</figcaption>
+      <img class="bb-photo" src="/assets/images/protein-structure.jpg" alt="Jean Tran and a colleague exploring a predicted protein structure on a touchscreen" width="1206" height="678" loading="lazy">
+      <figcaption>Exploring a predicted protein structure.</figcaption>
     </figure>
   </div>
 </section>
