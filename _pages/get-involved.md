@@ -219,11 +219,6 @@ permalink: /get-involved/
   </div>
 </section>
 
-<section class="bb-section--tight" style="padding-top:0">
-  <div class="bb-wrap">
-    <div class="bb-photo bb-photo--wide bb-photo-placeholder">Photo placeholder: you with students, mentors, or at a BioBridge event</div>
-  </div>
-</section>
 
 <section class="bb-section bb-band bb-band--forest" id="contact">
   <div class="bb-wrap bb-contact">

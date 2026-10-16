@@ -72,6 +72,24 @@ classes: wide
 
 /* ---------- Photo band ---------- */
 
+.bb-home .bb-photo-figure {
+  display: block;
+  margin: 0;
+}
+
+.bb-home .bb-photo-figure .bb-photo {
+  aspect-ratio: 16 / 9;
+  margin: 0;
+}
+
+.bb-home .bb-photo-figure figcaption {
+  width: auto;
+  margin: 0.75rem 0 0;
+  font-family: var(--bb-sans);
+  font-size: 0.95rem;
+  color: var(--bb-muted);
+}
+
 .bb-photo-band {
   padding-top: 3rem;
 }
@@ -309,7 +327,10 @@ classes: wide
 <!-- Photo -->
 <section class="bb-photo-band">
   <div class="bb-wrap">
-    <div class="bb-photo bb-photo--wide bb-photo-placeholder">Photo placeholder: a candid, wide photo of you, in the lab, in class, or on campus</div>
+    <figure class="bb-photo-figure">
+      <img class="bb-photo" src="/assets/images/panel-talk.jpg" alt="Jean Tran speaking on a student panel" width="907" height="510" loading="lazy">
+      <figcaption>Jean speaking on a student panel.</figcaption>
+    </figure>
   </div>
 </section>
 
