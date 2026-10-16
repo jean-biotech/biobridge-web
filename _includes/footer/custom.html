@@ -1,0 +1,11 @@
+<script>
+  // The theme's smooth-scroll script stops 20px from the top, which leaves
+  // in-page jump targets under the sticky header. It skips any link inside
+  // an element marked data-scroll-ignore, so mark the page content: the
+  // browser then scrolls natively (still smoothly, via CSS) and honors
+  // scroll-margin-top from biobridge.css. Marking the wrapper also covers
+  // the heading permalinks the theme adds later.
+  document.querySelectorAll('.bb-page').forEach(function (page) {
+    page.setAttribute('data-scroll-ignore', '');
+  });
+</script>
