@@ -70,6 +70,31 @@ classes: wide
 
 
 
+/* Narrower screens (phones, iPad portrait, split screen): the questions
+   sit under the intro as a compact row instead of a tall column */
+@media (max-width: 899px) {
+  .bb-hero-grid {
+    gap: 2rem;
+  }
+
+  .bb-dms {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: none;
+    gap: 0.5rem;
+  }
+
+  .bb-home .bb-dms-label {
+    flex-basis: 100%;
+    margin-bottom: 0.1rem;
+  }
+
+  .bb-home .bb-dm {
+    font-size: 1.1rem;
+    padding: 0.45rem 0.95rem 0.55rem;
+  }
+}
+
 /* ---------- Photo band ---------- */
 
 .bb-home .bb-photo-figure {
