@@ -465,10 +465,10 @@ permalink: /resources/
 <!-- Next step -->
 <section class="bb-section bb-band bb-band--cream bb-res-next">
   <div class="bb-wrap">
-    <h2>Have a resource to suggest?</h2>
-    <p>Get in touch and help grow this collection.</p>
+    <h2>Ready to see where you could fit in?</h2>
+    <p>Seven paths into the field, with realistic entry points for each.</p>
     <div class="bb-actions">
-      <a class="bb-button" href="/get-involved/">Suggest a resource</a>
+      <a class="bb-button" href="/career-pathways/">Explore careers</a>
     </div>
   </div>
 </section>

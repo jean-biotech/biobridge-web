@@ -351,7 +351,6 @@ permalink: /products/
         <a class="bb-button" href="/free-preview">Get the free preview</a>
       </div>
     </div>
-    <p class="bb-guides-contact bb-muted">Questions about the guide? Email <a href="mailto:jeans.connects@gmail.com">jeans.connects@gmail.com</a></p>
   </div>
 </section>
 

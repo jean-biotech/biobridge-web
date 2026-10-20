@@ -384,8 +384,8 @@ classes: wide
       <h2>Where to start</h2>
       <p>Everything on BioBridge is free. Pick the question you have right now.</p>
       <figure class="bb-start-photo">
-        <img class="bb-photo" src="/assets/images/protein-structure-4x3.jpg" alt="Jean Tran and a colleague exploring a predicted protein structure on a touchscreen" width="1206" height="904" loading="lazy">
-        <figcaption>Exploring a predicted protein structure.</figcaption>
+        <img class="bb-photo" src="/assets/images/microscope-4x3.jpg" alt="Jean Tran looking through a microscope" width="1000" height="750" loading="lazy">
+        <figcaption>At the microscope.</figcaption>
       </figure>
     </div>
     <ul class="bb-rows">
@@ -411,12 +411,6 @@ classes: wide
         <a href="/faq/">
           <span class="bb-index-title">FAQ</span>
           <span class="bb-index-text">Straight answers to common questions, like whether you need a science degree or have to live in a biotech hub.</span>
-        </a>
-      </li>
-      <li>
-        <a href="/get-involved/">
-          <span class="bb-index-title">Get involved</span>
-          <span class="bb-index-text">BioBridge is student-led. Students, mentors who work in biotech, and contributors are all welcome.</span>
         </a>
       </li>
     </ul>

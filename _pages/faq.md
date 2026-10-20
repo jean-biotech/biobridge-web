@@ -196,10 +196,10 @@ permalink: /faq/
   <div class="bb-wrap bb-ask">
     <h2>Still have questions?</h2>
     <div>
-      <p>You can reach out directly at <a href="mailto:jeans.connects@gmail.com">jeans.connects@gmail.com</a>. A mentorship program is in development for people who want more structured, one-on-one guidance.</p>
+      <p>Many are answered in the career guide and The Learning Lab. A mentorship program is in development for people who want more structured, one-on-one guidance.</p>
       <div class="bb-actions">
-        <a class="bb-button" href="mailto:jeans.connects@gmail.com">Email your question</a>
-        <a class="bb-textlink" href="/get-involved/">See ways to get involved</a>
+        <a class="bb-button" href="/career-pathways/">Explore careers</a>
+        <a class="bb-textlink" href="/resources/">Browse The Learning Lab</a>
       </div>
     </div>
   </div>

@@ -1,5 +1,4 @@
 title: BioBridge
-email: jeans.connects@gmail.com
 description: A student-led biotech access initiative bridging the gap between curiosity and careers in biotechnology.
 url: "https://biotechbridge.org"
 baseurl: ""
@@ -59,6 +58,3 @@ footer:
     - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
       url: "https://linkedin.com/in/jeantrann"
-    - label: "Email"
-      icon: "fas fa-fw fa-envelope"
-      url: "mailto:jeans.connects@gmail.com"
