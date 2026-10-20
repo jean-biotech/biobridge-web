@@ -27,6 +27,15 @@ plugins:
 include:
   - _pages
 
+# Keep repo-only files off the site (the Worker source and its notes)
+exclude:
+  - worker
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+
 defaults:
   - scope:
       path: ""
