@@ -95,6 +95,27 @@ classes: wide
   }
 }
 
+/* ---------- Photo beside "Where to start" ---------- */
+
+.bb-home .bb-start-photo {
+  display: block;
+  margin: 2rem 0 0;
+  max-width: 420px;
+}
+
+.bb-home .bb-start-photo .bb-photo {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+}
+
+.bb-home .bb-start-photo figcaption {
+  width: auto;
+  margin: 0.6rem 0 0;
+  font-family: var(--bb-sans);
+  font-size: 0.95rem;
+  color: var(--bb-muted);
+}
+
 /* ---------- Photo band ---------- */
 
 .bb-home .bb-photo-figure {
@@ -331,11 +352,6 @@ classes: wide
     width: 100%;
   }
 }
-
-/* No cover image for now: one column */
-.bb-nocover {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
 </style>
 
 <div class="bb-page bb-home">
@@ -361,22 +377,16 @@ classes: wide
   </div>
 </section>
 
-<!-- Photo -->
-<section class="bb-photo-band">
-  <div class="bb-wrap">
-    <figure class="bb-photo-figure">
-      <img class="bb-photo" src="/assets/images/protein-structure.jpg" alt="Jean Tran and a colleague exploring a predicted protein structure on a touchscreen" width="1206" height="603" loading="lazy">
-      <figcaption>Exploring a predicted protein structure.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <!-- Where to start -->
 <section class="bb-section">
   <div class="bb-wrap bb-start">
     <div class="bb-start-intro">
       <h2>Where to start</h2>
       <p>Everything on BioBridge is free. Pick the question you have right now.</p>
+      <figure class="bb-start-photo">
+        <img class="bb-photo" src="/assets/images/microscope-4x3.jpg" alt="Jean Tran looking through a microscope" width="1000" height="750" loading="lazy">
+        <figcaption>At the microscope.</figcaption>
+      </figure>
     </div>
     <ul class="bb-rows">
       <li>
@@ -401,12 +411,6 @@ classes: wide
         <a href="/faq/">
           <span class="bb-index-title">FAQ</span>
           <span class="bb-index-text">Straight answers to common questions, like whether you need a science degree or have to live in a biotech hub.</span>
-        </a>
-      </li>
-      <li>
-        <a href="/get-involved/">
-          <span class="bb-index-title">Get involved</span>
-          <span class="bb-index-text">BioBridge is student-led. Students, mentors who work in biotech, and contributors are all welcome.</span>
         </a>
       </li>
     </ul>
@@ -438,8 +442,8 @@ classes: wide
 
 <!-- The Biotech Blueprint -->
 <section class="bb-section bb-band bb-band--cream">
-  <div class="bb-wrap bb-guide bb-nocover">
-    <!-- Cover removed until the new one is ready. To restore: <img class="bb-guide-cover" src="/assets/images/blueprint-cover-600.jpg" alt="Cover of The Biotech Blueprint" width="600" height="900" loading="lazy"> -->
+  <div class="bb-wrap bb-guide">
+    <img class="bb-guide-cover" src="/assets/images/blueprint-cover-v2.jpg" alt="Cover of The Biotech Blueprint" width="600" height="829" loading="lazy">
     <div class="bb-guide-text">
       <p class="bb-kicker">The guide</p>
       <h2>The Biotech Blueprint</h2>

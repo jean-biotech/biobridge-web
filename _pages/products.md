@@ -202,19 +202,14 @@ permalink: /products/
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
-/* No cover image for now: one column */
-.bb-nocover {
-  grid-template-columns: minmax(0, 1fr) !important;
-}
 </style>
 
 <div class="bb-page bb-guides">
 
 <!-- Hero -->
 <header class="bb-pagehead bb-band bb-band--cream">
-  <div class="bb-wrap bb-guides-hero bb-nocover">
-    <!-- Cover removed until the new one is ready. To restore: <img class="bb-guides-cover" src="/assets/images/blueprint-cover-600.jpg" alt="Cover of The Biotech Blueprint" width="600" height="900"> -->
+  <div class="bb-wrap bb-guides-hero">
+    <img class="bb-guides-cover" src="/assets/images/blueprint-cover-v2.jpg" alt="Cover of The Biotech Blueprint" width="600" height="829">
     <div>
       <h1>The Biotech Blueprint</h1>
       <p class="bb-lede">A comprehensive, practical guide for anyone taking their first steps into biotechnology. Real materials, annotated and explained, with roadmaps developed from direct experience navigating this field as a student.</p>
@@ -356,7 +351,6 @@ permalink: /products/
         <a class="bb-button" href="/free-preview">Get the free preview</a>
       </div>
     </div>
-    <p class="bb-guides-contact bb-muted">Questions about the guide? Email <a href="mailto:jeans.connects@gmail.com">jeans.connects@gmail.com</a></p>
   </div>
 </section>
 

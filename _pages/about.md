@@ -45,24 +45,6 @@ permalink: /about/
   font-size: 1.1rem;
 }
 
-.bb-about .bb-about-candid {
-  margin: 2.25rem 0 0;
-  display: block;
-}
-
-.bb-about .bb-about-candid img {
-  margin: 0;
-  aspect-ratio: 3 / 2;
-}
-
-.bb-about .bb-about-candid figcaption {
-  width: auto;
-  margin: 0.75rem 0 0;
-  font-family: var(--bb-sans);
-  font-size: 0.95rem;
-  color: var(--bb-muted);
-}
-
 .bb-about .bb-prose p {
   font-size: 1.2rem;
   line-height: 1.7;
@@ -99,10 +81,6 @@ permalink: /about/
       <p>I was certain I would become a doctor. In college, I completed the shadowing hours, prerequisites, and extracurriculars. But the closer I pushed myself toward a future in clinical work, the more I questioned whether it was actually right for me. I realized I needed a different direction.</p>
       <p>While searching for alternatives, I discovered my school offered a combined BS/MS in biotechnology that I could complete in four years. I knew almost nothing about biotech when I applied, but the program revealed just how expansive the field actually is: not just lab work, but business strategy, regulatory policy, manufacturing operations, and more.</p>
       <p>I started documenting what I was learning on social media, and the audience grew quickly. Tens of thousands of people followed along, and my messages became a constant stream of the same questions: What is biotech? How do I get in? Do I need a PhD? People were curious, but lacked a practical starting point. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
-      <figure class="bb-about-candid">
-        <img class="bb-photo" src="/assets/images/microscope.jpg" alt="Jean Tran looking through a microscope" width="1000" height="667" loading="lazy">
-        <figcaption>At the microscope.</figcaption>
-      </figure>
     </div>
   </div>
 </section>
