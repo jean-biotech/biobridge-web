@@ -297,7 +297,7 @@ permalink: /what-is-biotech/
     </div>
     <ul class="bb-wib-examples">
       <li>
-        <img src="/assets/images/biotech-medicine.jpg" alt="" width="400" height="250" loading="lazy">
+        <img src="/assets/images/biotech-medicine.jpg?v=2" alt="" width="800" height="500" loading="lazy">
         <h3>Medicine</h3>
         <p>Insulin for diabetics is made by bacteria engineered to carry the human insulin gene. CAR-T therapy takes your own immune cells, genetically reprograms them to recognize cancer, and injects them back.</p>
         <ul class="bb-tags" aria-label="Companies">
@@ -307,7 +307,7 @@ permalink: /what-is-biotech/
         </ul>
       </li>
       <li>
-        <img src="/assets/images/biotech-agriculture.jpg" alt="" width="400" height="250" loading="lazy">
+        <img src="/assets/images/biotech-agriculture.jpg?v=2" alt="" width="800" height="500" loading="lazy">
         <h3>Agriculture</h3>
         <p>Drought-resistant crops can survive on 30% less water. Plant-based meat uses heme (a protein from engineered yeast) to replicate the taste and texture of beef.</p>
         <ul class="bb-tags" aria-label="Companies">
@@ -317,7 +317,7 @@ permalink: /what-is-biotech/
         </ul>
       </li>
       <li>
-        <img src="/assets/images/biotech-environment.jpg" alt="" width="400" height="250" loading="lazy">
+        <img src="/assets/images/biotech-environment.jpg?v=2" alt="" width="800" height="500" loading="lazy">
         <h3>Environment</h3>
         <p>Bioremediation uses bacteria that break down petroleum into harmless compounds. Bioplastics made from plants instead of petroleum decompose in months, not centuries.</p>
         <ul class="bb-tags" aria-label="Companies">
@@ -327,7 +327,7 @@ permalink: /what-is-biotech/
         </ul>
       </li>
       <li>
-        <img src="/assets/images/biotech-cuttingedge.jpg" alt="" width="400" height="250" loading="lazy">
+        <img src="/assets/images/biotech-cuttingedge.jpg?v=2" alt="" width="800" height="500" loading="lazy">
         <h3>The cutting edge</h3>
         <p>Bioprinting uses 3D printers loaded with living cells to build skin grafts, cartilage, and blood vessels. Mini-brains grown from stem cells are helping scientists study Alzheimer's without human trials.</p>
         <ul class="bb-tags" aria-label="Companies">
