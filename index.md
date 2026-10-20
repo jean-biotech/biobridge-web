@@ -95,6 +95,27 @@ classes: wide
   }
 }
 
+/* ---------- Photo beside "Where to start" ---------- */
+
+.bb-home .bb-start-photo {
+  display: block;
+  margin: 2rem 0 0;
+  max-width: 420px;
+}
+
+.bb-home .bb-start-photo .bb-photo {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+}
+
+.bb-home .bb-start-photo figcaption {
+  width: auto;
+  margin: 0.6rem 0 0;
+  font-family: var(--bb-sans);
+  font-size: 0.95rem;
+  color: var(--bb-muted);
+}
+
 /* ---------- Photo band ---------- */
 
 .bb-home .bb-photo-figure {
@@ -356,22 +377,16 @@ classes: wide
   </div>
 </section>
 
-<!-- Photo -->
-<section class="bb-photo-band">
-  <div class="bb-wrap">
-    <figure class="bb-photo-figure">
-      <img class="bb-photo" src="/assets/images/protein-structure.jpg" alt="Jean Tran and a colleague exploring a predicted protein structure on a touchscreen" width="1206" height="603" loading="lazy">
-      <figcaption>Exploring a predicted protein structure.</figcaption>
-    </figure>
-  </div>
-</section>
-
 <!-- Where to start -->
 <section class="bb-section">
   <div class="bb-wrap bb-start">
     <div class="bb-start-intro">
       <h2>Where to start</h2>
       <p>Everything on BioBridge is free. Pick the question you have right now.</p>
+      <figure class="bb-start-photo">
+        <img class="bb-photo" src="/assets/images/protein-structure-4x3.jpg" alt="Jean Tran and a colleague exploring a predicted protein structure on a touchscreen" width="1206" height="904" loading="lazy">
+        <figcaption>Exploring a predicted protein structure.</figcaption>
+      </figure>
     </div>
     <ul class="bb-rows">
       <li>
