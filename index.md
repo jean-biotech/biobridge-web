@@ -331,6 +331,11 @@ classes: wide
     width: 100%;
   }
 }
+
+/* No cover image for now: one column */
+.bb-nocover {
+  grid-template-columns: minmax(0, 1fr) !important;
+}
 </style>
 
 <div class="bb-page bb-home">
@@ -433,8 +438,8 @@ classes: wide
 
 <!-- The Biotech Blueprint -->
 <section class="bb-section bb-band bb-band--cream">
-  <div class="bb-wrap bb-guide">
-    <img class="bb-guide-cover" src="/assets/images/blueprint-cover-600.jpg" alt="Cover of The Biotech Blueprint" width="600" height="900" loading="lazy">
+  <div class="bb-wrap bb-guide bb-nocover">
+    <!-- Cover removed until the new one is ready. To restore: <img class="bb-guide-cover" src="/assets/images/blueprint-cover-600.jpg" alt="Cover of The Biotech Blueprint" width="600" height="900" loading="lazy"> -->
     <div class="bb-guide-text">
       <p class="bb-kicker">The guide</p>
       <h2>The Biotech Blueprint</h2>
