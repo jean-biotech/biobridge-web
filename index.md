@@ -324,93 +324,6 @@ classes: wide
     width: 100%;
   }
 }
-
-/* ---------- Placeholders: reels, community quotes, founder quote ----------
-   Each placeholder is marked in the HTML; swap in the real content. */
-
-.bb-home .bb-reels {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-}
-
-.bb-home .bb-reels li { margin: 0; }
-
-.bb-home .bb-reel {
-  aspect-ratio: 9 / 16;
-  border-radius: var(--bb-radius);
-  font-size: 0.9rem;
-}
-
-.bb-home .bb-reel-caption {
-  margin-top: 0.6rem;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  color: var(--bb-muted);
-}
-
-.bb-reels-head {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 0.5rem 2rem;
-  margin-bottom: 1.75rem;
-}
-
-.bb-home .bb-quotes {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.bb-home .bb-quotes li {
-  margin: 0;
-  padding-top: 1.1rem;
-  border-top: 2px solid var(--bb-green);
-}
-
-.bb-home .bb-quote-text {
-  font-family: var(--bb-serif);
-  font-weight: 600;
-  font-size: 1.3rem;
-  line-height: 1.35;
-  color: var(--bb-muted);
-  font-style: italic;
-}
-
-.bb-home .bb-quote-who {
-  margin-top: 0.6rem;
-  font-size: 0.95rem;
-  color: var(--bb-muted);
-}
-
-.bb-home .bb-founder-quote {
-  margin: 0 0 1.75rem;
-  padding: 1rem 0 1rem 1.25rem;
-  border-left: 3px solid var(--bb-lime);
-  font-family: var(--bb-serif);
-  font-weight: 600;
-  font-style: italic;
-  font-size: 1.5rem;
-  line-height: 1.3;
-  color: var(--bb-on-dark-soft);
-  max-width: 24em;
-}
-
-@media (min-width: 700px) {
-  .bb-home .bb-reels { gap: 1.25rem; }
-  .bb-home .bb-quotes { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2.5rem; }
-}
-
-@media (min-width: 900px) {
-  .bb-home .bb-reels { max-width: 720px; }
-}
 </style>
 
 <div class="bb-page bb-home">
@@ -494,23 +407,6 @@ classes: wide
   </div>
 </section>
 
-<!-- PLACEHOLDER: Instagram reels. Replace each placeholder box with
-     <a href="REEL LINK"><img class="bb-photo bb-reel" src="/assets/images/reel-1.jpg" alt="..."></a>
-     and write a one-line caption. -->
-<section class="bb-section bb-band bb-band--cream">
-  <div class="bb-wrap">
-    <div class="bb-reels-head">
-      <h2>From Instagram</h2>
-      <a class="bb-textlink" href="https://instagram.com/jeans.scenes" target="_blank" rel="noopener">Follow @jeans.scenes</a>
-    </div>
-    <ul class="bb-reels">
-      <li><div class="bb-photo bb-reel bb-photo-placeholder">Reel cover placeholder</div><p class="bb-reel-caption">Caption placeholder: one line about the reel</p></li>
-      <li><div class="bb-photo bb-reel bb-photo-placeholder">Reel cover placeholder</div><p class="bb-reel-caption">Caption placeholder: one line about the reel</p></li>
-      <li><div class="bb-photo bb-reel bb-photo-placeholder">Reel cover placeholder</div><p class="bb-reel-caption">Caption placeholder: one line about the reel</p></li>
-    </ul>
-  </div>
-</section>
-
 <!-- Founder story -->
 <section class="bb-section bb-band bb-band--forest">
   <div class="bb-wrap bb-founder">
@@ -523,8 +419,6 @@ classes: wide
       </figcaption>
     </figure>
     <div class="bb-founder-story">
-      <!-- PLACEHOLDER: founder quote. Replace the text, or delete this line to remove it. -->
-      <blockquote class="bb-founder-quote">Quote placeholder: one sentence in your own words about why BioBridge matters to you.</blockquote>
       <p>I was certain I would become a doctor. But the closer I got to a future in clinical work, the more I questioned whether it was right for me. A combined BS/MS in biotechnology showed me how big the field actually is: not just lab work, but business strategy, regulatory policy, manufacturing operations, and more.</p>
       <p>When I started sharing what I was learning on social media, the same questions kept coming in. BioBridge is the resource I wish had existed when I was trying to figure it out.</p>
       <p class="bb-founder-links">
@@ -533,20 +427,6 @@ classes: wide
         <a href="https://linkedin.com/in/jeantrann" target="_blank" rel="noopener">LinkedIn</a>
       </p>
     </div>
-  </div>
-</section>
-
-<!-- PLACEHOLDER: community quotes. Use real comments or DMs (with permission). -->
-<section class="bb-section">
-  <div class="bb-wrap">
-    <div class="bb-section-head">
-      <h2>What the community says</h2>
-    </div>
-    <ul class="bb-quotes">
-      <li><p class="bb-quote-text">Quote placeholder: a real comment or DM from a follower.</p><p class="bb-quote-who">Name or description, e.g. "Biology student"</p></li>
-      <li><p class="bb-quote-text">Quote placeholder: a real comment or DM from a follower.</p><p class="bb-quote-who">Name or description, e.g. "Career switcher"</p></li>
-      <li><p class="bb-quote-text">Quote placeholder: a real comment or DM from a follower.</p><p class="bb-quote-who">Name or description, e.g. "High school senior"</p></li>
-    </ul>
   </div>
 </section>
 
