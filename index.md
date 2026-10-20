@@ -393,12 +393,6 @@ classes: wide
         </a>
       </li>
       <li>
-        <a href="/application-reviewer/">
-          <span class="bb-index-title">Application Reviewer</span>
-          <span class="bb-index-text">A free tool: paste a job posting and your resume to see how well they match and what to strengthen.</span>
-        </a>
-      </li>
-      <li>
         <a href="/faq/">
           <span class="bb-index-title">FAQ</span>
           <span class="bb-index-text">Straight answers to common questions, like whether you need a science degree or have to live in a biotech hub.</span>
