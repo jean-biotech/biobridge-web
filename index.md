@@ -103,8 +103,15 @@ classes: wide
 }
 
 .bb-home .bb-photo-figure .bb-photo {
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 3;
+  object-position: 50% 35%;
   margin: 0;
+}
+
+@media (min-width: 640px) {
+  .bb-home .bb-photo-figure .bb-photo {
+    aspect-ratio: 2 / 1;
+  }
 }
 
 .bb-home .bb-photo-figure figcaption {
@@ -353,7 +360,7 @@ classes: wide
 <section class="bb-photo-band">
   <div class="bb-wrap">
     <figure class="bb-photo-figure">
-      <img class="bb-photo" src="/assets/images/protein-structure.jpg" alt="Jean Tran and a colleague exploring a predicted protein structure on a touchscreen" width="1206" height="678" loading="lazy">
+      <img class="bb-photo" src="/assets/images/protein-structure.jpg" alt="Jean Tran and a colleague exploring a predicted protein structure on a touchscreen" width="1206" height="603" loading="lazy">
       <figcaption>Exploring a predicted protein structure.</figcaption>
     </figure>
   </div>
