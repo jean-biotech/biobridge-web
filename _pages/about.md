@@ -14,17 +14,21 @@ permalink: /about/
   gap: 2rem;
 }
 
+/* Phones: a small photo beside the name. Wider screens: a portrait column. */
 .bb-about .bb-about-photo {
   margin: 0;
-  display: block;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
 }
 
 .bb-about .bb-about-photo img {
   display: block;
-  width: 100%;
-  max-width: 320px;
-  height: auto;
-  aspect-ratio: 4 / 5;
+  width: 72px;
+  height: 72px;
+  flex: none;
   object-fit: cover;
   object-position: 50% 30%;
   border-radius: 6px;
@@ -33,7 +37,7 @@ permalink: /about/
 
 .bb-about .bb-about-photo figcaption {
   width: auto;
-  margin: 1rem 0 0;
+  margin: 0;
   font-family: var(--bb-sans);
   font-size: 1rem;
   line-height: 1.45;
@@ -50,11 +54,31 @@ permalink: /about/
   line-height: 1.7;
 }
 
+@media (max-width: 639px) {
+  .bb-about .bb-prose p {
+    font-size: 1.1rem;
+  }
+}
+
 @media (min-width: 900px) {
   .bb-about-story {
-    grid-template-columns: 320px minmax(0, 1fr);
-    gap: 4.5rem;
+    grid-template-columns: 220px minmax(0, 1fr);
+    gap: 4rem;
     align-items: start;
+  }
+
+  .bb-about .bb-about-photo {
+    display: block;
+  }
+
+  .bb-about .bb-about-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+  }
+
+  .bb-about .bb-about-photo figcaption {
+    margin-top: 1rem;
   }
 }
 </style>

@@ -216,8 +216,8 @@ classes: wide
 }
 
 .bb-home .bb-founder-photo img {
-  width: 88px;
-  height: 88px;
+  width: 72px;
+  height: 72px;
   object-fit: cover;
   object-position: 50% 30%;
   border-radius: 6px;
@@ -320,7 +320,7 @@ classes: wide
   }
 
   .bb-founder {
-    grid-template-columns: 340px minmax(0, 1fr);
+    grid-template-columns: 220px minmax(0, 1fr);
     grid-template-areas:
       "photo head"
       "photo story";
